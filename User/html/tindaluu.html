@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tin Đã Lưu</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/tindaluu.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/style.css">
+
+
+</head>
+<body>
+<header class="header-area header-sticky">
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <!-- Logo -->
+            <a class="navbar-brand" href="home.html">
+                <img src="../images/LoGo.jpg" style="width: 50px; height: 50px">
+                <span class="ms-2 fw-bold">Mầm Xanh Group</span>
+            </a>
+            <!-- Toggle button for mobile -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- Navbar links -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <!-- Dropdown: Căn hộ bán -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="banDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Căn hộ bán
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="banDropdown">
+                            <li><a class="dropdown-item" href="Căn%20hộ%20bán.html">Bán căn hộ chung cư</a></li>
+                            <li><a class="dropdown-item" href="#">Bán chung cư mini</a></li>
+                            <li><a class="dropdown-item" href="#">Bán nhà riêng</a></li>
+                            <li><a class="dropdown-item" href="#">Bán biệt thự, liền kề</a></li>
+                            <li><a class="dropdown-item" href="#">Bán nhà mặt phố</a></li>
+                            <li><a class="dropdown-item" href="#">Bán shophouse</a></li>
+                        </ul>
+                    </li>
+                    <!-- Dropdown: Căn hộ thuê -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="thueDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Căn hộ thuê
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="thueDropdown">
+                            <li><a class="dropdown-item" href="#">Thuê căn hộ chung cư</a></li>
+                            <li><a class="dropdown-item" href="#">Thuê chung cư mini</a></li>
+                            <li><a class="dropdown-item" href="#">Thuê nhà riêng</a></li>
+                            <li><a class="dropdown-item" href="#">Thuê biệt thự</a></li>
+                            <li><a class="dropdown-item" href="#">Thuê nhà mặt phố</a></li>
+                            <li><a class="dropdown-item" href="#">Thuê phòng trọ</a></li>
+                        </ul>
+                    </li>
+                    <!-- Tin tức -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="tin%20tức.html">Tin tức</a>
+                    </li>
+                    <!-- Mục yêu thích(mục tin đã lưu) -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="tindaluu.html"><i class="fas fa-heart"></i> Tin đã lưu</a>
+                    </li>
+                    <!-- Đăng nhập & Đăng ký -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html">Đăng nhập</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="signup.html">Đăng ký</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+</header>
+
+<!-- Main content -->
+<div class="container mt-4">
+    <h1 class="text-center mb-4">Tin Đã Lưu</h1>
+
+    <!-- Danh sách bất động sản -->
+    <h3 class="mb-4">Danh sách bất động sản</h3>
+    <div class="row" id="saved-posts">
+        <!-- Card 1 -->
+        <div class="col-md-4 mb-4">
+            <div class="card shadow-sm h-100">
+                <img src="/User/images/hst4.jpg" class="card-img-top" alt="Căn hộ Eco Green">
+                <div class="card-body">
+                    <h5 class="card-title">Căn hộ Eco Green</h5>
+                    <p class="card-text"><strong>Giá:</strong> 14 triệu/tháng</p>
+                    <p class="card-text"><strong>Diện tích:</strong> 65 m²</p>
+                    <p class="card-text"><strong>Vị trí:</strong> Quận 7, TP. HCM</p>
+                    <button class="btn btn-danger btn-sm btn-delete">
+                        <i class="fas fa-trash-alt"></i> Xóa
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Card 2 -->
+        <div class="col-md-4 mb-4">
+            <div class="card shadow-sm h-100">
+                <img src="/User/images/vh2.jpg" class="card-img-top" alt="Căn hộ Sunrise City">
+                <div class="card-body">
+                    <h5 class="card-title">Căn hộ Sunrise City</h5>
+                    <p class="card-text"><strong>Giá:</strong> 18 triệu/tháng</p>
+                    <p class="card-text"><strong>Diện tích:</strong> 75 m²</p>
+                    <p class="card-text"><strong>Vị trí:</strong> Quận 7, TP. HCM</p>
+                    <button class="btn btn-danger btn-sm btn-delete">
+                        <i class="fas fa-trash-alt"></i> Xóa
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Card 3 -->
+        <div class="col-md-4 mb-4">
+            <div class="card shadow-sm h-100">
+                <img src="/User/images/vh4.jpg" class="card-img-top" alt="Căn hộ Sky Garden">
+                <div class="card-body">
+                    <h5 class="card-title">Căn hộ Sky Garden</h5>
+                    <p class="card-text"><strong>Giá:</strong> 20 triệu/tháng</p>
+                    <p class="card-text"><strong>Diện tích:</strong> 85 m²</p>
+                    <p class="card-text"><strong>Vị trí:</strong> Quận 7, TP. HCM</p>
+                    <button class="btn btn-danger btn-sm"><i class="fas fa-trash-alt"></i> Xóa</button>
+                </div>
+            </div>
+        </div>
+    </div>
+        <!-- Nút "Xem thêm" -->
+        <div class="text-center mt-5">
+            <button id="load-more" class="btn btn-primary">Xem thêm</button>
+        </div>
+
+</div>
+
+<!--Footer-->
+<footer class="footer">
+    <div class="footer-section top">
+        <div class="footer-brand">
+            <img src="../images/LoGo.jpg" alt="Logo" class="footer-logo">
+            <div>
+                <p class="company-name">CÔNG TY CỔ PHẦN PROPERTYGURU VIỆT NAM</p>
+                <address>
+                    S1803, Vinhome grandpark Quận 9, Thủ Đức<br>
+                    (84) 3562 5939 - (84) 3562 5940
+                </address>
+            </div>
+            <div class="download-links">
+                <img src="../images/google-play.png" alt="Google Play" class="app-icon">
+                <img src="../images/app-store.png" alt="App Store" class="app-icon">
+            </div>
+        </div>
+        <div class="footer-links">
+            <div>
+                <div>
+                    Hotline<br>
+                    <b>1900 1881 <br><br></b>
+                </div>
+                <h4>HƯỚNG DẪN</h4>
+                <ul>
+                    <li><a href="#">Về chúng tôi</a></li>
+                    <li><a href="#">Báo giá và hỗ trợ</a></li>
+                    <li><a href="#">Câu hỏi thường gặp</a></li>
+                    <li><a href="#">Góp ý báo lỗi</a></li>
+                    <li><a href="#">Sitemap</a></li>
+                </ul>
+            </div>
+            <div>
+                <div>
+                    Hỗ trợ khách hàng<br>
+                    <b>trogiup.mamxanhgroup.com.vn<br><br></b>
+                </div>
+                <h4>QUY ĐỊNH</h4>
+                <ul>
+                    <li><a href="#">Quy định đăng tin</a></li>
+                    <li><a href="#">Quy chế hoạt động</a></li>
+                    <li><a href="#">Điều khoản thỏa thuận</a></li>
+                    <li><a href="#">Chính sách bảo mật</a></li>
+                    <li><a href="#">Giải quyết khiếu nại</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-subscribe">
+            <div>
+                Chăm sóc khách hàng<br>
+                <b>hotro@mamxanhgroup.com.vn<br><br></b>
+            </div>
+            <h4>ĐĂNG KÝ NHẬN TIN</h4>
+            <form>
+                <input type="email" placeholder="Nhập email của bạn">
+                <button type="submit">&#9654;</button>
+            </form>
+            <div class="language-select">
+                <span>QUỐC GIA & NGÔN NGỮ</span>
+                <select>
+                    <option>Việt Nam</option>
+                    <option>Singapo</option>
+                    <option>Malaysia</option>
+                    <option>Thailand</option>
+                    <option>Indonesia</option>
+                    <option>Australia</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="footer-section branches">
+        <p><strong>Chi nhánh của Mamxanhgroup.com.vn</strong></p>
+        <div class="branch-info">
+            <div>
+                <p><strong>Chi nhánh TP. Hồ Chí Minh</strong><br>S1803, Vinhome grandpark , Q.9, TP. Thủ Đức<br>Hotline: 1900 1881 - Mobile: 0904 893 279</p>
+                <p><strong>Chi nhánh Đà Nẵng</strong><br>Tầng 9, Tòa nhà Vĩnh Trung Plaza, 255 - 257 Hùng Vương, Q.Thanh Khê, TP. Đà Nẵng<br>Hotline: 1900 1881 - Mobile: 0904 907 279</p>
+            </div>
+            <div>
+                <p><strong>Chi nhánh Hà Nội</strong><br>Đường Chu Huy Mân, Phường Phúc Lợi, Quận Long Biên, Hà Nội<br>Hotline: 1900 1881 - Mobile: 0903 456 322</p>
+                <p><strong>Chi nhánh Vũng Tàu</strong><br>Tầng 4, Tòa nhà ACB, Hoàng Hoa Thám, P.2, TP. Vũng Tàu<br>Hotline: 1900 1881 - Mobile: 0904 509 293</p>
+            </div>
+            <div>
+                <p><strong>Chi nhánh Bình Dương</strong><br>Phòng 10, tầng 16, Becamex Tower, ĐL Bình Dương, TP. Thủ Dầu Một<br>Hotline: 1900 1881 - Mobile: 0919 255 580</p>
+                <p><strong>Chi nhánh Nha Trang</strong><br>Tầng 6, Tòa nhà Điện Lực Khánh Hòa, Lý Thánh Tôn, TP. Nha Trang<br>Hotline: 1900 1881 - Mobile: 0902 169 295</p>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="footer-section bottom">
+        <p>Copyright © 2007 - 2024 mamxanhgroup.com.vn <br>
+
+            Giấy ĐKKD số 0104630479 do Sở KHĐT TP Hà Nội cấp lần đầu ngày 02/06/2010 <br>
+            Giấy phép thiết lập trang thông tin điện tử tổng hợp trên mạng số 191/GP-TTĐT do<br>
+            Sở TTTT Thành phố Hồ Chí Minh cấp ngày 31/08/2020</p>
+        <p>Chịu trách nhiệm nội dung GP ICP: Bà Cao Bich Thùy<br>
+            Chịu trách nhiệm sàn GDTMĐT: Ông Đặng Thành <br>
+            Quy chế, quy định giao dịch có hiệu lực từ 08/08/2020<br>
+            Ghi rõ nguồn "manxanhgroup.com.vn" khi phát hành lại thông tin từ website này.
+        </p>
+        <img src="../images/registered-icon.png" alt="Registered" class="social-icon" style="width: 100px; height: 40px;">
+        <div class="social-icons">
+            <img src="../images/facebook-icon.png" alt="Facebook" class="social-icon">
+            <img src="../images/youtube-icon.png" alt="YouTube" class="social-icon">
+            <img src="../images/zalo-icon.png" alt="Facebook" class="social-icon">
+        </div>
+    </div>
+</footer>
+<script src="../js/tindaluu.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

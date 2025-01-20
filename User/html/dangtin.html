@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Đăng Tin Bán Căn Hộ Chung Cư</title>
+
+  <link rel="stylesheet" href="../css/dangtin.css">
+</head>
+<body>
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="form-container">
+      <h2 class="text-center mb-4">Đăng Tin Bán Căn Hộ Chung Cư</h2>
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <form>
+            <!-- Tiêu đề bài đăng -->
+            <div class="mb-3">
+              <label for="title" class="form-label">Tiêu đề</label>
+              <input type="text" class="form-control" id="title" placeholder="Nhập tiêu đề bài đăng" required>
+            </div>
+
+            <!-- Mô tả chi tiết -->
+            <div class="mb-3">
+              <label for="description" class="form-label">Mô tả</label>
+              <textarea class="form-control" id="description" rows="5" placeholder="Nhập mô tả chi tiết về căn hộ" required></textarea>
+            </div>
+
+            <!-- Mức giá -->
+            <div class="mb-3">
+              <label for="price" class="form-label">Mức giá (VNĐ)</label>
+              <input type="number" class="form-control" id="price" placeholder="Nhập mức giá" required>
+            </div>
+
+            <!-- Diện tích -->
+            <div class="mb-3">
+              <label for="area" class="form-label">Diện tích (m²)</label>
+              <input type="number" class="form-control" id="area" placeholder="Nhập diện tích" required>
+            </div>
+
+            <!-- Số phòng -->
+            <div class="mb-3">
+              <label for="rooms" class="form-label">Số phòng</label>
+              <input type="number" class="form-control" id="rooms" placeholder="Nhập số phòng" required>
+            </div>
+
+            <!-- Số phòng tắm -->
+            <div class="mb-3">
+              <label for="bathrooms" class="form-label">Số phòng tắm</label>
+              <input type="number" class="form-control" id="bathrooms" placeholder="Nhập số phòng tắm" required>
+            </div>
+
+            <!-- Số toilet -->
+            <div class="mb-3">
+              <label for="toilets" class="form-label">Số toilet</label>
+              <input type="number" class="form-control" id="toilets" placeholder="Nhập số toilet" required>
+            </div>
+
+            <!-- Số tầng -->
+            <div class="mb-3">
+              <label for="floors" class="form-label">Số tầng</label>
+              <input type="number" class="form-control" id="floors" placeholder="Nhập số tầng" required>
+            </div>
+
+            <!-- Pháp lý -->
+            <div class="mb-3">
+              <label for="legal" class="form-label">Pháp lý</label>
+              <select class="form-select" id="legal" required>
+                <option value="" selected>Chọn loại giấy tờ pháp lý</option>
+                <option value="1">Sổ đỏ</option>
+                <option value="2">Sổ hồng</option>
+                <option value="3">Giấy tờ hợp lệ</option>
+              </select>
+            </div>
+
+            <!-- Địa chỉ -->
+            <div class="mb-3">
+              <label for="address" class="form-label">Địa chỉ</label>
+              <input type="text" class="form-control" id="address" placeholder="Nhập địa chỉ căn hộ" required>
+            </div>
+
+            <!-- Họ tên người đăng -->
+            <div class="mb-3">
+              <label for="fullname" class="form-label">Họ tên người đăng</label>
+              <input type="text" class="form-control" id="fullname" placeholder="Nhập họ tên" required>
+            </div>
+
+            <!-- Số điện thoại -->
+            <div class="mb-3">
+              <label for="phone" class="form-label">Số điện thoại</label>
+              <input type="tel" class="form-control" id="phone" placeholder="Nhập số điện thoại" required>
+            </div>
+
+            <!-- Email -->
+            <div class="mb-3">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" class="form-control" id="email" placeholder="Nhập email" required>
+            </div>
+            <!-- Ngày đăng-->
+            <div class="mb-3">
+              <label for="ngay-dang" class="form-label">Ngày đăng</label>
+              <input type="date" id="ngay-dang" class="form-control" />
+            </div>
+
+            <!-- Nút gửi -->
+            <div class="d-grid">
+              <button type="submit" class="btn btn-primary">Đăng tin</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="../js/dangtin.js"></script>
+</body>
+</html>

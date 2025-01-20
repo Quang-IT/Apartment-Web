@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+    <title>Bảng Quản Lý Căn Hộ</title>
+    <link rel="shortcut icon" type="image/x-icon" href="../User/images/favicon-user.ico">
+
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/plugins/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="assets/plugins/fontawesome/css/fontawesome.min.css">
+    <link rel="stylesheet" href="assets/css/feathericon.min.css">
+    <link rel="stylesheet" href="assets/plugins/morris/morris.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap-datetimepicker.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+<div class="main-wrapper">
+
+
+
+
+    <div class="header">
+        <div class="header-left">
+            <a href="/Admin/user.html" class="logo"> <img src="assets/img/anhdaidien.jpg" width="50" height="70" alt="logo"> <span class="logoclass">Bán căn hộ</span> </a>
+            <a href="/Admin/user.html" class="logo logo-small"> <img src="assets/img/anhdaidien.jpg" alt="Logo" width="30" height="30"> </a>
+        </div>
+        <a href="javascript:void(0);" id="toggle_btn"> <i class="fe fe-text-align-left"></i> </a>
+        <a class="mobile_btn" id="mobile_btn"> <i class="fas fa-bars"></i> </a>
+        <ul class="nav user-menu">
+            <li class="nav-item dropdown noti-dropdown">
+                <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown"> <i class="fe fe-bell"></i> <span class="badge badge-pill">3</span> </a>
+                <div class="dropdown-menu notifications">
+                    <div class="topnav-dropdown-header"> <span class="notification-title">Thông báo</span> <a href="javascript:void(0)" class="clear-noti"> Xóa tất cả  </a> </div>
+                    <div class="noti-content">
+
+
+                        <ul class="notification-list">
+                            <li class="notification-message">
+                                <a href="#">
+                                    <div class="media"> <span class="avatar avatar-sm">
+											<img class="avatar-img rounded-circle" alt="User Image" src="assets/img/anhdaidien.jpg">
+											</span>
+                                        <div class="media-body">
+                                            <p class="noti-details"><span class="noti-title">Giao dịch</span> của bạn <span class="noti-title">đã thành công!
+													</span></p>
+                                            <p class="noti-time"><span class="notification-time">1 phút trước</span> </p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <li class="notification-message">
+                                <a href="#">
+                                    <div class="media"> <span class="avatar avatar-sm">
+											<img class="avatar-img rounded-circle" alt="User Image" src="assets/img/anhdaidien.jpg">
+											</span>
+                                        <div class="media-body">
+                                            <p class="noti-details"><span class="noti-title">  Đang xem xét
+													</span> hộp đồng mua bán <span class="noti-title"> căn hộ 21 tỷ</span></p>
+                                            <p class="noti-time"><span class="notification-time">1 ngày trước</span> </p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <li class="notification-message">
+                                <a href="#">
+                                    <div class="media"> <span class="avatar avatar-sm">
+											<img class="avatar-img rounded-circle" alt="User Image" src="assets/img/anhdaidien.jpg">
+											</span>
+                                        <div class="media-body">
+                                            <p class="noti-details"><span class="noti-title">Chờ duyệt</span> đăng tin <span class="noti-title">bán căn hộ</span></p>
+                                            <p class="noti-time"><span class="notification-time">4 ngày trước</span> </p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+
+                    </div>
+                    <div class="topnav-dropdown-footer"> <a href="#">Xem tất cả</a> </div>
+                </div>
+            </li>
+
+
+            <li class="nav-item dropdown has-arrow">
+                <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown"> <span class="user-img"><img class="rounded-circle" src="assets/img/anhdaidien.jpg" width="31" alt="Soeng Souy"></span> </a>
+                <div class="dropdown-menu">
+                    <div class="user-header">
+                        <div class="avatar avatar-sm"> <img src="assets/img/anhdaidien.jpg" alt="User Image" class="avatar-img rounded-circle"> </div>
+                        <div class="user-text">
+                            <h6>Nhựt Quang</h6>
+                            <p class="text-muted mb-0">Khách Hàng</p>
+                        </div>
+                    </div> <a class="dropdown-item" href="user.html">Hồ sơ của tôi</a> <a class="dropdown-item" href="../User/html/login.html">Đăng xuất</a> </div>
+            </li>
+
+        </ul>
+    </div>
+
+
+
+
+
+
+    <!-- danh mục -->
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-inner slimscroll">
+            <div id="sidebar-menu" class="sidebar-menu">
+                <ul>
+
+                    <li> <a href="user.html"><i class="fas fa-user"></i> <span>Hồ sơ của tôi</span></a> </li>
+
+                    <li> <a href="post.html"><i class="fas fa-cube"></i> <span>Tin đăng</span></a> </li>
+
+                    <li> <a href="notification.html"><i class="far fa-bell"></i> <span>Thông báo</span></a> </li>
+
+                    <li> <a href="transaction-user.html"><i class="far fa-money-bill-alt"></i> <span>Giao dịch</span></a> </li>
+
+                    <li> <a href="../User/html/login.html"><i class="fa-solid fa-right-from-bracket"></i> <span>Đăng Xuất</span></a> </li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="page-wrapper">
+        <div class="content container-fluid">
+            <div class="page-header">
+                <div class="row align-items-center">
+                    <div class="col">
+                        <h4 class="card-title float-left mt-2">Danh sách tin đăng</h4>
+                        <button class="btn btn-primary float-right add-listing" data-toggle="modal" data-target="#listingForm" onclick="openForm()">Thêm tin</button>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="card card-table">
+                        <div class="card-body booking_card">
+                            <div class="table-responsive">
+                                <table class="table table-striped table-hover table-center mb-0">
+                                    <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Ảnh</th>
+                                        <th>Tên</th>
+                                        <th>Mô tả</th>
+                                        <th>Mức giá</th>
+                                        <th>Diện tích</th>
+                                        <th>Phòng ngủ</th>
+                                        <th>Phòng tắm</th>
+                                        <th>Toilet</th>
+                                        <th>Số tầng</th>
+                                        <th>Nội thất</th>
+                                        <th>Pháp lý</th>
+                                        <th>Loại căn hộ</th>
+                                        <th>Bản đồ</th>
+                                        <th>Ngày đăng</th>
+                                        <th>Trạng thái</th>
+                                        <th class="text-right">Hành động</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody id="listingTable">
+                                    <!-- Mẫu dữ liệu ban đầu sẽ được thêm ở đây -->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Form thêm hoặc sửa tin đăng -->
+    <div id="listingForm" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 id="formTitle">Thêm tin đăng</h5>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <form id="listingInputForm">
+                        <input type="hidden" id="listingId"> <!-- Thêm trường ẩn để lưu ID -->
+                        <div class="mb-3">
+                            <label for="listingImage" class="form-label">Ảnh</label>
+                            <input type="file" id="listingImage" class="form-control" placeholder="URL ảnh">
+                        </div>
+                        <div class="mb-3">
+                            <label for="listingName" class="form-label">Tên</label>
+                            <input type="text" id="listingName" class="form-control" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="listingDescription" class="form-label">Mô tả</label>
+                            <textarea id="listingDescription" class="form-control"></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label for="listingPrice" class="form-label">Mức giá</label>
+                            <input type="number" id="listingPrice" class="form-control">
+                        </div>
+                        <div class="mb-3">
+                            <label for="listingArea" class="form-label">Diện tích</label>
+                            <input type="number" id="listingArea" class="form-control">
+                        </div>
+                        <div class="mb-3">
+                            <label for="listingBedrooms" class="form-label">Phòng ngủ</label>
+                            <input type="number" id="listingBedrooms" class="form-control">
+                        </div>
+                        <div class="mb-3">
+                            <label for="listingBathrooms" class="form-label">Phòng tắm</label>
+                            <input type="number" id="listingBathrooms" class="form-control">
+                        </div>
+                        <div class="mb-3">
+                            <label for="listingToilet" class="form-label">Toilet</label>
+                            <input type="number" id="listingToilet" class="form-control">
+                        </div>
+                        <div class="mb-3">
+                            <label for="listingFloors" class="form-label">Số tầng</label>
+                            <input type="number" id="listingFloors" class="form-control">
+                        </div>
+                        <div class="mb-3">
+                            <label for="listingFurniture" class="form-label">Nội thất</label>
+                            <input type="text" id="listingFurniture" class="form-control">
+                        </div>
+                        <div class="mb-3">
+                            <label for="listingLegal" class="form-label">Pháp lý</label>
+                            <input type="text" id="listingLegal" class="form-control">
+                        </div>
+                        <div class="mb-3">
+                            <label for="listingType" class="form-label">Loại căn hộ</label>
+                            <input type="text" id="listingType" class="form-control">
+                        </div>
+
+                        <!-- Nhúng bản đồ Google Maps -->
+                        <div class="mb-3">
+                            <label for="listingMap" class="form-label">Bản đồ</label>
+                            <div id="listingMap" style="height: 300px; width: 100%;"></div>
+                            <input type="hidden" id="listingMapLocation" class="form-control">
+                            <small class="form-text text-muted">
+                                Kéo marker hoặc nhấp vào bản đồ để chọn vị trí.
+                            </small>
+                        </div>
+
+
+                        <div class="mb-3">
+                            <label for="listingDate" class="form-label">Ngày đăng</label>
+                            <input type="date" id="listingDate" class="form-control">
+                        </div>
+                        <div class="mb-3">
+                            <label for="listingStatus" class="form-label">Trạng thái</label>
+                            <input type="text" id="listingStatus" class="form-control">
+                        </div>
+                        <button type="button" class="btn btn-success" onclick="saveListing()">Lưu</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Hủy</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+</div>
+</div>
+
+
+
+
+<script>
+    // Mảng lưu trữ dữ liệu tin đăng
+    let listings = [
+        {
+            id: 1,
+            image: 'https://via.placeholder.com/150',
+            name: 'Căn hộ 1 phòng ngủ',
+            description: 'Căn hộ 1 phòng ngủ, tiện nghi đầy đủ',
+            price: 5000000,
+            area: 50,
+            bedrooms: 1,
+            bathrooms: 1,
+            toilet: 1,
+            floors: 1,
+            furniture: 'Đầy đủ',
+            legal: 'Sổ đỏ',
+            type: 'Chung cư',
+            map: 'Vị trí A',
+            date: '2024-11-01',
+            status: 'Đang bán'
+        },
+        {
+            id: 2,
+            image: 'https://via.placeholder.com/150',
+            name: 'Căn hộ 3 phòng ngủ',
+            description: 'Căn hộ 3 phòng ngủ, rộng rãi và hiện đại',
+            price: 12000000,
+            area: 100,
+            bedrooms: 3,
+            bathrooms: 2,
+            toilet: 2,
+            floors: 2,
+            furniture: 'Nội thất cao cấp',
+            legal: 'Sổ hồng',
+            type: 'Biệt thự',
+            map: 'Vị trí B',
+            date: '2024-11-15',
+            status: 'Đang bán'
+        }
+    ];
+
+    // Hiển thị dữ liệu trong bảng
+    function renderTable() {
+        const tableBody = document.getElementById('listingTable');
+        tableBody.innerHTML = ''; // Xóa dữ liệu cũ
+
+        listings.forEach((listing) => {
+            const row = document.createElement('tr');
+            row.innerHTML = `
+            <td>${listing.id}</td>
+            <td><img src="${listing.image}" alt="Ảnh tin đăng" width="100"></td>
+            <td>${listing.name}</td>
+            <td>${listing.description}</td>
+            <td>${listing.price}</td>
+            <td>${listing.area}</td>
+            <td>${listing.bedrooms}</td>
+            <td>${listing.bathrooms}</td>
+            <td>${listing.toilet}</td>
+            <td>${listing.floors}</td>
+            <td>${listing.furniture}</td>
+            <td>${listing.legal}</td>
+            <td>${listing.type}</td>
+            <td>${listing.map}</td>
+            <td>${listing.date}</td>
+            <td>${listing.status}</td>
+            <td class="text-right">
+                <button class="btn btn-info" onclick="editListing(${listing.id})">Sửa</button>
+                <button class="btn btn-danger" onclick="deleteListing(${listing.id})">Xóa</button>
+            </td>
+        `;
+            tableBody.appendChild(row);
+        });
+    }
+
+    // Mở form thêm mới
+    function openForm() {
+        document.getElementById('listingForm').querySelector('form').reset();
+        document.getElementById('formTitle').textContent = 'Thêm tin đăng';
+        document.getElementById('listingId').value = ''; // Reset ID
+        $('#listingForm').modal('show');
+    }
+
+    function editListing(id) {
+        const listing = listings.find(listing => listing.id === id);
+        if (listing) {
+            document.getElementById('formTitle').textContent = 'Sửa tin đăng';
+            document.getElementById('listingId').value = listing.id; // Đặt ID vào trường ẩn
+            document.getElementById('listingImage').value = ''; // Reset trường file (do không hỗ trợ trực tiếp)
+            document.getElementById('listingName').value = listing.name;
+            document.getElementById('listingDescription').value = listing.description;
+            document.getElementById('listingPrice').value = listing.price;
+            document.getElementById('listingArea').value = listing.area;
+            document.getElementById('listingBedrooms').value = listing.bedrooms;
+            document.getElementById('listingBathrooms').value = listing.bathrooms;
+            document.getElementById('listingToilet').value = listing.toilet;
+            document.getElementById('listingFloors').value = listing.floors;
+            document.getElementById('listingFurniture').value = listing.furniture;
+            document.getElementById('listingLegal').value = listing.legal;
+            document.getElementById('listingType').value = listing.type;
+            document.getElementById('listingMapLocation').value = listing.map;
+            document.getElementById('listingDate').value = listing.date;
+            document.getElementById('listingStatus').value = listing.status;
+            $('#listingForm').modal('show'); // Hiển thị modal
+        }
+    }
+
+
+    // Xóa tin đăng
+    function deleteListing(id) {
+        const confirmDelete = confirm('Bạn có chắc chắn muốn xóa tin đăng này không?');
+        if (confirmDelete) {
+            listings = listings.filter(listing => listing.id !== id);
+            renderTable(); // Cập nhật lại bảng
+        }
+    }
+
+    // Lưu hoặc sửa tin đăng
+    function saveListing() {
+        const id = document.getElementById('listingId').value;
+        const listing = {
+            id: id ? parseInt(id) : listings.length + 1, // Nếu id có thì sửa, nếu không là thêm mới
+            image: document.getElementById('listingImage').value,
+            name: document.getElementById('listingName').value,
+            description: document.getElementById('listingDescription').value,
+            price: parseFloat(document.getElementById('listingPrice').value),
+            area: parseFloat(document.getElementById('listingArea').value),
+            bedrooms: parseInt(document.getElementById('listingBedrooms').value),
+            bathrooms: parseInt(document.getElementById('listingBathrooms').value),
+            toilet: parseInt(document.getElementById('listingToilet').value),
+            floors: parseInt(document.getElementById('listingFloors').value),
+            furniture: document.getElementById('listingFurniture').value,
+            legal: document.getElementById('listingLegal').value,
+            type: document.getElementById('listingType').value,
+            map: document.getElementById('listingMapLocation').value,
+            date: document.getElementById('listingDate').value,
+            status: document.getElementById('listingStatus').value
+        };
+
+        if (id) {
+            // Sửa tin đăng
+            const index = listings.findIndex(listing => listing.id === parseInt(id));
+            listings[index] = listing;
+        } else {
+            // Thêm tin đăng mới
+            listings.push(listing);
+        }
+
+        $('#listingForm').modal('hide');
+        renderTable(); // Cập nhật bảng sau khi thêm hoặc sửa
+    }
+
+    // Khởi tạo bảng với 2 mẫu dữ liệu
+    document.addEventListener('DOMContentLoaded', function () {
+        renderTable(); // Hiển thị bảng khi trang load
+    });
+
+    let map, marker;
+
+    function initMap() {
+        const defaultLocation = { lat: 10.8231, lng: 106.6297 }; // Vị trí mặc định (Hồ Chí Minh)
+        const mapElement = document.getElementById("listingMap");
+
+        map = new google.maps.Map(mapElement, {
+            zoom: 12,
+            center: defaultLocation,
+        });
+
+        marker = new google.maps.Marker({
+            position: defaultLocation,
+            map: map,
+            draggable: true, // Cho phép kéo marker
+        });
+
+        // Lắng nghe sự kiện kéo thả marker
+        google.maps.event.addListener(marker, 'dragend', function (event) {
+            updateMapLocation(event.latLng.lat(), event.latLng.lng());
+        });
+
+        // Lắng nghe sự kiện nhấp vào bản đồ
+        google.maps.event.addListener(map, 'click', function (event) {
+            marker.setPosition(event.latLng);
+            updateMapLocation(event.latLng.lat(), event.latLng.lng());
+        });
+    }
+
+    function updateMapLocation(lat, lng) {
+        document.getElementById('listingMapLocation').value = `${lat},${lng}`;
+    }
+
+
+
+
+
+</script>
+
+
+<script data-cfasync="false" src="../../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+<script src="assets/js/jquery-3.5.1.min.js"></script>
+<script src="assets/js/popper.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/moment.min.js"></script>
+<script src="assets/js/select2.min.js"></script>
+<script src="assets/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+<script src="assets/js/bootstrap-datetimepicker.min.js"></script>
+<script src="assets/js/script.js"></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
+
+
+
+
+</body>
+
+</html>

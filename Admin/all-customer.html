@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+  <title>Bảng Quản Lý Căn Hộ</title>
+  
+  <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/plugins/fontawesome/css/fontawesome.min.css">
+  <link rel="stylesheet" href="assets/plugins/fontawesome/css/all.min.css">
+  <link rel="stylesheet" href="assets/plugins/datatables/datatables.min.css">
+  <link rel="stylesheet" href="assets/css/feathericon.min.css">
+  <link rel="stylesheet" href="assets/plugins/morris/morris.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+<div class="main-wrapper">
+  <div class="header">
+    <div class="header-left">
+      <a href="index.html" class="logo"> <img src="assets/img/hotel_logo.png" width="50" height="70" alt="logo"> <span class="logoclass">Bán Căn Hộ</span> </a>
+      <a href="index.html" class="logo logo-small"> <img src="assets/img/hotel_logo.png" alt="Logo" width="30" height="30"> </a>
+    </div>
+    <a href="javascript:void(0);" id="toggle_btn"> <i class="fe fe-text-align-left"></i> </a>
+    <a class="mobile_btn" id="mobile_btn"> <i class="fas fa-bars"></i> </a>
+    <ul class="nav user-menu">
+      <li class="nav-item dropdown noti-dropdown">
+        <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown"> <i class="fe fe-bell"></i> <span class="badge badge-pill">3</span> </a>
+        <div class="dropdown-menu notifications">
+          <div class="topnav-dropdown-header"> <span class="notification-title">Thông báo</span> <a href="javascript:void(0)" class="clear-noti"> Xóa tất cả  </a> </div>
+          <div class="noti-content">
+            <ul class="notification-list">
+              <li class="notification-message">
+                <a href="notification.html">
+                  <div class="media"> <span class="avatar avatar-sm">
+											<img class="avatar-img rounded-circle" alt="User Image" src="assets/img/profiles/avatar-02.jpg">
+											</span>
+                    <div class="media-body">
+                      <p class="noti-details"><span class="noti-title">Chờ duyệt</span> đăng tin <span class="noti-title">thuê nhà</span></p>
+                      <p class="noti-time"><span class="notification-time">4 phút trước</span> </p>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li class="notification-message">
+                <a href="#">
+                  <div class="media"> <span class="avatar avatar-sm">
+											<img class="avatar-img rounded-circle" alt="User Image" src="assets/img/profiles/avatar-11.jpg">
+											</span>
+                    <div class="media-body">
+                      <p class="noti-details"><span class="noti-title">  Đang xem xét
+													</span> hộp đồng mua bán <span class="noti-title"> căn hộ 21 tỷ</span></p>
+                      <p class="noti-time"><span class="notification-time">6 phút trước</span> </p>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li class="notification-message">
+                <a href="#">
+                  <div class="media"> <span class="avatar avatar-sm">
+											<img class="avatar-img rounded-circle" alt="User Image" src="assets/img/profiles/avatar-17.jpg">
+											</span>
+                    <div class="media-body">
+                      <p class="noti-details"><span class="noti-title">Khách hàng</span> yêu cầu <span class="noti-title">cấp lại mật khẩu
+													</span></p>
+                      <p class="noti-time"><span class="notification-time">8 phút trước</span> </p>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li class="notification-message">
+                <a href="#">
+                  <div class="media"> <span class="avatar avatar-sm">
+											<img class="avatar-img rounded-circle" alt="User Image" src="assets/img/profiles/avatar-13.jpg">
+											</span>
+                    <div class="media-body">
+                      <p class="noti-details"><span class="noti-title">Chỉ số biểu đồ
+													</span> hôm nay <span class="noti-title">
+													</span></p>
+                      <p class="noti-time"><span class="notification-time">12 phút trước</span> </p>
+                    </div>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="topnav-dropdown-footer"> <a href="notification.html">Xem tất cả</a> </div>
+        </div>
+      </li>
+      <li class="nav-item dropdown has-arrow">
+        <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown"> <span class="user-img"><img class="rounded-circle" src="assets/img/profiles/avatar-01.jpg" width="31" alt="Chí Sơn"></span> </a>
+        <div class="dropdown-menu">
+          <div class="user-header">
+            <div class="avatar avatar-sm"> <img src="assets/img/profiles/avatar-01.jpg" alt="User Image" class="avatar-img rounded-circle"> </div>
+            <div class="user-text">
+              <h6>Chí Sơn</h6>
+              <p class="text-muted mb-0">Quản Trị Viên</p>
+            </div>
+          </div> <a class="dropdown-item" href="profile.html">Hồ Sơ Của Tôi</a>  <a class="dropdown-item" href="login.html">Đăng Xuất</a> </div>
+      </li>
+    </ul>
+  </div>
+
+
+
+
+  <!-- danh mục -->
+  <div class="sidebar" id="sidebar">
+    <div class="sidebar-inner slimscroll">
+      <div id="sidebar-menu" class="sidebar-menu">
+        <ul>
+          <li> <a href="index.html"><i class="fa-solid fa-house"></i> <span>Trang chủ</span></a> </li>
+          <li class="list-divider"></li>
+
+          <li> <a href="all-customer.html"><i class="fas fa-user"></i>  <span>Khách Hàng</span></a> </li>
+
+
+
+          <li> <a href="sell.html"><i class="fas fa-cube"></i> <span>Căn Hộ</span></a> </li>
+
+          <li> <a href="notification.html"><i class="far fa-bell"></i> <span>Thông báo</span></a> </li>
+
+          <li> <a href="transaction.html"><i class="far fa-money-bill-alt"></i> <span>Giao dịch</span></a> </li>
+
+
+          <li class="submenu"> <a href="#"><i class="fas fa-columns"></i> <span> Tùy Chọn </span> <span class="menu-arrow"></span></a>
+            <ul class="submenu_class" style="display: none;">
+              <li><a href="login.html">Đăng Nhập </a></li>
+              <li><a href="register.html">Đăng Ký </a></li>
+              <li><a href="forgot-password.html">Quên Mật Khẩu </a></li>
+              <li><a href="lock-screen.html">Khóa Màn Hình </a></li>
+              <li><a href="profile.html">Hồ Sơ </a></li>
+              <li><a href="error-404.html">404 Error </a></li>
+              <li><a href="error-500.html">500 Error </a></li>
+            </ul>
+          </li>
+
+          <li> <a href="#"><i class="fas fa-cog"></i> <span>Cài Đặt</span></a> </li>
+
+          <li class="submenu"> <a href="#"><i class="fas fa-user"></i>  <span> Tôi </span> <span class="menu-arrow"></span></a>
+            <ul class="submenu_class" style="display: none;">
+              <li><a href="profile.html"> Hồ Sơ Của Tôi </a></li>
+              <li><a href="lock-screen.html"> Đăng Xuất </a></li>
+
+            </ul>
+          </li>
+
+          <li> <a href="login.html"><i class="fa-solid fa-right-from-bracket"></i> <span>Đăng Xuất</span></a> </li>
+
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="page-wrapper">
+    <div class="content container-fluid">
+      <div class="page-header">
+        <div class="row align-items-center">
+          <div class="col">
+            <h4 class="card-title float-left mt-2">Danh sách khách hàng</h4>
+            <button class="btn btn-primary float-right add-customer" data-toggle="modal" data-target="#customerForm" onclick="openForm()">Thêm khách hàng</button>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="card card-table">
+            <div class="card-body booking_card">
+              <div class="table-responsive">
+                <table class="table table-striped table-hover table-center mb-0">
+                  <thead>
+                  <tr>
+                    <th>ID</th>
+                    <th>Tên</th>
+                    <th>Mật khẩu</th>
+                    <th>Email</th>
+                    <th>SĐT</th>
+                    <th>Quyền</th>
+                    <th>Ngày tạo</th>
+                    <th>Thời gian đăng nhập lần cuối</th>
+                    <th>Căn hộ yêu thích</th>
+                    <th>Trạng thái người dùng</th>
+                    <th class="text-right">Hành động</th>
+                  </tr>
+                  </thead>
+                  <tbody id="customerTable">
+                  <!-- Thêm dữ liệu khách hàng ở đây -->
+                  </tbody>
+
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+  <!-- Form Thêm/Sửa Khách Hàng -->
+  <div class="modal fade" id="customerForm" tabindex="-1" role="dialog" aria-labelledby="customerFormLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="customerFormLabel">Thêm/Sửa Khách Hàng</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form id="customerFormContent">
+            <input type="hidden" id="customerId">
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <label for="customerName" class="form-label">Tên</label>
+                <input type="text" id="customerName" class="form-control" placeholder="Nhập tên" required>
+              </div>
+              <div class="col-md-6 mb-3">
+                <label for="customerPassword" class="form-label">Mật khẩu</label>
+                <input type="password" id="customerPassword" class="form-control" placeholder="Nhập mật khẩu" required>
+              </div>
+              <div class="col-md-6 mb-3">
+                <label for="customerEmail" class="form-label">Email</label>
+                <input type="email" id="customerEmail" class="form-control" placeholder="Nhập email" required>
+              </div>
+              <div class="col-md-6 mb-3">
+                <label for="customerPhone" class="form-label">SĐT</label>
+                <input type="text" id="customerPhone" class="form-control" placeholder="Nhập số điện thoại" required>
+              </div>
+              <div class="col-md-6 mb-3">
+                <label for="customerRole" class="form-label">Quyền</label>
+                <select id="customerRole" class="form-control">
+                  <option value="user">User</option>
+                  <option value="admin">Admin</option>
+                </select>
+              </div>
+              <div class="col-md-6 mb-3">
+                <label for="customerFavorite" class="form-label">Căn hộ yêu thích</label>
+                <input type="text" id="customerFavorite" class="form-control" placeholder="Nhập căn hộ yêu thích">
+              </div>
+              <div class="col-md-6 mb-3">
+                <label for="userState" class="form-label">Trạng thái người dùng</label>
+                <select id="userState" class="form-control">
+                  <option value="Online">Online</option>
+                  <option value="Offline">Offline</option>
+                </select>
+              </div>
+              <div class="col-md-6 mb-3">
+                <label for="accountCreated" class="form-label">Ngày tạo tài khoản</label>
+                <input type="date" id="accountCreated" class="form-control" placeholder="Chọn ngày tạo tài khoản">
+              </div>
+              <div class="col-md-6 mb-3">
+                <label for="lastLoginTime" class="form-label">Thời gian đăng nhập lần cuối</label>
+                <input type="datetime-local" id="lastLoginTime" class="form-control" placeholder="Nhập thời gian đăng nhập lần cuối">
+              </div>
+            </div>
+            <button type="submit" class="btn btn-primary" onclick="saveCustomer(event)">Lưu</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+</div>
+
+
+
+<script>
+  let customers = [
+    {
+      id: 1,
+      name: "Nguyễn Văn A",
+      password: "password123",
+      email: "nguyenvana@example.com",
+      phone: "0901234567",
+      role: "user",
+      createdAt: "2024-01-15",
+      lastLogin: "2024-11-15 10:00",
+      favorite: "Căn hộ A1",
+      userState: "Online"
+    },
+    {
+      id: 2,
+      name: "Trần Thị B",
+      password: "password456",
+      email: "tranthib@example.com",
+      phone: "0907654321",
+      role: "admin",
+      createdAt: "2023-10-10",
+      lastLogin: "2024-11-12 09:30",
+      favorite: "Căn hộ B2",
+      userState: "Offline"
+    },
+    {
+      id: 3,
+      name: "Lê Minh C",
+      password: "password789",
+      email: "leminhc@example.com",
+      phone: "0912345678",
+      role: "user",
+      createdAt: "2024-03-22",
+      lastLogin: "2024-11-20 14:45",
+      favorite: "Căn hộ C3",
+      userState: "Online"
+    },
+    {
+      id: 4,
+      name: "Phan Thị D",
+      password: "password101112",
+      email: "phanthid@example.com",
+      phone: "0922334455",
+      role: "admin",
+      createdAt: "2024-02-01",
+      lastLogin: "2024-11-18 16:00",
+      favorite: "Căn hộ D4",
+      userState: "Offline"
+    },
+    {
+      id: 5,
+      name: "Ngô Văn E",
+      password: "password131415",
+      email: "ngovane@example.com",
+      phone: "0933445566",
+      role: "user",
+      createdAt: "2024-04-15",
+      lastLogin: "2024-11-10 08:30",
+      favorite: "Căn hộ E5",
+      userState: "Online"
+    },
+    {
+      id: 6,
+      name: "Vũ Thị F",
+      password: "password161718",
+      email: "vuthif@example.com",
+      phone: "0944556677",
+      role: "user",
+      createdAt: "2024-05-10",
+      lastLogin: "2024-11-19 11:15",
+      favorite: "Căn hộ F6",
+      userState: "Offline"
+    },
+    {
+      id: 7,
+      name: "Bùi Minh G",
+      password: "password192021",
+      email: "buimingh@example.com",
+      phone: "0955667788",
+      role: "admin",
+      createdAt: "2023-11-05",
+      lastLogin: "2024-11-11 17:20",
+      favorite: "Căn hộ G7",
+      userState: "Online"
+    },
+    {
+      id: 8,
+      name: "Hoàng Thị H",
+      password: "password222324",
+      email: "hoangthih@example.com",
+      phone: "0966778899",
+      role: "user",
+      createdAt: "2024-06-18",
+      lastLogin: "2024-11-16 13:00",
+      favorite: "Căn hộ H8",
+      userState: "Offline"
+    },
+    {
+      id: 9,
+      name: "Đặng Văn I",
+      password: "password252627",
+      email: "dangvani@example.com",
+      phone: "0977889900",
+      role: "admin",
+      createdAt: "2024-07-30",
+      lastLogin: "2024-11-14 12:25",
+      favorite: "Căn hộ I9",
+      userState: "Online"
+    },
+    {
+      id: 10,
+      name: "Lý Thị J",
+      password: "password282930",
+      email: "lythij@example.com",
+      phone: "0988990011",
+      role: "user",
+      createdAt: "2024-08-25",
+      lastLogin: "2024-11-13 15:45",
+      favorite: "Căn hộ J10",
+      userState: "Offline"
+    }
+  ];
+
+
+  function renderCustomers() {
+    const customerTable = document.getElementById("customerTable");
+    customerTable.innerHTML = "";
+
+    customers.forEach(customer => {
+      const row = document.createElement("tr");
+
+      row.innerHTML = `
+            <td>${customer.id}</td>
+            <td>${customer.name}</td>
+            <td>${customer.password}</td>
+            <td>${customer.email}</td>
+            <td>${customer.phone}</td>
+            <td>${customer.role}</td>
+            <td>${customer.createdAt}</td>
+            <td>${customer.lastLogin}</td>
+            <td>${customer.favorite}</td>
+            <td>${customer.userState}</td>
+            <td class="text-right">
+                <button class="btn btn-info" onclick="editCustomer(${customer.id})">Sửa</button>
+                <button class="btn btn-danger" onclick="deleteCustomer(${customer.id})">Xóa</button>
+            </td>
+        `;
+
+      customerTable.appendChild(row);
+    });
+  }
+
+  function saveCustomer(event) {
+    event.preventDefault();
+
+    const id = document.getElementById("customerId").value;
+    const customer = {
+      id: id ? parseInt(id) : customers.length + 1,
+      name: document.getElementById("customerName").value,
+      password: document.getElementById("customerPassword").value,
+      email: document.getElementById("customerEmail").value,
+      phone: document.getElementById("customerPhone").value,
+      role: document.getElementById("customerRole").value,
+      createdAt: document.getElementById("accountCreated").value || new Date().toISOString().split("T")[0],
+      lastLogin: document.getElementById("lastLoginTime").value || "Chưa đăng nhập",
+      favorite: document.getElementById("customerFavorite").value,
+      userState: document.getElementById("userState").value
+    };
+
+    if (id) {
+      // Cập nhật khách hàng
+      const index = customers.findIndex(c => c.id == id);
+      customers[index] = customer;
+    } else {
+      // Thêm khách hàng mới
+      customers.push(customer);
+    }
+
+    renderCustomers();
+    resetForm();
+    $('#customerForm').modal('hide');
+  }
+
+  function editCustomer(id) {
+    const customer = customers.find(c => c.id === id);
+
+    if (customer) {
+      document.getElementById("customerId").value = customer.id;
+      document.getElementById("customerName").value = customer.name;
+      document.getElementById("customerPassword").value = customer.password;
+      document.getElementById("customerEmail").value = customer.email;
+      document.getElementById("customerPhone").value = customer.phone;
+      document.getElementById("customerRole").value = customer.role;
+      document.getElementById("customerFavorite").value = customer.favorite;
+      document.getElementById("userState").value = customer.userState;
+      document.getElementById("accountCreated").value = customer.createdAt;
+      document.getElementById("lastLoginTime").value = customer.lastLogin;
+
+      $('#customerForm').modal('show');
+    }
+  }
+
+  function deleteCustomer(id) {
+    if (confirm("Bạn có chắc chắn muốn xóa khách hàng này?")) {
+      customers = customers.filter(c => c.id !== id);
+      renderCustomers();
+    }
+  }
+
+  function openForm() {
+    resetForm();
+    $('#customerForm').modal('show');
+  }
+
+  function resetForm() {
+    document.getElementById("customerFormContent").reset();
+    document.getElementById("customerId").value = "";
+  }
+
+  document.getElementById("customerFormContent").addEventListener("submit", saveCustomer);
+
+  // Render lại bảng khi trang tải
+  document.addEventListener("DOMContentLoaded", function () {
+    renderCustomers();
+  });
+
+</script>
+
+
+
+
+
+
+<script data-cfasync="false" src="../../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+<script src="assets/js/jquery-3.5.1.min.js"></script>
+<script src="assets/js/popper.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/plugins/datatables/jquery.dataTables.min.js"></script>
+<script src="assets/plugins/datatables/datatables.min.js"></script>
+<script src="assets/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+<script src="assets/plugins/raphael/raphael.min.js"></script>
+<script src="assets/js/script.js"></script>
+</body>
+
+</html>

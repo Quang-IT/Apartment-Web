@@ -1,0 +1,306 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.footer {
+    background-color: #f5f5f5;
+    padding: 20px;
+    color: #333;
+    font-size: 14px;
+}
+
+.footer-section {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+    flex-wrap: wrap;
+}
+
+.footer-section.top {
+    align-items: flex-start;
+}
+
+.footer-brand, .footer-links, .footer-subscribe {
+    flex: 1;
+    margin-bottom: 20px;
+}
+
+.footer-logo {
+    max-width: 150px;
+    margin-bottom: 10px;
+}
+
+.company-name {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.download-links {
+    display: flex;
+    gap: 10px;
+}
+
+.app-icon {
+    width: 100px;
+}
+
+.footer-links ul {
+    list-style: none;
+    margin-right: 70px;
+}
+.footer-links{
+    display:flex;
+}
+.footer-links h4, .footer-subscribe h4 {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+}
+
+.footer-links ul li a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.footer-subscribe form {
+    display: flex;
+    margin-top: 10px;
+}
+
+.footer-subscribe input[type="email"] {
+    padding: 5px;
+    flex: 1;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px;
+}
+
+.footer-subscribe button {
+    padding: 5px;
+    background-color: #e53935;
+    color: white;
+    border: none;
+    border-radius: 0 5px 5px 0;
+}
+.language-select {
+    margin-top: 20px;
+}
+
+.language-select select {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #ccc;
+}
+
+.footer-section.branches {
+    flex-direction: column;
+    text-align: left;
+    gap: 20px;
+}
+
+.branch-info {
+    display: flex;
+    gap: 20px;
+    width:100%;
+}
+
+.footer-section.bottom {
+    align-items: center;
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.social-icon {
+    width: 24px;
+    height: 24px;
+}
+
+/* Responsive CSS */
+
+@media (max-width: 1024px) {
+    .footer-section {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-brand, .footer-links, .footer-subscribe {
+        margin-bottom: 20px;
+    }
+
+    .branch-info {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+.language-select {
+    margin-top: 20px;
+}
+
+.language-select select {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #ccc;
+}
+
+.footer-section.branches {
+    flex-direction: column;
+    text-align: left;
+    gap: 20px;
+}
+
+.branch-info {
+    display: flex;
+    gap: 20px;
+    width:100%;
+}
+
+.footer-section.bottom {
+    align-items: center;
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.social-icon {
+    width: 24px;
+    height: 24px;
+}
+
+/* Responsive CSS */
+
+@media (max-width: 1024px) {
+    .footer-section {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-brand, .footer-links, .footer-subscribe {
+        margin-bottom: 20px;
+    }
+
+    .branch-info {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-subscribe form {
+        flex-direction: column;
+    }
+
+    .footer-subscribe input[type="email"],
+    .footer-subscribe button {
+        width: 100%;
+        margin-bottom: 5px;
+        border-radius: 5px;
+    }
+
+    .footer-subscribe button {
+        border-radius: 5px;
+    }
+
+    .download-links {
+        flex-direction: column;
+    }
+
+    .app-icon {
+        width: 120px;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-logo {
+        max-width: 100px;
+    }
+
+    .footer-subscribe form {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-subscribe input[type="email"] {
+        margin-bottom: 10px;
+    }
+
+    .footer-links, .footer-brand, .footer-subscribe {
+        text-align: center;
+    }
+
+    .branch-info {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+}
+._hj-widget-container{
+    width: 36px;
+    height: 38px;
+    background-color: rgba(0,0,0,0.6) !important;
+    color: #fff;
+    padding: 4px 4px;
+    border-radius: 4px;
+    z-index: 9;
+    border: none;
+    transform: translateX(0px) translateY(0px) !important;
+    display: block
+}
+.slider-container {
+    margin-top: -1080px;
+}
+
+.slider-container #productCarousel {
+    width: 100%;
+    max-width: 990px; /* Đảm bảo kích thước tối đa trên màn hình lớn */
+    height: auto; /* Chiều cao tự động để giữ tỷ lệ */
+    margin: 0 auto;
+    position: relative;
+}
+
+.slider-container .carousel-inner .carousel-item img {
+    width: 100%; /* Chiếm toàn bộ chiều ngang slider */
+    height: auto; /* Tự động điều chỉnh chiều cao */
+    object-fit: cover;
+}
+
+/* Định dạng cho nội dung bên trong */
+.slider-container .carousel-caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    z-index: 2;
+
+}
+
+
+

@@ -1,0 +1,173 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Thiết lập cho body */
+body {
+    font-family: Tahoma, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Định dạng container */
+.container {
+    width: 100%;
+    max-width: 400px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+/* Khu vực nội dung chính */
+.containt {
+    height: 600px; /* Giữ chiều cao 600px */
+    padding: 20px;
+    display: flex;
+    flex-direction: column; /* Xếp theo chiều dọc */
+    justify-content: space-between; /* Căn giữa các phần tử với không gian đều */
+}
+
+/* Tiêu đề */
+h2 {
+    font-size: 18px;
+    margin-bottom: 5px; /* Giảm khoảng cách dưới */
+    text-align: center;
+}
+
+h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Định dạng nhóm input */
+.input-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px; /* Khoảng cách dưới */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    transition: border-color 0.3s ease; /* Tạo hiệu ứng mượt mà khi chuyển màu */
+}
+
+.input-group:focus-within {
+    border-color: black; /* Đổi màu viền khi có focus */
+}
+
+.input-group input {
+    border: none;
+    outline: none;
+    flex: 1;
+    padding: 5px;
+}
+
+/* Định dạng icon trong nhóm input */
+.input-group i {
+    margin-right: 10px;
+    color: black;
+}
+
+/* Định dạng cho nút */
+.btn,
+.social-btn {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Nút đăng nhập chính */
+.btn {
+    background-color: red; /* Màu chính */
+    color: white;
+    margin-bottom: 15px; /* Khoảng cách dưới */
+}
+
+.btn:hover {
+    background-color: #e80c0c; /* Màu đậm hơn khi hover */
+    transform: scale(1.02); /* Hiệu ứng phóng to */
+}
+
+/* Nút mạng xã hội với nền trắng */
+.social-btn {
+    background-color: #ffffff; /* Nền trắng */
+    color: #000; /* Màu chữ đen */
+    border: 1px solid #ccc; /* Viền nhẹ để phân biệt nút */
+    margin-bottom: 10px; /* Khoảng cách dưới */
+    padding-left: 14px; /* Dịch chuyển chữ sang bên trái */
+    position: relative; /* Để có thể đặt logo */
+}
+
+/* Nút Facebook với nền trắng */
+.social-btn.facebook {
+    color: black;
+}
+
+.social-btn.facebook:hover {
+    background-color: #f0f0f0;
+}
+
+/* Nút Google với nền trắng */
+.social-btn.google {
+    color: black;
+}
+
+.social-btn.google:hover {
+    background-color: #f0f0f0;
+}
+
+/* Định dạng cho phần lựa chọn và liên kết điều khoản */
+.options {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.or {
+    text-align: center;
+    margin: 20px 0;
+}
+
+/* Liên kết điều khoản và đăng ký */
+.terms, .register {
+    text-align: center;
+    font-size: 14px; /* Giữ kích thước chữ nhỏ */
+}
+
+.terms a, .register a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.terms a:hover, .register a:hover {
+    text-decoration: underline;
+}
+
+/* Định dạng cho hình ảnh trong nút mạng xã hội */
+.img-face {
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    top: 9px;
+    left: 50px;
+}
+
+.img-gg {
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    top: 9px;
+    left: 55px;
+}

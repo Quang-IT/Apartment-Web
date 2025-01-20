@@ -1,0 +1,61 @@
+/* Đảm bảo header chiếm toàn bộ chiều rộng và cố định trên cùng */
+header.header-area {
+    position: sticky; /* Giữ cố định khi cuộn */
+    top: 0; /* Cố định tại vị trí trên cùng */
+    width: 100%; /* Chiếm toàn bộ chiều rộng */
+    z-index: 1000; /* Ưu tiên hiển thị phía trước nội dung khác */
+    background-color: #ffffff; /* Màu nền (có thể thay đổi tùy ý) */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Tạo hiệu ứng đổ bóng */
+}
+
+/* Định dạng container bên trong */
+header.header-area .container {
+    max-width: 100%; /* Đảm bảo nội dung trải đều */
+    padding: 0 15px; /* Thêm khoảng cách hai bên */
+}
+
+/* Navbar customizations */
+header.header-area .navbar {
+    padding: 10px 0; /* Khoảng cách trên và dưới trong navbar */
+}
+
+/* Logo và tên thương hiệu */
+header.header-area .navbar-brand {
+    display: flex;
+    align-items: center;
+}
+
+header.header-area .navbar-brand img {
+    margin-right: 10px; /* Khoảng cách giữa logo và chữ */
+}
+
+/* Link trong navbar */
+header.header-area .nav-link {
+    color: #333; /* Màu chữ */
+    transition: color 0.3s ease; /* Hiệu ứng mượt khi hover */
+}
+
+header.header-area .nav-link:hover {
+    color: #007bff; /* Đổi màu khi hover */
+}
+
+/* Dropdown menu */
+header.header-area .dropdown-menu {
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header.header-area .dropdown-item:hover {
+    background-color: #f8f9fa; /* Màu nền khi hover */
+}
+
+/* Mobile toggle button */
+header.header-area .navbar-toggler {
+    border: none;
+    outline: none;
+}
+
+header.header-area .navbar-toggler-icon {
+    background-color: #333;
+}

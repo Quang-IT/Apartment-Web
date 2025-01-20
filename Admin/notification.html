@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+    <title>Bảng Quản Lý Căn Hộ</title>
+
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/plugins/fontawesome/css/fontawesome.min.css">
+    <link rel="stylesheet" href="assets/plugins/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="assets/plugins/datatables/datatables.min.css">
+    <link rel="stylesheet" href="assets/css/feathericon.min.css">
+    <link rel="stylesheet" href="assets/plugins/morris/morris.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+
+
+
+</head>
+
+<body>
+<div class="main-wrapper">
+    <div class="header">
+        <div class="header-left">
+            <a href="index.html" class="logo"> <img src="assets/img/hotel_logo.png" width="50" height="70" alt="logo"> <span class="logoclass">Bán Căn Hộ</span> </a>
+            <a href="index.html" class="logo logo-small"> <img src="assets/img/hotel_logo.png" alt="Logo" width="30" height="30"> </a>
+        </div>
+        <a href="javascript:void(0);" id="toggle_btn"> <i class="fe fe-text-align-left"></i> </a>
+        <a class="mobile_btn" id="mobile_btn"> <i class="fas fa-bars"></i> </a>
+        <ul class="nav user-menu">
+            <li class="nav-item dropdown noti-dropdown">
+                <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown"> <i class="fe fe-bell"></i> <span class="badge badge-pill">3</span> </a>
+                <div class="dropdown-menu notifications">
+                    <div class="topnav-dropdown-header"> <span class="notification-title">Thông báo</span> <a href="javascript:void(0)" class="clear-noti"> Xóa tất cả  </a> </div>
+                    <div class="noti-content">
+                        <ul class="notification-list">
+                            <li class="notification-message">
+                                <a href="notification.html">
+                                    <div class="media"> <span class="avatar avatar-sm">
+											<img class="avatar-img rounded-circle" alt="User Image" src="assets/img/profiles/avatar-02.jpg">
+											</span>
+                                        <div class="media-body">
+                                            <p class="noti-details"><span class="noti-title">Chờ duyệt</span> đăng tin <span class="noti-title">thuê nhà</span></p>
+                                            <p class="noti-time"><span class="notification-time">4 phút trước</span> </p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="notification-message">
+                                <a href="#">
+                                    <div class="media"> <span class="avatar avatar-sm">
+											<img class="avatar-img rounded-circle" alt="User Image" src="assets/img/profiles/avatar-11.jpg">
+											</span>
+                                        <div class="media-body">
+                                            <p class="noti-details"><span class="noti-title">  Đang xem xét
+													</span> hộp đồng mua bán <span class="noti-title"> căn hộ 21 tỷ</span></p>
+                                            <p class="noti-time"><span class="notification-time">6 phút trước</span> </p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="notification-message">
+                                <a href="#">
+                                    <div class="media"> <span class="avatar avatar-sm">
+											<img class="avatar-img rounded-circle" alt="User Image" src="assets/img/profiles/avatar-17.jpg">
+											</span>
+                                        <div class="media-body">
+                                            <p class="noti-details"><span class="noti-title">Khách hàng</span> yêu cầu <span class="noti-title">cấp lại mật khẩu
+													</span></p>
+                                            <p class="noti-time"><span class="notification-time">8 phút trước</span> </p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="notification-message">
+                                <a href="#">
+                                    <div class="media"> <span class="avatar avatar-sm">
+											<img class="avatar-img rounded-circle" alt="User Image" src="assets/img/profiles/avatar-13.jpg">
+											</span>
+                                        <div class="media-body">
+                                            <p class="noti-details"><span class="noti-title">Chỉ số biểu đồ
+													</span> hôm nay <span class="noti-title">
+													</span></p>
+                                            <p class="noti-time"><span class="notification-time">12 phút trước</span> </p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="topnav-dropdown-footer"> <a href="notification.html">Xem tất cả</a> </div>
+                </div>
+            </li>
+            <li class="nav-item dropdown has-arrow">
+                <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown"> <span class="user-img"><img class="rounded-circle" src="assets/img/profiles/avatar-01.jpg" width="31" alt="Soeng Souy"></span> </a>
+                <div class="dropdown-menu">
+                    <div class="user-header">
+                        <div class="avatar avatar-sm"> <img src="assets/img/profiles/avatar-01.jpg" alt="User Image" class="avatar-img rounded-circle"> </div>
+                        <div class="user-text">
+                            <h6>Chí Sơn</h6>
+                            <p class="text-muted mb-0">Quản trị viên</p>
+                        </div>
+                    </div> <a class="dropdown-item" href="profile.html">Hồ sơ của tôi</a> <a class="dropdown-item" href="login.html">Đăng xuất</a> </div>
+            </li>
+        </ul>
+    </div>
+
+
+
+
+    <!-- danh mục -->
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-inner slimscroll">
+            <div id="sidebar-menu" class="sidebar-menu">
+                <ul>
+                    <li> <a href="index.html"><i class="fa-solid fa-house"></i> <span>Trang chủ</span></a> </li>
+                    <li class="list-divider"></li>
+
+                    <li> <a href="all-customer.html"><i class="fas fa-user"></i>  <span>Khách Hàng</span></a> </li>
+
+
+
+                    <li> <a href="sell.html"><i class="fas fa-cube"></i> <span>Căn Hộ</span></a> </li>
+
+
+                    <li> <a href="notification.html"><i class="far fa-bell"></i> <span>Thông báo</span></a> </li>
+
+                    <li> <a href="transaction.html"><i class="far fa-money-bill-alt"></i> <span>Giao dịch</span></a> </li>
+
+                    <li class="submenu"> <a href="#"><i class="fas fa-columns"></i> <span> Tùy Chọn </span> <span class="menu-arrow"></span></a>
+                        <ul class="submenu_class" style="display: none;">
+                            <li><a href="login.html">Đăng Nhập </a></li>
+                            <li><a href="register.html">Đăng Ký </a></li>
+                            <li><a href="forgot-password.html">Quên Mật Khẩu </a></li>
+                            <li><a href="lock-screen.html">Khóa Màn Hình </a></li>
+                            <li><a href="profile.html">Hồ Sơ </a></li>
+                            <li><a href="error-404.html">404 Error </a></li>
+                            <li><a href="error-500.html">500 Error </a></li>
+                        </ul>
+                    </li>
+
+                    <li> <a href="#"><i class="fas fa-cog"></i> <span>Cài Đặt</span></a> </li>
+
+                    <li class="submenu"> <a href="#"><i class="fas fa-user"></i>  <span> Tôi </span> <span class="menu-arrow"></span></a>
+                        <ul class="submenu_class" style="display: none;">
+                            <li><a href="profile.html"> Hồ Sơ Của Tôi </a></li>
+                            <li><a href="lock-screen.html"> Đăng Xuất </a></li>
+
+                        </ul>
+                    </li>
+
+                    <li> <a href="login.html"><i class="fa-solid fa-right-from-bracket"></i> <span>Đăng Xuất</span></a> </li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="page-wrapper">
+        <div class="content container-fluid">
+            <div class="page-header">
+                <div class="row align-items-center">
+                    <div class="col">
+                        <h4 class="card-title float-left mt-2">Thông Báo Duyệt Tin Của Khách Hàng!</h4>
+
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="card card-table">
+                        <div class="card-body booking_card">
+                            <div class="table-responsive">
+                                <table class="table table-striped table-hover table-center mb-0">
+                                    <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Ảnh</th>
+                                        <th>Tên</th>
+                                        <th>Mô tả</th>
+                                        <th>Diện tích</th>
+                                        <th>Mức giá</th>
+                                        <th>Phòng ngủ</th>
+                                        <th>Phòng tắm</th>
+                                        <th>Toilet</th>
+                                        <th>Số tầng</th>
+                                        <th>Nội thất</th>
+                                        <th>Pháp lý</th>
+                                        <th>Địa chỉ</th>
+                                        <th>Loại căn hộ</th>
+                                        <th>Người đăng</th>
+                                        <th>Ngày đăng</th>
+                                        <th>Trạng thái</th>
+                                        <th class="text-right">Hành động</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody id="houseTable">
+                                    <!-- Dữ liệu căn hộ sẽ được thêm tại đây -->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Dữ liệu mẫu
+            const houses = [
+                {
+                    id: 1,
+                    image: "https://via.placeholder.com/100",
+                    name: "Căn hộ Sunrise City",
+                    description: "Căn hộ đẹp, view thành phố.",
+                    area: "120m²",
+                    price: "5 tỷ",
+                    bedrooms: 3,
+                    bathrooms: 2,
+                    toilets: 2,
+                    floors: 1,
+                    furniture: "Đầy đủ nội thất",
+                    legality: "Sổ hồng",
+                    address: "Quận 7, TP.HCM",
+                    apartmentType: "Chung cư",
+                    poster: "Nguyễn Văn A",
+                    postedDate: "2024-12-01",
+                    status: "Chờ duyệt",
+                },
+                {
+                    id: 2,
+                    image: "https://via.placeholder.com/100",
+                    name: "Căn hộ Vinhomes",
+                    description: "Căn hộ cao cấp, an ninh tốt.",
+                    area: "80m²",
+                    price: "3 tỷ",
+                    bedrooms: 2,
+                    bathrooms: 1,
+                    toilets: 1,
+                    floors: 1,
+                    furniture: "Cơ bản",
+                    legality: "Sổ đỏ",
+                    address: "Bình Thạnh, TP.HCM",
+                    apartmentType: "Chung cư",
+                    poster: "Trần Thị B",
+                    postedDate: "2024-11-30",
+                    status: "Chờ duyệt",
+                },{
+                    id: 3,
+                    image: "https://via.placeholder.com/100",
+                    name: "Căn hộ City Garden",
+                    description: "Căn hộ hiện đại, đầy đủ tiện nghi.",
+                    area: "100m²",
+                    price: "4 tỷ",
+                    bedrooms: 2,
+                    bathrooms: 2,
+                    toilets: 2,
+                    floors: 2,
+                    furniture: "Cao cấp",
+                    legality: "Sổ hồng",
+                    address: "Bình Thạnh, TP.HCM",
+                    apartmentType: "Chung cư",
+                    poster: "Lê Văn C",
+                    postedDate: "2024-11-29",
+                    status: "Chờ duyệt",
+                },
+                {
+                    id: 4,
+                    image: "https://via.placeholder.com/100",
+                    name: "Căn hộ Masteri Thảo Điền",
+                    description: "Căn hộ cao cấp tại trung tâm Thảo Điền.",
+                    area: "75m²",
+                    price: "3.5 tỷ",
+                    bedrooms: 2,
+                    bathrooms: 2,
+                    toilets: 2,
+                    floors: 1,
+                    furniture: "Đầy đủ",
+                    legality: "Sổ đỏ",
+                    address: "Thảo Điền, TP.HCM",
+                    apartmentType: "Chung cư",
+                    poster: "Nguyễn Thị D",
+                    postedDate: "2024-11-28",
+                    status: "Chờ duyệt",
+                },
+                {
+                    id: 5,
+                    image: "https://via.placeholder.com/100",
+                    name: "Căn hộ Golden River",
+                    description: "Căn hộ sang trọng, gần sông.",
+                    area: "90m²",
+                    price: "6 tỷ",
+                    bedrooms: 3,
+                    bathrooms: 2,
+                    toilets: 2,
+                    floors: 1,
+                    furniture: "Đầy đủ",
+                    legality: "Sổ hồng",
+                    address: "Quận 1, TP.HCM",
+                    apartmentType: "Chung cư",
+                    poster: "Trần Văn E",
+                    postedDate: "2024-11-27",
+                    status: "Chờ duyệt",
+                },
+                {
+                    id: 6,
+                    image: "https://via.placeholder.com/100",
+                    name: "Căn hộ Estella Heights",
+                    description: "Căn hộ cao cấp với hồ bơi riêng.",
+                    area: "110m²",
+                    price: "7 tỷ",
+                    bedrooms: 3,
+                    bathrooms: 3,
+                    toilets: 3,
+                    floors: 2,
+                    furniture: "Cao cấp",
+                    legality: "Sổ hồng",
+                    address: "Quận 2, TP.HCM",
+                    apartmentType: "Chung cư",
+                    poster: "Phạm Thị F",
+                    postedDate: "2024-11-26",
+                    status: "Chờ duyệt",
+                },
+                {
+                    id: 7,
+                    image: "https://via.placeholder.com/100",
+                    name: "Căn hộ Lexington Residence",
+                    description: "Căn hộ giá rẻ, tiện ích đầy đủ.",
+                    area: "70m²",
+                    price: "2.8 tỷ",
+                    bedrooms: 2,
+                    bathrooms: 1,
+                    toilets: 1,
+                    floors: 1,
+                    furniture: "Cơ bản",
+                    legality: "Sổ đỏ",
+                    address: "Quận 2, TP.HCM",
+                    apartmentType: "Chung cư",
+                    poster: "Nguyễn Văn G",
+                    postedDate: "2024-11-25",
+                    status: "Chờ duyệt",
+                },
+                {
+                    id: 8,
+                    image: "https://via.placeholder.com/100",
+                    name: "Căn hộ Feliz En Vista",
+                    description: "Căn hộ phong cách resort.",
+                    area: "85m²",
+                    price: "5 tỷ",
+                    bedrooms: 2,
+                    bathrooms: 2,
+                    toilets: 2,
+                    floors: 1,
+                    furniture: "Cao cấp",
+                    legality: "Sổ hồng",
+                    address: "Quận 2, TP.HCM",
+                    apartmentType: "Chung cư",
+                    poster: "Lê Thị H",
+                    postedDate: "2024-11-24",
+                    status: "Chờ duyệt",
+                },
+                {
+                    id: 9,
+                    image: "https://via.placeholder.com/100",
+                    name: "Căn hộ Palm Heights",
+                    description: "Căn hộ xanh với không gian mở.",
+                    area: "95m²",
+                    price: "4.5 tỷ",
+                    bedrooms: 2,
+                    bathrooms: 2,
+                    toilets: 2,
+                    floors: 1,
+                    furniture: "Đầy đủ",
+                    legality: "Sổ đỏ",
+                    address: "Quận 9, TP.HCM",
+                    apartmentType: "Chung cư",
+                    poster: "Phạm Văn I",
+                    postedDate: "2024-11-23",
+                    status: "Chờ duyệt",
+                },
+                {
+                    id: 10,
+                    image: "https://via.placeholder.com/100",
+                    name: "Căn hộ Sala Đại Quang Minh",
+                    description: "Căn hộ cao cấp tại khu đô thị Sala.",
+                    area: "120m²",
+                    price: "10 tỷ",
+                    bedrooms: 4,
+                    bathrooms: 3,
+                    toilets: 3,
+                    floors: 2,
+                    furniture: "Cao cấp",
+                    legality: "Sổ hồng",
+                    address: "Quận 2, TP.HCM",
+                    apartmentType: "Chung cư",
+                    poster: "Nguyễn Thị J",
+                    postedDate: "2024-11-22",
+                    status: "Chờ duyệt",
+                },
+                {
+                    id: 11,
+                    image: "https://via.placeholder.com/100",
+                    name: "Căn hộ Diamond Island",
+                    description: "Căn hộ ven sông, không gian yên tĩnh.",
+                    area: "100m²",
+                    price: "9 tỷ",
+                    bedrooms: 3,
+                    bathrooms: 3,
+                    toilets: 3,
+                    floors: 1,
+                    furniture: "Đầy đủ",
+                    legality: "Sổ đỏ",
+                    address: "Quận 2, TP.HCM",
+                    apartmentType: "Chung cư",
+                    poster: "Trần Văn K",
+                    postedDate: "2024-11-21",
+                    status: "Chờ duyệt",
+                },
+                {
+                    id: 12,
+                    image: "https://via.placeholder.com/100",
+                    name: "Căn hộ The Vista An Phú",
+                    description: "Căn hộ cao cấp tại khu An Phú.",
+                    area: "90m²",
+                    price: "6.8 tỷ",
+                    bedrooms: 3,
+                    bathrooms: 2,
+                    toilets: 2,
+                    floors: 1,
+                    furniture: "Cơ bản",
+                    legality: "Sổ hồng",
+                    address: "Quận 2, TP.HCM",
+                    apartmentType: "Chung cư",
+                    poster: "Lê Văn L",
+                    postedDate: "2024-11-20",
+                    status: "Chờ duyệt",
+                },
+                {
+                    id: 13,
+                    image: "https://via.placeholder.com/100",
+                    name: "Căn hộ The Sun Avenue",
+                    description: "Căn hộ tại khu trung tâm.",
+                    area: "80m²",
+                    price: "3.8 tỷ",
+                    bedrooms: 2,
+                    bathrooms: 1,
+                    toilets: 1,
+                    floors: 1,
+                    furniture: "Cơ bản",
+                    legality: "Sổ đỏ",
+                    address: "Quận 2, TP.HCM",
+                    apartmentType: "Chung cư",
+                    poster: "Nguyễn Thị M",
+                    postedDate: "2024-11-19",
+                    status: "Chờ duyệt",
+                },
+                {
+                    id: 14,
+                    image: "https://via.placeholder.com/100",
+                    name: "Căn hộ Gateway Thảo Điền",
+                    description: "Căn hộ đẹp, tiện ích cao cấp.",
+                    area: "85m²",
+                    price: "4.2 tỷ",
+                    bedrooms: 2,
+                    bathrooms: 2,
+                    toilets: 2,
+                    floors: 1,
+                    furniture: "Cao cấp",
+                    legality: "Sổ đỏ",
+                    address: "Thảo Điền, TP.HCM",
+                    apartmentType: "Chung cư",
+                    poster: "Trần Thị N",
+                    postedDate: "2024-11-18",
+                    status: "Chờ duyệt",
+                },
+                {
+                    id: 15,
+                    image: "https://via.placeholder.com/100",
+                    name: "Căn hộ New City Thủ Thiêm",
+                    description: "Căn hộ hiện đại, gần trung tâm.",
+                    area: "95m²",
+                    price: "5.5 tỷ",
+                    bedrooms: 3,
+                    bathrooms: 2,
+                    toilets: 2,
+                    floors: 1,
+                    furniture: "Cơ bản",
+                    legality: "Sổ hồng",
+                    address: "Quận 2, TP.HCM",
+                    apartmentType: "Chung cư",
+                    poster: "Nguyễn Văn O",
+                    postedDate: "2024-11-17",
+                    status: "Chờ duyệt",
+                }
+            ];
+
+            // Hàm render dữ liệu lên bảng
+            function renderHouses() {
+                const houseTable = document.getElementById("houseTable");
+                houseTable.innerHTML = ""; // Xóa dữ liệu cũ
+                houses.forEach((house) => {
+                    const row = document.createElement("tr");
+                    row.innerHTML = `
+                <td>${house.id}</td>
+                <td><img src="${house.image}" alt="Ảnh" style="width: 50px; height: 50px;"></td>
+                <td>${house.name}</td>
+                <td>${house.description}</td>
+                <td>${house.area}</td>
+                <td>${house.price}</td>
+                <td>${house.bedrooms}</td>
+                <td>${house.bathrooms}</td>
+                <td>${house.toilets}</td>
+                <td>${house.floors}</td>
+                <td>${house.furniture}</td>
+                <td>${house.legality}</td>
+                <td>${house.address}</td>
+                <td>${house.apartmentType}</td>
+                <td>${house.poster}</td>
+                <td>${house.postedDate}</td>
+                <td>${house.status}</td>
+                <td class="text-right">
+                    <button class="btn btn-success btn-sm approve-btn">Duyệt</button>
+                    <button class="btn btn-danger btn-sm delete-btn">Xóa</button>
+                </td>
+            `;
+                    houseTable.appendChild(row);
+                });
+
+                attachEventListeners();
+            }
+
+            // Hàm gắn sự kiện cho các nút
+            function attachEventListeners() {
+                // Nút "Duyệt"
+                document.querySelectorAll(".approve-btn").forEach((button, index) => {
+                    button.addEventListener("click", function () {
+                        alert("Đã duyệt thành công!");
+                        houses[index].status = "Đã duyệt"; // Cập nhật trạng thái
+                        renderHouses(); // Render lại bảng
+                    });
+                });
+
+                // Nút "Xóa"
+                document.querySelectorAll(".delete-btn").forEach((button, index) => {
+                    button.addEventListener("click", function () {
+                        const confirmDelete = confirm("Bạn có chắc chắn muốn xóa tin này không?");
+                        if (confirmDelete) {
+                            houses.splice(index, 1); // Xóa dữ liệu
+                            renderHouses(); // Render lại bảng
+                        }
+                    });
+                });
+            }
+
+            // Render bảng khi tải trang
+            renderHouses();
+        });
+
+    </script>
+
+    <script data-cfasync="false" src="../../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+    <script src="assets/js/jquery-3.5.1.min.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/plugins/datatables/jquery.dataTables.min.js"></script>
+    <script src="assets/plugins/datatables/datatables.min.js"></script>
+    <script src="assets/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+    <script src="assets/plugins/raphael/raphael.min.js"></script>
+    <script src="assets/js/script.js"></script>
+</div>
+</body>
+
+</html>
