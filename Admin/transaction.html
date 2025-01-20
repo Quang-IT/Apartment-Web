@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+    <title>Bảng Quản Lý Căn Hộ</title>
+
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/plugins/fontawesome/css/fontawesome.min.css">
+    <link rel="stylesheet" href="assets/plugins/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="assets/plugins/datatables/datatables.min.css">
+    <link rel="stylesheet" href="assets/css/feathericon.min.css">
+    <link rel="stylesheet" href="assets/plugins/morris/morris.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+
+
+
+</head>
+
+<body>
+<div class="main-wrapper">
+    <div class="header">
+        <div class="header-left">
+            <a href="index.html" class="logo"> <img src="assets/img/hotel_logo.png" width="50" height="70" alt="logo"> <span class="logoclass">Bán Căn Hộ</span> </a>
+            <a href="index.html" class="logo logo-small"> <img src="assets/img/hotel_logo.png" alt="Logo" width="30" height="30"> </a>
+        </div>
+        <a href="javascript:void(0);" id="toggle_btn"> <i class="fe fe-text-align-left"></i> </a>
+        <a class="mobile_btn" id="mobile_btn"> <i class="fas fa-bars"></i> </a>
+        <ul class="nav user-menu">
+            <li class="nav-item dropdown noti-dropdown">
+                <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown"> <i class="fe fe-bell"></i> <span class="badge badge-pill">3</span> </a>
+                <div class="dropdown-menu notifications">
+                    <div class="topnav-dropdown-header"> <span class="notification-title">Thông báo</span> <a href="javascript:void(0)" class="clear-noti"> Xóa tất cả  </a> </div>
+                    <div class="noti-content">
+                        <ul class="notification-list">
+                            <li class="notification-message">
+                                <a href="notification.html">
+                                    <div class="media"> <span class="avatar avatar-sm">
+											<img class="avatar-img rounded-circle" alt="User Image" src="assets/img/profiles/avatar-02.jpg">
+											</span>
+                                        <div class="media-body">
+                                            <p class="noti-details"><span class="noti-title">Chờ duyệt</span> đăng tin <span class="noti-title">thuê nhà</span></p>
+                                            <p class="noti-time"><span class="notification-time">4 phút trước</span> </p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="notification-message">
+                                <a href="#">
+                                    <div class="media"> <span class="avatar avatar-sm">
+											<img class="avatar-img rounded-circle" alt="User Image" src="assets/img/profiles/avatar-11.jpg">
+											</span>
+                                        <div class="media-body">
+                                            <p class="noti-details"><span class="noti-title">  Đang xem xét
+													</span> hộp đồng mua bán <span class="noti-title"> căn hộ 21 tỷ</span></p>
+                                            <p class="noti-time"><span class="notification-time">6 phút trước</span> </p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="notification-message">
+                                <a href="#">
+                                    <div class="media"> <span class="avatar avatar-sm">
+											<img class="avatar-img rounded-circle" alt="User Image" src="assets/img/profiles/avatar-17.jpg">
+											</span>
+                                        <div class="media-body">
+                                            <p class="noti-details"><span class="noti-title">Khách hàng</span> yêu cầu <span class="noti-title">cấp lại mật khẩu
+													</span></p>
+                                            <p class="noti-time"><span class="notification-time">8 phút trước</span> </p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="notification-message">
+                                <a href="#">
+                                    <div class="media"> <span class="avatar avatar-sm">
+											<img class="avatar-img rounded-circle" alt="User Image" src="assets/img/profiles/avatar-13.jpg">
+											</span>
+                                        <div class="media-body">
+                                            <p class="noti-details"><span class="noti-title">Chỉ số biểu đồ
+													</span> hôm nay <span class="noti-title">
+													</span></p>
+                                            <p class="noti-time"><span class="notification-time">12 phút trước</span> </p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="topnav-dropdown-footer"> <a href="notification.html">Xem tất cả</a> </div>
+                </div>
+            </li>
+            <li class="nav-item dropdown has-arrow">
+                <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown"> <span class="user-img"><img class="rounded-circle" src="assets/img/profiles/avatar-01.jpg" width="31" alt="Soeng Souy"></span> </a>
+                <div class="dropdown-menu">
+                    <div class="user-header">
+                        <div class="avatar avatar-sm"> <img src="assets/img/profiles/avatar-01.jpg" alt="User Image" class="avatar-img rounded-circle"> </div>
+                        <div class="user-text">
+                            <h6>Chí Sơn</h6>
+                            <p class="text-muted mb-0">Quản trị viên</p>
+                        </div>
+                    </div> <a class="dropdown-item" href="profile.html">Hồ sơ của tôi</a> <a class="dropdown-item" href="login.html">Đăng xuất</a> </div>
+            </li>
+        </ul>
+    </div>
+
+
+
+
+    <!-- danh mục -->
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-inner slimscroll">
+            <div id="sidebar-menu" class="sidebar-menu">
+                <ul>
+                    <li> <a href="index.html"><i class="fa-solid fa-house"></i> <span>Trang chủ</span></a> </li>
+                    <li class="list-divider"></li>
+
+                    <li> <a href="all-customer.html"><i class="fas fa-user"></i>  <span>Khách Hàng</span></a> </li>
+
+
+
+                    <li> <a href="sell.html"><i class="fas fa-cube"></i> <span>Căn Hộ</span></a> </li>
+
+
+                    <li> <a href="notification.html"><i class="far fa-bell"></i> <span>Thông báo</span></a> </li>
+
+                    <li> <a href="transaction.html"><i class="far fa-money-bill-alt"></i> <span>Giao dịch</span></a> </li>
+
+                    <li class="submenu"> <a href="#"><i class="fas fa-columns"></i> <span> Tùy Chọn </span> <span class="menu-arrow"></span></a>
+                        <ul class="submenu_class" style="display: none;">
+                            <li><a href="login.html">Đăng Nhập </a></li>
+                            <li><a href="register.html">Đăng Ký </a></li>
+                            <li><a href="forgot-password.html">Quên Mật Khẩu </a></li>
+                            <li><a href="lock-screen.html">Khóa Màn Hình </a></li>
+                            <li><a href="profile.html">Hồ Sơ </a></li>
+                            <li><a href="error-404.html">404 Error </a></li>
+                            <li><a href="error-500.html">500 Error </a></li>
+                        </ul>
+                    </li>
+
+                    <li> <a href="#"><i class="fas fa-cog"></i> <span>Cài Đặt</span></a> </li>
+
+                    <li class="submenu"> <a href="#"><i class="fas fa-user"></i>  <span> Tôi </span> <span class="menu-arrow"></span></a>
+                        <ul class="submenu_class" style="display: none;">
+                            <li><a href="profile.html"> Hồ Sơ Của Tôi </a></li>
+                            <li><a href="lock-screen.html"> Đăng Xuất </a></li>
+
+                        </ul>
+                    </li>
+
+                    <li> <a href="login.html"><i class="fa-solid fa-right-from-bracket"></i> <span>Đăng Xuất</span></a> </li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="page-wrapper">
+        <div class="content container-fluid">
+            <div class="page-header">
+                <div class="row align-items-center">
+                    <div class="col">
+                        <h4 class="card-title float-left mt-2">Giao dịch hôm nay!</h4>
+
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="card card-table">
+                        <div class="card-body booking_card">
+                            <div class="table-responsive">
+                                <table class="table table-striped table-hover table-center mb-0">
+                                    <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Căn hộ</th>
+                                        <th>Người mua</th>
+                                        <th>Người bán</th>
+                                        <th>Số tiền giao dịch</th>
+                                        <th>Phương thức giao dịch</th>
+                                        <th>Thời gian giao dịch</th>
+                                        <th>Trạng thái giao dịch</th>
+                                        <th class="text-right">Hành động</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody id="houseTable">
+                                    <!-- Dữ liệu căn hộ sẽ được thêm tại đây -->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Dữ liệu mẫu
+            const transactions = [
+                {
+                    id: 1,
+                    apartment: "Căn hộ Sunrise City",
+                    buyer: "Nguyễn Văn A",
+                    seller: "Trần Thị B",
+                    amount: "5 tỷ",
+                    method: "Chuyển khoản",
+                    time: "2024-12-01 14:00",
+                    status: "Chờ xử lý",
+                },
+                {
+                    id: 2,
+                    apartment: "Căn hộ Vinhomes",
+                    buyer: "Lê Văn C",
+                    seller: "Phạm Thị D",
+                    amount: "3 tỷ",
+                    method: "Tiền mặt",
+                    time: "2024-12-02 10:30",
+                    status: "Chờ xử lý",
+                },
+                {
+                    id: 3,
+                    apartment: "Căn hộ City Garden",
+                    buyer: "Nguyễn Thị E",
+                    seller: "Trần Văn F",
+                    amount: "4 tỷ",
+                    method: "Chuyển khoản",
+                    time: "2024-12-03 15:20",
+                    status: "Chờ xử lý",
+                },
+                {
+                    id: 4,
+                    apartment: "Căn hộ Masteri Thảo Điền",
+                    buyer: "Phạm Văn G",
+                    seller: "Nguyễn Thị H",
+                    amount: "6 tỷ",
+                    method: "Tiền mặt",
+                    time: "2024-12-03 11:00",
+                    status: "Chờ xử lý",
+                },
+                {
+                    id: 5,
+                    apartment: "Căn hộ Golden River",
+                    buyer: "Lê Văn I",
+                    seller: "Trần Thị J",
+                    amount: "7 tỷ",
+                    method: "Chuyển khoản",
+                    time: "2024-12-04 10:00",
+                    status: "Chờ xử lý",
+                },
+                {
+                    id: 6,
+                    apartment: "Căn hộ Diamond Island",
+                    buyer: "Nguyễn Thị K",
+                    seller: "Lê Văn L",
+                    amount: "10 tỷ",
+                    method: "Chuyển khoản",
+                    time: "2024-12-04 14:30",
+                    status: "Chờ xử lý",
+                },
+                {
+                    id: 7,
+                    apartment: "Căn hộ Sala Đại Quang Minh",
+                    buyer: "Phạm Thị M",
+                    seller: "Nguyễn Văn N",
+                    amount: "8 tỷ",
+                    method: "Tiền mặt",
+                    time: "2024-12-05 09:15",
+                    status: "Chờ xử lý",
+                },
+                {
+                    id: 8,
+                    apartment: "Căn hộ Estella Heights",
+                    buyer: "Trần Văn O",
+                    seller: "Phạm Thị P",
+                    amount: "4.5 tỷ",
+                    method: "Chuyển khoản",
+                    time: "2024-12-05 16:45",
+                    status: "Chờ xử lý",
+                },
+                {
+                    id: 9,
+                    apartment: "Căn hộ Gateway Thảo Điền",
+                    buyer: "Nguyễn Văn Q",
+                    seller: "Trần Thị R",
+                    amount: "6.2 tỷ",
+                    method: "Tiền mặt",
+                    time: "2024-12-06 10:00",
+                    status: "Chờ xử lý",
+                },
+                {
+                    id: 10,
+                    apartment: "Căn hộ Lexington Residence",
+                    buyer: "Lê Văn S",
+                    seller: "Nguyễn Thị T",
+                    amount: "3.8 tỷ",
+                    method: "Chuyển khoản",
+                    time: "2024-12-06 13:20",
+                    status: "Chờ xử lý",
+                },
+                {
+                    id: 11,
+                    apartment: "Căn hộ Sunwah Pearl",
+                    buyer: "Trần Thị U",
+                    seller: "Phạm Văn V",
+                    amount: "5.5 tỷ",
+                    method: "Tiền mặt",
+                    time: "2024-12-07 08:45",
+                    status: "Chờ xử lý",
+                },
+                {
+                    id: 12,
+                    apartment: "Căn hộ Palm Heights",
+                    buyer: "Nguyễn Văn W",
+                    seller: "Lê Thị X",
+                    amount: "4 tỷ",
+                    method: "Chuyển khoản",
+                    time: "2024-12-07 15:30",
+                    status: "Chờ xử lý",
+                },
+                {
+                    id: 13,
+                    apartment: "Căn hộ Feliz En Vista",
+                    buyer: "Phạm Văn Y",
+                    seller: "Nguyễn Thị Z",
+                    amount: "7.8 tỷ",
+                    method: "Tiền mặt",
+                    time: "2024-12-08 10:10",
+                    status: "Chờ xử lý",
+                },
+                {
+                    id: 14,
+                    apartment: "Căn hộ The Sun Avenue",
+                    buyer: "Trần Văn A1",
+                    seller: "Nguyễn Thị B1",
+                    amount: "3.9 tỷ",
+                    method: "Chuyển khoản",
+                    time: "2024-12-08 16:00",
+                    status: "Chờ xử lý",
+                },
+                {
+                    id: 15,
+                    apartment: "Căn hộ New City Thủ Thiêm",
+                    buyer: "Phạm Văn C1",
+                    seller: "Nguyễn Thị D1",
+                    amount: "4.6 tỷ",
+                    method: "Tiền mặt",
+                    time: "2024-12-09 09:30",
+                    status: "Chờ xử lý",
+                },
+                {
+                    id: 16,
+                    apartment: "Căn hộ The Vista An Phú",
+                    buyer: "Trần Văn E1",
+                    seller: "Lê Thị F1",
+                    amount: "6.7 tỷ",
+                    method: "Chuyển khoản",
+                    time: "2024-12-09 14:15",
+                    status: "Chờ xử lý",
+                },
+                {
+                    id: 17,
+                    apartment: "Căn hộ The Ascent",
+                    buyer: "Nguyễn Thị G1",
+                    seller: "Phạm Văn H1",
+                    amount: "5 tỷ",
+                    method: "Chuyển khoản",
+                    time: "2024-12-10 11:45",
+                    status: "Chờ xử lý",
+                },
+                {
+                    id: 18,
+                    apartment: "Căn hộ Thảo Điền Pearl",
+                    buyer: "Lê Văn I1",
+                    seller: "Nguyễn Thị J1",
+                    amount: "9 tỷ",
+                    method: "Tiền mặt",
+                    time: "2024-12-10 15:00",
+                    status: "Chờ xử lý",
+                },
+                {
+                    id: 19,
+                    apartment: "Căn hộ The Metropole Thủ Thiêm",
+                    buyer: "Phạm Văn K1",
+                    seller: "Trần Thị L1",
+                    amount: "8.5 tỷ",
+                    method: "Chuyển khoản",
+                    time: "2024-12-11 09:20",
+                    status: "Chờ xử lý",
+                },
+                {
+                    id: 20,
+                    apartment: "Căn hộ Diamond Lotus Riverside",
+                    buyer: "Nguyễn Văn M1",
+                    seller: "Lê Thị N1",
+                    amount: "4.3 tỷ",
+                    method: "Tiền mặt",
+                    time: "2024-12-11 14:40",
+                    status: "Chờ xử lý",
+                },
+                {
+                    id: 21,
+                    apartment: "Căn hộ Scenic Valley",
+                    buyer: "Trần Văn O1",
+                    seller: "Phạm Thị P1",
+                    amount: "6 tỷ",
+                    method: "Chuyển khoản",
+                    time: "2024-12-12 11:00",
+                    status: "Chờ xử lý",
+                },
+                {
+                    id: 22,
+                    apartment: "Căn hộ Happy Valley",
+                    buyer: "Nguyễn Thị Q1",
+                    seller: "Trần Văn R1",
+                    amount: "5.4 tỷ",
+                    method: "Tiền mặt",
+                    time: "2024-12-12 15:30",
+                    status: "Chờ xử lý",
+                },
+                {
+                    id: 23,
+                    apartment: "Căn hộ Sky Garden",
+                    buyer: "Lê Văn S1",
+                    seller: "Nguyễn Thị T1",
+                    amount: "3.6 tỷ",
+                    method: "Chuyển khoản",
+                    time: "2024-12-13 10:45",
+                    status: "Chờ xử lý",
+                },
+                {
+                    id: 24,
+                    apartment: "Căn hộ Hưng Phúc Premier",
+                    buyer: "Phạm Văn U1",
+                    seller: "Trần Thị V1",
+                    amount: "4.8 tỷ",
+                    method: "Tiền mặt",
+                    time: "2024-12-13 14:20",
+                    status: "Chờ xử lý",
+                },
+                {
+                    id: 25,
+                    apartment: "Căn hộ Flora Fuji",
+                    buyer: "Nguyễn Văn W1",
+                    seller: "Lê Thị X1",
+                    amount: "3 tỷ",
+                    method: "Chuyển khoản",
+                    time: "2024-12-14 13:15",
+                    status: "Chờ xử lý",
+                },
+
+            ];
+
+            // Hàm render dữ liệu lên bảng
+            function renderTable() {
+                const houseTable = document.getElementById("houseTable");
+                houseTable.innerHTML = ""; // Xóa dữ liệu cũ
+                transactions.forEach((transaction, index) => {
+                    const row = document.createElement("tr");
+                    row.innerHTML = `
+                <td>${transaction.id}</td>
+                <td>${transaction.apartment}</td>
+                <td>${transaction.buyer}</td>
+                <td>${transaction.seller}</td>
+                <td>${transaction.amount}</td>
+                <td>${transaction.method}</td>
+                <td>${transaction.time}</td>
+                <td>${transaction.status}</td>
+                <td class="text-right">
+                    <button class="btn btn-success btn-sm complete-btn">Hoàn thành</button>
+                </td>
+            `;
+                    houseTable.appendChild(row);
+                });
+
+                attachEventListeners();
+            }
+
+            // Hàm xử lý sự kiện cho các nút
+            function attachEventListeners() {
+                document.querySelectorAll(".complete-btn").forEach((button, index) => {
+                    button.addEventListener("click", function () {
+                        showCompletionForm(transactions[index]); // Hiển thị form giao dịch thành công
+                        transactions.splice(index, 1); // Xóa giao dịch khỏi danh sách
+                        renderTable(); // Render lại bảng
+                    });
+                });
+            }
+
+            // Hiển thị form giao dịch thành công
+            function showCompletionForm(transaction) {
+                const formHTML = `
+            <div class="completion-form">
+                <div class="form-content">
+                    <h3>Giao dịch thành công!</h3>
+                    <p><strong>ID:</strong> ${transaction.id}</p>
+                    <p><strong>Căn hộ:</strong> ${transaction.apartment}</p>
+                    <p><strong>Người mua:</strong> ${transaction.buyer}</p>
+                    <p><strong>Người bán:</strong> ${transaction.seller}</p>
+                    <p><strong>Số tiền giao dịch:</strong> ${transaction.amount}</p>
+                    <p><strong>Phương thức giao dịch:</strong> ${transaction.method}</p>
+                    <p><strong>Thời gian:</strong> ${transaction.time}</p>
+                    <button class="btn btn-primary" id="closeForm">Đóng</button>
+                </div>
+            </div>
+        `;
+
+                // Thêm form vào DOM
+                const body = document.body;
+                const formContainer = document.createElement("div");
+                formContainer.innerHTML = formHTML;
+                body.appendChild(formContainer);
+
+                // Xử lý nút Đóng
+                document.getElementById("closeForm").addEventListener("click", function () {
+                    body.removeChild(formContainer); // Xóa form khỏi DOM
+                });
+            }
+
+            // Render bảng khi tải trang
+            renderTable();
+        });
+
+    </script>
+
+
+    <script data-cfasync="false" src="../../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+    <script src="assets/js/jquery-3.5.1.min.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/moment.min.js"></script>
+    <script src="assets/js/select2.min.js"></script>
+    <script src="assets/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+    <script src="assets/js/bootstrap-datetimepicker.min.js"></script>
+    <script src="assets/js/script.js"></script>
+</div>
+</body>
+
+</html>

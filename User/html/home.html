@@ -1,0 +1,711 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Bán Căn Hộ Nơi Mầm Xanh Phát Triền Số 1 VN </title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="shortcut icon" type="image/x-icon" href="/User/images/favicon.ico">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/thanhtimkiem.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/Tintuc.css">
+    <link rel="stylesheet" href="../css/home.css">
+
+</head>
+<body>
+<header class="header-area header-sticky">
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <!-- Logo -->
+            <a class="navbar-brand" href="home.html">
+                <img src="../images/LoGo.jpg" style="width: 50px; height: 50px">
+                <span class="ms-2 fw-bold">Mầm Xanh Group</span>
+            </a>
+            <!-- Toggle button for mobile -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- Navbar links -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <!-- Dropdown: Căn hộ bán -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="banDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Căn hộ bán
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="banDropdown">
+                            <li><a class="dropdown-item" href="Căn%20hộ%20bán.html">Bán căn hộ chung cư</a></li>
+                            <li><a class="dropdown-item" href="#">Bán chung cư mini</a></li>
+                            <li><a class="dropdown-item" href="#">Bán nhà riêng</a></li>
+                            <li><a class="dropdown-item" href="#">Bán biệt thự, liền kề</a></li>
+                            <li><a class="dropdown-item" href="#">Bán nhà mặt phố</a></li>
+                            <li><a class="dropdown-item" href="#">Bán shophouse</a></li>
+                        </ul>
+                    </li>
+                    <!-- Dropdown: Căn hộ thuê -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="thueDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Căn hộ thuê
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="thueDropdown">
+                            <li><a class="dropdown-item" href="../html/CanHoThue.html">Thuê căn hộ chung cư</a></li>
+                            <li><a class="dropdown-item" href="#">Thuê chung cư mini</a></li>
+                            <li><a class="dropdown-item" href="#">Thuê nhà riêng</a></li>
+                            <li><a class="dropdown-item" href="#">Thuê biệt thự</a></li>
+                            <li><a class="dropdown-item" href="#">Thuê nhà mặt phố</a></li>
+                            <li><a class="dropdown-item" href="#">Thuê phòng trọ</a></li>
+                        </ul>
+                    </li>
+                    <!-- Tin tức -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="tin%20tức.html">Tin tức</a>
+                    </li>
+                    <!-- Mục yêu thích(mục tin đã lưu) -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="tindaluu.html"><i class="fas fa-heart"></i> Tin đã lưu</a>
+                    </li>
+                    <!-- Đăng nhập & Đăng ký -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html">Đăng nhập</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="signup.html">Đăng ký</a>
+                    </li>
+
+                </ul>
+            </div>
+        </nav>
+    </div>
+</header>
+
+<div class="container mt-4">
+    <div class="card shadow-sm p-4">
+        <div class="row gx-2 align-items-center">
+            <!-- Thanh tìm kiếm chính -->
+            <div class="col-md-3">
+                <div class="input-group">
+                    <span class="input-group-text bg-light">
+                        <i class="fas fa-search"></i>
+                    </span>
+                    <input type="text" class="form-control" placeholder="Trên toàn quốc">
+                </div>
+            </div>
+
+            <!-- Dropdown chọn thành phố -->
+            <div class="col-md-2">
+                <select class="form-select">
+                    <option selected>Hồ Chí Minh</option>
+                    <option>Hà Nội</option>
+                    <option>Đà Nẵng</option>
+                    <option>Nha Trang</option>
+                    <option>Vũng Tàu</option>
+                    <option>Bình Dương</option>
+                </select>
+            </div>
+
+            <!-- Dropdown loại nhà đất -->
+            <div class="col-md-2">
+                <select class="form-select">
+                    <option selected>Loại nhà đất</option>
+                    <option>Nhà mặt phố</option>
+                    <option>Chung cư</option>
+                    <option>Chung cư mini</option>
+                    <option>Nhà riêng</option>
+                    <option>Biệt thự</option>
+                </select>
+            </div>
+
+            <!-- Dropdown mức giá -->
+            <div class="col-md-2">
+                <select class="form-select">
+                    <option selected>Mức giá</option>
+                    <option>Dưới 500 triệu</option>
+                    <option>500-800 triệu</option>
+                    <option>Dưới 1 tỷ</option>
+                    <option>1-2 tỷ</option>
+                    <option>3-5 tỷ</option>
+                    <option>5-10 tỷ</option>
+                    <option>Thỏa thuận</option>
+                </select>
+            </div>
+
+            <!-- Dropdown diện tích -->
+            <div class="col-md-2">
+                <select class="form-select">
+                    <option selected>Diện tích</option>
+                    <option>Dưới 50 m²</option>
+                    <option>50-100 m²</option>
+                    <option>100-150 m²</option>
+                    <option>150-200 m²</option>
+                    <option>200+ m²</option>
+                </select>
+            </div>
+            <!-- Dropdown phòng ngủ -->
+            <div class="col-md-2">
+                <select class="form-select">
+                    <option selected>Phòng ngủ</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5+</option>
+                </select>
+            </div>
+
+            <!-- Nút tìm kiếm -->
+            <div class="col-md-2">
+                <button class="btn btn-primary w-100">
+                    Tìm kiếm
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--Slider-->
+<div class="slider-container" style = "margin-top: 2px; width:1600px">
+    <div id="productCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="/User/images/img1.jpg" class="d-block w-100" alt="Căn hộ 1">
+                <div class="carousel-caption"></div>
+            </div>
+            <div class="carousel-item">
+                <img src="/User/images/img3.jpg" class="d-block w-100" alt="Căn hộ 2">
+                <div class="carousel-caption"></div>
+            </div>
+            <div class="carousel-item">
+                <img src="/User/images/img4.jpg" class="d-block w-100" alt="Căn hộ 3">
+                <div class="carousel-caption"></div>
+            </div>
+            <div class="carousel-item">
+                <img src="/User/images/img5.jpg" class="d-block w-100" alt="Căn hộ 4">
+                <div class="carousel-caption"></div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#productCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+</div>
+
+
+
+<!--Tin Tức -->
+<div class="news-main">
+    <div class="tabs">
+        <div class="tab">Tin Tức</div>
+        <a href="tin%20tức.html" class="view-more">Xem thêm →</a>
+    </div>
+    <div class = "two-item">
+        <div class="main-news">
+            <img src="/User/images/img4.jpg" alt="Main News" class="main-image">
+            <div class="main-title">Tận Hưởng Cuộc Sống Phong Cách Nhật, Đậm “Chất” Hạ Long Tại Misaki Tower</div>
+            <div class="time">10 giờ trước</div>
+        </div>
+        <ul class="news-list">
+            <li><a href="#">Giải Thưởng Bất Động Sản Việt Nam PropertyGuru Cán Mốc 10 Năm Vinh Danh Các “Biểu Tượng”…</a></li>
+            <li><a href="#">Tận Hưởng Cuộc Sống Phong Cách Nhật, Đậm “Chất” Hạ Long Tại Misaki Tower</a></li>
+            <li><a href="#">Phân khu căn hộ hạng sang duy nhất của Vinhomes Grand Park, được kiến tạo bởi Vinhomes và ông lớn Samty - Tập đoàn BĐS lâu đời nhất Nhật Bản với những giá trị độc bản không thể tìm kiếm được ở dự khác: Căn hộ hạng sang đầu tiên tại Việt Nam có công viên Vinwonders ngay trước nhà và còn hơn thế: </a></li>
+            <li><a href="#">Thị Trường Thuê Trọ Ngã Tư Sở Và Những Thông Tin Liên Quan Cần Biết</a></li>
+            <li><a href="#">Căn Hộ Chung Cư – Điểm Nóng Của Thị Trường Bất Động Sản Việt Nam Năm 2024</a></li>
+            <li><a href="#">Thị Trường BĐS Đà Nẵng: Dự Báo Xu Hướng Và Cơ Hội Đầu Tư</a></li>
+        </ul>
+    </div>
+
+    <div class = "two-item">
+        <div class="main-news">
+            <img src="/User/images/img6.jpg   " alt="Main News" class="main-image">
+            <div class="main-title">Toàn cảnh Vinhome về đêm, được cho là một đô thị thu nhỏ</div>
+            <div class="time">10 giờ trước</div>
+        </div>
+        <ul class="news-list">
+            <li><a href="#">Giải Thưởng Bất Động Sản Việt Nam PropertyGuru Cán Mốc 10 Năm Vinh Danh Các “Biểu Tượng”…</a></li>
+            <li><a href="#">Tận Hưởng Cuộc Sống Phong Cách Nhật, Đậm “Chất” Hạ Long Tại Misaki Tower</a></li>
+            <li><a href="#">Phân khu căn hộ hạng sang duy nhất của Vinhomes Grand Park, được kiến tạo bởi Vinhomes và ông lớn Samty - Tập đoàn BĐS lâu đời nhất Nhật Bản với những giá trị độc bản không thể tìm kiếm được ở dự khác: Căn hộ hạng sang đầu tiên tại Việt Nam có công viên Vinwonders ngay trước nhà và còn hơn thế: </a></li>
+            <li><a href="#">Thị Trường Thuê Trọ Ngã Tư Sở Và Những Thông Tin Liên Quan Cần Biết</a></li>
+            <li><a href="#">Căn Hộ Chung Cư – Điểm Nóng Của Thị Trường Bất Động Sản Việt Nam Năm 2024</a></li>
+            <li><a href="#">Thị Trường BĐS Đà Nẵng: Dự Báo Xu Hướng Và Cơ Hội Đầu Tư</a></li>
+        </ul>
+    </div>
+</div>
+
+
+<!-- Main content -->
+<div class="news-container">
+<div class="container mt-4">
+    <h2 class="mb-4">Danh sách căn hộ bán</h2>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card">
+                <img src="/User/images/h1.jpg" class="card-img-top" alt="Căn hộ 1">
+                <div class="card-body">
+                    <h5 class="card-title">Căn hộ HCM - 2 tỷ</h5>
+                    <p class="card-text">Căn hộ 2 phòng ngủ, diện tích 70m², tiện ích đầy đủ.</p>
+                    <p>
+                        <i class="fas fa-eye text-muted"></i>
+                        <span class="text-muted">3500 lượt xem</span>
+                    </p>
+                    <p>
+                        <i class="fas fa-calendar-alt text-muted"></i>
+                        <span class="text-muted">Ngày đăng: 30/11/2024</span>
+                    </p>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <a href="Căn%20hộ%20bán.html" class="btn btn-primary">Xem chi tiết</a>
+                        <i class="fas fa-heart text-muted heart-icon" onclick="toggleFavorite(this)"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card">
+                <img src="/User/images/h1.jpg" class="card-img-top" alt="Căn hộ 1">
+                <div class="card-body">
+                    <h5 class="card-title">Căn hộ HCM - 2 tỷ</h5>
+                    <p class="card-text">Căn hộ 2 phòng ngủ, diện tích 70m², tiện ích đầy đủ.</p>
+                    <p>
+                        <i class="fas fa-eye text-muted"></i>
+                        <span class="text-muted">3500 lượt xem</span>
+                    </p>
+                    <p>
+                        <i class="fas fa-calendar-alt text-muted"></i>
+                        <span class="text-muted">Ngày đăng: 30/11/2024</span>
+                    </p>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <a href="Căn%20hộ%20bán.html" class="btn btn-primary">Xem chi tiết</a>
+                        <i class="fas fa-heart text-muted heart-icon" onclick="toggleFavorite(this)"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <img src="/User/images/h1.jpg" class="card-img-top" alt="Căn hộ 1">
+                <div class="card-body">
+                    <h5 class="card-title">Căn hộ Quận 7 - 3 tỷ</h5>
+                    <p class="card-text">Diện tích: 70m², 2 phòng ngủ, nội thất đầy đủ.</p>
+                    <!-- Lượt xem và ngày đăng -->
+                    <p>
+                        <i class="fas fa-eye text-muted"></i>
+                        <span class="text-muted">3500 lượt xem</span>
+                    </p>
+                    <p>
+                        <i class="fas fa-calendar-alt text-muted"></i>
+                        <span class="text-muted">Ngày đăng: 30/11/2024</span>
+                    </p>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <a href="Căn%20hộ%20bán.html" class="btn btn-primary">Xem chi tiết</a>
+                        <i class="fas fa-heart text-muted heart-icon" onclick="toggleFavorite(this)"></i>
+                    </div>
+                </div>
+            </div>
+
+    </div>
+
+    <h2 class="mt-5 mb-4">Danh sách căn hộ thuê</h2>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card">
+                <img src="/User/images/h2.jpg" class="card-img-top" alt="Căn hộ 1">
+                <div class="card-body">
+                    <h5 class="card-title">Căn hộ Bình Dương - 10 triệu/tháng</h5>
+                    <p class="card-text">Căn hộ 1 phòng ngủ, gần trung tâm, đầy đủ nội thất.</p>
+                    <p>
+                        <i class="fas fa-eye text-muted"></i>
+                        <span class="text-muted">3500 lượt xem</span>
+                    </p>
+                    <p>
+                        <i class="fas fa-calendar-alt text-muted"></i>
+                        <span class="text-muted">Ngày đăng: 30/11/2024</span>
+                    </p>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <a href="CanHoThue.html" class="btn btn-primary">Xem chi tiết</a>
+                        <i class="fas fa-heart text-muted heart-icon" onclick="toggleFavorite(this)"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <img src="/User/images/h1.jpg" class="card-img-top" alt="Căn hộ 1">
+                <div class="card-body">
+                    <h5 class="card-title">Căn hộ HCM - 15 triệu/tháng</h5>
+                    <p class="card-text">Căn hộ 2 phòng ngủ, diện tích 70m², tiện ích đầy đủ.</p>
+                    <p>
+                        <i class="fas fa-eye text-muted"></i>
+                        <span class="text-muted">2500 lượt xem</span>
+                    </p>
+                    <p>
+                        <i class="fas fa-calendar-alt text-muted"></i>
+                        <span class="text-muted">Ngày đăng: 25/11/2024</span>
+                    </p>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <a href="CanHoThue.html" class="btn btn-primary">Xem chi tiết</a>
+                        <i class="fas fa-heart text-muted heart-icon" onclick="toggleFavorite(this)"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <img src="/User/images/hst1.jpg" class="card-img-top" alt="Căn hộ 1">
+                <div class="card-body">
+                    <h5 class="card-title">Căn hộ HCM - 18 triệu/tháng</h5>
+
+                    <p class="card-text">Căn hộ 3 phòng ngủ, diện tích 70m², tiện ích đầy đủ.</p>
+                    <p>
+                        <i class="fas fa-eye text-muted"></i>
+                        <span class="text-muted">3500 lượt xem</span>
+                    </p>
+                    <p>
+                        <i class="fas fa-calendar-alt text-muted"></i>
+                        <span class="text-muted">Ngày đăng: 30/11/2024</span>
+                    </p>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <a href="CanHoThue.html" class="btn btn-primary">Xem chi tiết</a>
+                        <i class="fas fa-heart text-muted heart-icon" onclick="toggleFavorite(this)"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container mt-5">
+    <h2 class="mb-4">Căn hộ được đăng mới nhất</h2>
+    <div class="row">
+        <!-- Căn hộ 1 -->
+        <div class="col-md-4">
+            <div class="card">
+                <img src="/User/images/h1.jpg" class="card-img-top" alt="Căn hộ 1">
+                <div class="card-body">
+                    <h5 class="card-title">Căn hộ HCM - 2 tỷ</h5>
+                    <p class="card-text">Căn hộ 2 phòng ngủ, diện tích 70m², tiện ích đầy đủ.</p>
+                    <p>
+                        <i class="fas fa-eye text-muted"></i>
+                        <span class="text-muted">3500 lượt xem</span>
+                    </p>
+                    <p>
+                        <i class="fas fa-calendar-alt text-muted"></i>
+                        <span class="text-muted">Ngày đăng: 30/11/2024</span>
+                    </p>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <a href="product-details.html" class="btn btn-primary">Xem chi tiết</a>
+                        <i class="fas fa-heart text-muted heart-icon" onclick="toggleFavorite(this)"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Căn hộ 2 -->
+        <div class="col-md-4">
+            <div class="card">
+                <img src="/User/images/h1.jpg" class="card-img-top" alt="Căn hộ 1">
+                <div class="card-body">
+                    <h5 class="card-title">Căn hộ HCM - 4 tỷ</h5>
+                    <p class="card-text">Căn hộ 2 phòng ngủ, diện tích 170m², tiện ích đầy đủ.</p>
+                    <p>
+                        <i class="fas fa-eye text-muted"></i>
+                        <span class="text-muted">5000 lượt xem</span>
+                    </p>
+                    <p>
+                        <i class="fas fa-calendar-alt text-muted"></i>
+                        <span class="text-muted">Ngày đăng: 30/11/2024</span>
+                    </p>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <a href="product-details.html" class="btn btn-primary">Xem chi tiết</a>
+                        <i class="fas fa-heart text-muted heart-icon" onclick="toggleFavorite(this)"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Căn hộ 3 -->
+        <div class="col-md-4">
+            <div class="card">
+                <img src="/User/images/h1.jpg" class="card-img-top" alt="Căn hộ 1">
+                <div class="card-body">
+                    <h5 class="card-title">Căn hộ HCM - 3 tỷ</h5>
+                    <p class="card-text">Căn hộ 2 phòng ngủ, diện tích 100m², tiện ích đầy đủ.</p>
+                    <p>
+                        <i class="fas fa-eye text-muted"></i>
+                        <span class="text-muted">3500 lượt xem</span>
+                    </p>
+                    <p>
+                        <i class="fas fa-calendar-alt text-muted"></i>
+                        <span class="text-muted">Ngày đăng: 30/11/2024</span>
+                    </p>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <a href="product-details.html" class="btn btn-primary">Xem chi tiết</a>
+                        <i class="fas fa-heart text-muted heart-icon" onclick="toggleFavorite(this)"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h2 class="mb-4">Căn hộ có lượt xem nhiều nhất</h2>
+        <div class="row">
+            <!-- Căn hộ 1 -->
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="/User/images/h1.jpg" class="card-img-top" alt="Căn hộ 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Căn hộ Bình Dương - 2 tỷ 55 </h5>
+                        <p class="card-text">Căn hộ 2 phòng ngủ, diện tích 70m², tiện ích đầy đủ.</p>
+                        <p>
+                            <i class="fas fa-eye text-muted"></i>
+                            <span class="text-muted">7000 lượt xem</span>
+                        </p>
+                        <p>
+                            <i class="fas fa-calendar-alt text-muted"></i>
+                            <span class="text-muted">Ngày đăng: 30/11/2024</span>
+                        </p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <a href="product-details.html" class="btn btn-primary">Xem chi tiết</a>
+                            <i class="fas fa-heart text-muted heart-icon" onclick="toggleFavorite(this)"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Căn hộ 2 -->
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="/User/images/h1.jpg" class="card-img-top" alt="Căn hộ 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Căn hộ HCM - 2 tỷ 5</h5>
+                        <p class="card-text">Căn hộ 2 phòng ngủ, diện tích 70m², tiện ích đầy đủ.</p>
+                        <p>
+                            <i class="fas fa-eye text-muted"></i>
+                            <span class="text-muted">6000 lượt xem</span>
+                        </p>
+                        <p>
+                            <i class="fas fa-calendar-alt text-muted"></i>
+                            <span class="text-muted">Ngày đăng: 30/11/2024</span>
+                        </p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <a href="product-details.html" class="btn btn-primary">Xem chi tiết</a>
+                            <i class="fas fa-heart text-muted heart-icon" onclick="toggleFavorite(this)"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Căn hộ 3 -->
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="/User/images/h1.jpg" class="card-img-top" alt="Căn hộ 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Căn hộ HCM - 15tr/thang</h5>
+                        <p class="card-text">Căn hộ 3 phòng ngủ, diện tích 70m², tiện ích đầy đủ.</p>
+                        <p>
+                            <i class="fas fa-eye text-muted"></i>
+                            <span class="text-muted">15000 lượt xem</span>
+                        </p>
+                        <p>
+                            <i class="fas fa-calendar-alt text-muted"></i>
+                            <span class="text-muted">Ngày đăng: 30/11/2024</span>
+                        </p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <a href="product-details.html" class="btn btn-primary">Xem chi tiết</a>
+                            <i class="fas fa-heart text-muted heart-icon" onclick="toggleFavorite(this)"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="container mt-5">
+        <h2 class="mb-4">Danh sách căn hộ theo khu vực</h2>
+        <div class="row">
+            <!-- Vũng Tàu-->
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="/User/images/h1.jpg" class="card-img-top" alt="Căn hộ 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Căn hộ Vũng Tàu - 2 tỷ</h5>
+                        <p class="card-text">Căn hộ 2 phòng ngủ, diện tích 70m², tiện ích đầy đủ.</p>
+                        <p>
+                            <i class="fas fa-eye text-muted"></i>
+                            <span class="text-muted">3500 lượt xem</span>
+                        </p>
+                        <p>
+                            <i class="fas fa-calendar-alt text-muted"></i>
+                            <span class="text-muted">Ngày đăng: 30/11/2024</span>
+                        </p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <a href="Căn%20hộ%20bán.html" class="btn btn-primary">Xem chi tiết</a>
+                            <i class="fas fa-heart text-muted heart-icon" onclick="toggleFavorite(this)"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Binh Dương-->
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="/User/images/h1.jpg" class="card-img-top" alt="Căn hộ 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Căn hộ Bình Dương - 2 tỷ 5</h5>
+                        <p class="card-text">Căn hộ 2 phòng ngủ, diện tích 70m², tiện ích đầy đủ.</p>
+                        <p>
+                            <i class="fas fa-eye text-muted"></i>
+                            <span class="text-muted">3500 lượt xem</span>
+                        </p>
+                        <p>
+                            <i class="fas fa-calendar-alt text-muted"></i>
+                            <span class="text-muted">Ngày đăng: 30/11/2024</span>
+                        </p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <a href="Căn%20hộ%20bán.html" class="btn btn-primary">Xem chi tiết</a>
+                            <i class="fas fa-heart text-muted heart-icon" onclick="toggleFavorite(this)"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Hồ Chí Minh -->
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="/User/images/h1.jpg" class="card-img-top" alt="Căn hộ 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Căn hộ HCM - 2 tỷ</h5>
+                        <p class="card-text">Căn hộ 2 phòng ngủ, diện tích 70m², tiện ích đầy đủ.</p>
+                        <p>
+                            <i class="fas fa-eye text-muted"></i>
+                            <span class="text-muted">3500 lượt xem</span>
+                        </p>
+                        <p>
+                            <i class="fas fa-calendar-alt text-muted"></i>
+                            <span class="text-muted">Ngày đăng: 30/11/2024</span>
+                        </p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <a href="Căn%20hộ%20bán.html" class="btn btn-primary">Xem chi tiết</a>
+                            <i class="fas fa-heart text-muted heart-icon" onclick="toggleFavorite(this)"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+
+
+<footer class="footer">
+    <div class="footer-section top">
+        <div class="footer-brand">
+            <img src="../images/LoGo.jpg" alt="Logo" class="footer-logo">
+            <div>
+                <p class="company-name">CÔNG TY CỔ PHẦN PROPERTYGURU VIỆT NAM</p>
+                <address>
+                    S1803, Vinhome grandpark Quận 9, Thủ Đức<br>
+                    (84) 3562 5939 - (84) 3562 5940
+                </address>
+            </div>
+            <div class="download-links">
+                <img src="../images/google.pnj.png" alt="Google Play" class="app-icon">
+                <img src="../images/app-store.jpg" alt="App Store" class="app-icon">
+            </div>
+        </div>
+        <div class="footer-links">
+            <div>
+                <div>
+                    Hotline<br>
+                    <b>1900 1881 <br><br></b>
+                </div>
+                <h4>HƯỚNG DẪN</h4>
+                <ul>
+                    <li><a href="#">Về chúng tôi</a></li>
+                    <li><a href="#">Báo giá và hỗ trợ</a></li>
+                    <li><a href="#">Câu hỏi thường gặp</a></li>
+                    <li><a href="#">Góp ý báo lỗi</a></li>
+                    <li><a href="#">Sitemap</a></li>
+                </ul>
+            </div>
+            <div>
+                <div>
+                    Hỗ trợ khách hàng<br>
+                    <b>trogiup.mamxanhgroup.com.vn<br><br></b>
+                </div>
+                <h4>QUY ĐỊNH</h4>
+                <ul>
+                    <li><a href="#">Quy định đăng tin</a></li>
+                    <li><a href="#">Quy chế hoạt động</a></li>
+                    <li><a href="#">Điều khoản thỏa thuận</a></li>
+                    <li><a href="#">Chính sách bảo mật</a></li>
+                    <li><a href="#">Giải quyết khiếu nại</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-subscribe">
+            <div>
+                Chăm sóc khách hàng<br>
+                <b>hotro@mamxanhgroup.com.vn<br><br></b>
+            </div>
+            <h4>ĐĂNG KÝ NHẬN TIN</h4>
+            <form>
+                <input type="email" placeholder="Nhập email của bạn">
+                <button type="submit">&#9654;</button>
+            </form>
+            <div class="language-select">
+                <span>QUỐC GIA & NGÔN NGỮ</span>
+                <select>
+                    <option>Việt Nam</option>
+                    <option>Singapo</option>
+                    <option>Malaysia</option>
+                    <option>Thailand</option>
+                    <option>Indonesia</option>
+                    <option>Australia</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="footer-section branches">
+        <p><strong>Chi nhánh của Mamxanhgroup.com.vn</strong></p>
+        <div class="branch-info">
+            <div>
+                <p><strong>Chi nhánh TP. Hồ Chí Minh</strong><br>S1803, Vinhome grandpark , Q.9, TP. Thủ Đức<br>Hotline: 1900 1881 - Mobile: 0904 893 279</p>
+                <p><strong>Chi nhánh Đà Nẵng</strong><br>Tầng 9, Tòa nhà Vĩnh Trung Plaza, 255 - 257 Hùng Vương, Q.Thanh Khê, TP. Đà Nẵng<br>Hotline: 1900 1881 - Mobile: 0904 907 279</p>
+            </div>
+            <div>
+                <p><strong>Chi nhánh Hà Nội</strong><br>Đường Chu Huy Mân, Phường Phúc Lợi, Quận Long Biên, Hà Nội<br>Hotline: 1900 1881 - Mobile: 0903 456 322</p>
+                <p><strong>Chi nhánh Vũng Tàu</strong><br>Tầng 4, Tòa nhà ACB, Hoàng Hoa Thám, P.2, TP. Vũng Tàu<br>Hotline: 1900 1881 - Mobile: 0904 509 293</p>
+            </div>
+            <div>
+                <p><strong>Chi nhánh Bình Dương</strong><br>Phòng 10, tầng 16, Becamex Tower, ĐL Bình Dương, TP. Thủ Dầu Một<br>Hotline: 1900 1881 - Mobile: 0919 255 580</p>
+                <p><strong>Chi nhánh Nha Trang</strong><br>Tầng 6, Tòa nhà Điện Lực Khánh Hòa, Lý Thánh Tôn, TP. Nha Trang<br>Hotline: 1900 1881 - Mobile: 0902 169 295</p>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="footer-section bottom">
+        <p>Copyright © 2007 - 2024 mamxanhgroup.com.vn <br>
+
+            Giấy ĐKKD số 0104630479 do Sở KHĐT TP Hà Nội cấp lần đầu ngày 02/06/2010 <br>
+            Giấy phép thiết lập trang thông tin điện tử tổng hợp trên mạng số 191/GP-TTĐT do<br>
+            Sở TTTT Thành phố Hồ Chí Minh cấp ngày 31/08/2020</p>
+        <p>Chịu trách nhiệm nội dung GP ICP: Bà Cao Bich Thùy<br>
+            Chịu trách nhiệm sàn GDTMĐT: Ông Đặng Thành <br>
+            Quy chế, quy định giao dịch có hiệu lực từ 08/08/2020<br>
+            Ghi rõ nguồn "manxanhgroup.com.vn" khi phát hành lại thông tin từ website này.
+        </p>
+        <img src="../images/registered-icon.jpg" alt="Registered" class="social-icon" style="width: 100px; height: 40px;">
+        <div class="social-icons">
+            <img src="../images/face.pnj.jpg" alt="Facebook" class="social-icon">
+            <img src="../images/youtube-icon.jpg" alt="YouTube" class="social-icon">
+            <img src="../images/zalo-icon.jpg" alt="Facebook" class="social-icon">
+        </div>
+    </div>
+</footer>
+    <script src="../js/home.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

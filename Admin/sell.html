@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+  <title>Bảng Quản Lý Căn Hộ</title>
+
+  <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/plugins/fontawesome/css/fontawesome.min.css">
+  <link rel="stylesheet" href="assets/plugins/fontawesome/css/all.min.css">
+  <link rel="stylesheet" href="assets/plugins/datatables/datatables.min.css">
+  <link rel="stylesheet" href="assets/css/feathericon.min.css">
+  <link rel="stylesheet" href="assets/plugins/morris/morris.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="main-wrapper">
+  <div class="header">
+    <div class="header-left">
+      <a href="index.html" class="logo"> <img src="assets/img/hotel_logo.png" width="50" height="70" alt="logo"> <span class="logoclass">Bán Căn Hộ</span> </a>
+      <a href="index.html" class="logo logo-small"> <img src="assets/img/hotel_logo.png" alt="Logo" width="30" height="30"> </a>
+    </div>
+    <a href="javascript:void(0);" id="toggle_btn"> <i class="fe fe-text-align-left"></i> </a>
+    <a class="mobile_btn" id="mobile_btn"> <i class="fas fa-bars"></i> </a>
+    <ul class="nav user-menu">
+      <li class="nav-item dropdown noti-dropdown">
+        <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown"> <i class="fe fe-bell"></i> <span class="badge badge-pill">3</span> </a>
+        <div class="dropdown-menu notifications">
+          <div class="topnav-dropdown-header"> <span class="notification-title">Thông báo</span> <a href="javascript:void(0)" class="clear-noti"> Xóa tất cả  </a> </div>
+          <div class="noti-content">
+            <ul class="notification-list">
+              <li class="notification-message">
+                <a href="#">
+                  <div class="media"> <span class="avatar avatar-sm">
+											<img class="avatar-img rounded-circle" alt="User Image" src="assets/img/profiles/avatar-02.jpg">
+											</span>
+                    <div class="media-body">
+                      <p class="noti-details"><span class="noti-title">Chờ duyệt</span> đăng tin <span class="noti-title">thuê nhà</span></p>
+                      <p class="noti-time"><span class="notification-time">4 phút trước</span> </p>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li class="notification-message">
+                <a href="#">
+                  <div class="media"> <span class="avatar avatar-sm">
+											<img class="avatar-img rounded-circle" alt="User Image" src="assets/img/profiles/avatar-11.jpg">
+											</span>
+                    <div class="media-body">
+                      <p class="noti-details"><span class="noti-title">  Đang xem xét
+													</span> hộp đồng mua bán <span class="noti-title"> căn hộ 21 tỷ</span></p>
+                      <p class="noti-time"><span class="notification-time">6 phút trước</span> </p>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li class="notification-message">
+                <a href="#">
+                  <div class="media"> <span class="avatar avatar-sm">
+											<img class="avatar-img rounded-circle" alt="User Image" src="assets/img/profiles/avatar-17.jpg">
+											</span>
+                    <div class="media-body">
+                      <p class="noti-details"><span class="noti-title">Khách hàng</span> yêu cầu <span class="noti-title">cấp lại mật khẩu
+													</span></p>
+                      <p class="noti-time"><span class="notification-time">8 phút trước</span> </p>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li class="notification-message">
+                <a href="#">
+                  <div class="media"> <span class="avatar avatar-sm">
+											<img class="avatar-img rounded-circle" alt="User Image" src="assets/img/profiles/avatar-13.jpg">
+											</span>
+                    <div class="media-body">
+                      <p class="noti-details"><span class="noti-title">Chỉ số biểu đồ
+													</span> hôm nay <span class="noti-title">
+													</span></p>
+                      <p class="noti-time"><span class="notification-time">12 phút trước</span> </p>
+                    </div>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="topnav-dropdown-footer"> <a href="notification.html">Xem tất cả</a> </div>
+        </div>
+      </li>
+      <li class="nav-item dropdown has-arrow">
+        <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown"> <span class="user-img"><img class="rounded-circle" src="assets/img/profiles/avatar-01.jpg" width="31" alt="Soeng Souy"></span> </a>
+        <div class="dropdown-menu">
+          <div class="user-header">
+            <div class="avatar avatar-sm"> <img src="assets/img/profiles/avatar-01.jpg" alt="User Image" class="avatar-img rounded-circle"> </div>
+            <div class="user-text">
+              <h6>Chí Sơn</h6>
+              <p class="text-muted mb-0">Quản trị viên</p>
+            </div>
+          </div> <a class="dropdown-item" href="profile.html">Hồ sơ của tôi</a> <a class="dropdown-item" href="login.html">Đăng xuất</a> </div>
+      </li>
+    </ul>
+  </div>
+  <!-- danh mục -->
+  <div class="sidebar" id="sidebar">
+    <div class="sidebar-inner slimscroll">
+      <div id="sidebar-menu" class="sidebar-menu">
+        <ul>
+          <li> <a href="index.html"><i class="fa-solid fa-house"></i> <span>Trang chủ</span></a> </li>
+          <li class="list-divider"></li>
+          <li> <a href="all-customer.html"><i class="fas fa-user"></i>  <span>Khách Hàng</span></a> </li>
+          <li> <a href="sell.html"><i class="fas fa-cube"></i> <span>Căn Hộ</span></a> </li>
+          <li> <a href="notification.html"><i class="far fa-bell"></i> <span>Thông báo</span></a> </li>
+          <li> <a href="transaction.html"><i class="far fa-money-bill-alt"></i> <span>Giao dịch</span></a> </li>
+          <li class="submenu"> <a href="#"><i class="fas fa-columns"></i> <span> Tùy Chọn </span> <span class="menu-arrow"></span></a>
+            <ul class="submenu_class" style="display: none;">
+              <li><a href="login.html">Đăng Nhập </a></li>
+              <li><a href="register.html">Đăng Ký </a></li>
+              <li><a href="forgot-password.html">Quên Mật Khẩu </a></li>
+              <li><a href="lock-screen.html">Khóa Màn Hình </a></li>
+              <li><a href="profile.html">Hồ Sơ </a></li>
+              <li><a href="error-404.html">404 Error </a></li>
+              <li><a href="error-500.html">500 Error </a></li>
+            </ul>
+          </li>
+          <li> <a href="#"><i class="fas fa-cog"></i> <span>Cài Đặt</span></a> </li>
+          <li class="submenu"> <a href="#"><i class="fas fa-user"></i>  <span> Tôi </span> <span class="menu-arrow"></span></a>
+            <ul class="submenu_class" style="display: none;">
+              <li><a href="profile.html"> Hồ Sơ Của Tôi </a></li>
+              <li><a href="lock-screen.html"> Đăng Xuất </a></li>
+            </ul>
+          </li>
+          <li> <a href="login.html"><i class="fa-solid fa-right-from-bracket"></i> <span>Đăng Xuất</span></a> </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="page-wrapper">
+    <div class="content container-fluid">
+      <div class="page-header">
+        <div class="row align-items-center">
+          <div class="col">
+            <h4 class="card-title float-left mt-2">Danh sách căn hộ bán</h4>
+            <button class="btn btn-primary float-right add-house" data-toggle="modal" data-target="#houseForm" onclick="openHouseForm()">Thêm căn hộ</button>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="card card-table">
+            <div class="card-body booking_card">
+              <div class="table-responsive">
+                <table class="table table-striped table-hover table-center mb-0">
+                  <thead>
+                  <tr>
+                    <th>ID</th>
+                    <th>Ảnh</th>
+                    <th>Tên</th>
+                    <th>Mô tả</th>
+                    <th>Diện tích</th>
+                    <th>Mức giá</th>
+                    <th>Phòng ngủ</th>
+                    <th>Phòng tắm</th>
+                    <th>Toilet</th>
+                    <th>Số tầng</th>
+                    <th>Nội thất</th>
+                    <th>Pháp lý</th>
+                    <th>Địa chỉ</th>
+                    <th>Loại căn hộ</th>
+                    <th>Người đăng</th>
+                    <th>Ngày đăng</th>
+                    <th>Trạng thái</th>
+                    <th class="text-right">Hành động</th>
+                  </tr>
+                  </thead>
+                  <tbody id="houseTable">
+                  <!-- Dữ liệu căn hộ sẽ được thêm tại đây -->
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal Form -->
+    <div class="modal fade" id="houseForm" tabindex="-1" role="dialog" aria-labelledby="houseFormLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="houseFormLabel">Thêm căn hộ</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Đóng">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form id="houseFormData">
+              <div class="form-group">
+                <label for="houseName">Tên căn hộ</label>
+                <input type="text" class="form-control" id="houseName" placeholder="Tên căn hộ" required>
+              </div>
+              <div class="form-group">
+                <label for="houseDescription">Mô tả</label>
+                <textarea class="form-control" id="houseDescription" rows="3" placeholder="Mô tả căn hộ" required></textarea>
+              </div>
+              <div class="form-group">
+                <label for="houseSize">Diện tích (m²)</label>
+                <input type="number" class="form-control" id="houseSize" placeholder="Diện tích" required>
+              </div>
+              <div class="form-group">
+                <label for="housePrice">Mức giá</label>
+                <input type="number" class="form-control" id="housePrice" placeholder="Mức giá" required>
+              </div>
+              <div class="form-group">
+                <label for="houseRooms">Phòng ngủ</label>
+                <input type="number" class="form-control" id="houseRooms" placeholder="Số phòng ngủ" required>
+              </div>
+              <div class="form-group">
+                <label for="houseBathrooms">Phòng tắm</label>
+                <input type="number" class="form-control" id="houseBathrooms" placeholder="Số phòng tắm" required>
+              </div>
+              <div class="form-group">
+                <label for="houseToilets">Toilet</label>
+                <input type="number" class="form-control" id="houseToilets" placeholder="Số toilet" required>
+              </div>
+              <div class="form-group">
+                <label for="houseFloors">Số tầng</label>
+                <input type="number" class="form-control" id="houseFloors" placeholder="Số tầng" required>
+              </div>
+              <div class="form-group">
+                <label for="houseFurniture">Nội thất</label>
+                <input type="text" class="form-control" id="houseFurniture" placeholder="Nội thất" required>
+              </div>
+              <div class="form-group">
+                <label for="houseLegal">Pháp lý</label>
+                <input type="text" class="form-control" id="houseLegal" placeholder="Pháp lý" required>
+              </div>
+              <div class="form-group">
+                <label for="houseAddress">Địa chỉ</label>
+                <input type="text" class="form-control" id="houseAddress" placeholder="Địa chỉ" required>
+              </div>
+              <!-- Thêm phần loại căn hộ -->
+              <div class="form-group">
+                <label for="houseType">Loại căn hộ</label>
+                <select class="form-control" id="houseType" required>
+                  <option value="for_rent">Cho thuê</option>
+                  <option value="for_sale">Bán</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="houseStatus">Trạng thái</label>
+                <select class="form-control" id="houseStatus" required>
+                  <option value="available">Có sẵn</option>
+                  <option value="sold">Đã bán</option>
+                  <option value="reserved">Đã đặt trước</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="houseSeller">Người đăng</label>
+                <input type="text" class="form-control" id="houseSeller" placeholder="Người đăng" required>
+              </div>
+              <div class="form-group">
+                <label for="houseDate">Ngày đăng</label>
+                <input type="date" class="form-control" id="houseDate" required>
+              </div>
+              <div class="form-group">
+                <label for="houseImage">Ảnh căn hộ</label>
+                <input type="file" class="form-control" id="houseImage" accept="image/*" onchange="previewImage(event)" required>
+                <img id="preview" src="" alt="Xem trước ảnh" style="margin-top: 10px; max-width: 100%; height: auto; display: none;">
+              </div>
+              <button type="submit" class="btn btn-primary">Lưu căn hộ</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    // Danh sách căn hộ mẫu
+    let sampleHouses = [
+      {
+        id: 1,
+        name: "Căn hộ A",
+        description: "Căn hộ 2 phòng ngủ",
+        size: 70,
+        price: 200000000,
+        rooms: 2,
+        bathrooms: 1,
+        toilets: 1,
+        floors: 5,
+        furniture: "Đầy đủ",
+        legal: "Sổ đỏ",
+        address: "Đường ABC, Quận 1",
+        type: "for_sale",
+        status: "available",
+        seller: "Người đăng 1",
+        date: "2024-11-20",
+      },
+      {
+        id: 2,
+        name: "Căn hộ B",
+        description: "Căn hộ 3 phòng ngủ",
+        size: 85,
+        price: 250000000,
+        rooms: 3,
+        bathrooms: 2,
+        toilets: 2,
+        floors: 6,
+        furniture: "Cơ bản",
+        legal: "Sổ hồng",
+        address: "Đường XYZ, Quận 3",
+        type: "for_sale",
+        status: "available",
+        seller: "Người đăng 2",
+        date: "2024-11-18",
+      },
+      {
+        id: 3,
+        name: "Căn hộ C",
+        description: "Căn hộ 1 phòng ngủ",
+        size: 50,
+        price: 150000000,
+        rooms: 1,
+        bathrooms: 1,
+        toilets: 1,
+        floors: 4,
+        furniture: "Đầy đủ",
+        legal: "Sổ đỏ",
+        address: "Đường 123, Quận 5",
+        type: "for_rent",
+        status: "rented",
+        seller: "Người đăng 3",
+        date: "2024-11-15",
+      },
+      {
+        id: 4,
+        name: "Căn hộ D",
+        description: "Căn hộ 4 phòng ngủ",
+        size: 120,
+        price: 400000000,
+        rooms: 4,
+        bathrooms: 3,
+        toilets: 2,
+        floors: 7,
+        furniture: "Đầy đủ",
+        legal: "Sổ đỏ",
+        address: "Đường DEF, Quận 2",
+        type: "for_sale",
+        status: "available",
+        seller: "Người đăng 4",
+        date: "2024-11-12",
+      },
+      {
+        id: 5,
+        name: "Căn hộ E",
+        description: "Căn hộ 2 phòng ngủ",
+        size: 65,
+        price: 180000000,
+        rooms: 2,
+        bathrooms: 1,
+        toilets: 1,
+        floors: 5,
+        furniture: "Cơ bản",
+        legal: "Sổ hồng",
+        address: "Đường 456, Quận 7",
+        type: "for_rent",
+        status: "available",
+        seller: "Người đăng 5",
+        date: "2024-11-10",
+      },
+      {
+        id: 6,
+        name: "Căn hộ F",
+        description: "Căn hộ 3 phòng ngủ",
+        size: 90,
+        price: 300000000,
+        rooms: 3,
+        bathrooms: 2,
+        toilets: 2,
+        floors: 6,
+        furniture: "Đầy đủ",
+        legal: "Sổ đỏ",
+        address: "Đường 789, Quận 1",
+        type: "for_sale",
+        status: "available",
+        seller: "Người đăng 6",
+        date: "2024-11-05",
+      },
+      {
+        id: 7,
+        name: "Căn hộ G",
+        description: "Căn hộ 1 phòng ngủ",
+        size: 45,
+        price: 120000000,
+        rooms: 1,
+        bathrooms: 1,
+        toilets: 1,
+        floors: 3,
+        furniture: "Cơ bản",
+        legal: "Sổ hồng",
+        address: "Đường 101, Quận 10",
+        type: "for_rent",
+        status: "rented",
+        seller: "Người đăng 7",
+        date: "2024-11-02",
+      },
+      {
+        id: 8,
+        name: "Căn hộ H",
+        description: "Căn hộ 2 phòng ngủ",
+        size: 75,
+        price: 220000000,
+        rooms: 2,
+        bathrooms: 1,
+        toilets: 1,
+        floors: 8,
+        furniture: "Đầy đủ",
+        legal: "Sổ đỏ",
+        address: "Đường 112, Quận 9",
+        type: "for_sale",
+        status: "available",
+        seller: "Người đăng 8",
+        date: "2024-10-30",
+      },
+      {
+        id: 9,
+        name: "Căn hộ I",
+        description: "Căn hộ 5 phòng ngủ",
+        size: 150,
+        price: 500000000,
+        rooms: 5,
+        bathrooms: 4,
+        toilets: 3,
+        floors: 9,
+        furniture: "Đầy đủ",
+        legal: "Sổ đỏ",
+        address: "Đường 202, Quận 2",
+        type: "for_rent",
+        status: "available",
+        seller: "Người đăng 9",
+        date: "2024-10-25",
+      },
+      {
+        id: 10,
+        name: "Căn hộ J",
+        description: "Căn hộ 3 phòng ngủ",
+        size: 95,
+        price: 280000000,
+        rooms: 3,
+        bathrooms: 2,
+        toilets: 2,
+        floors: 7,
+        furniture: "Cơ bản",
+        legal: "Sổ hồng",
+        address: "Đường 303, Quận 4",
+        type: "for_sale",
+        status: "available",
+        seller: "Người đăng 10",
+        date: "2024-10-22",
+      }
+    ];
+    // Biến lưu trữ hình ảnh tải lên
+    let uploadedImage = null;
+    // Hàm xem trước hình ảnh
+    function previewImage(event) {
+      const file = event.target.files[0];
+      if (file) {
+        const reader = new FileReader();
+        reader.onload = function (e) {
+          const preview = document.getElementById("preview");
+          preview.src = e.target.result; // Hiển thị ảnh xem trước
+          preview.style.display = "block"; // Hiển thị hình ảnh
+          uploadedImage = e.target.result; // Lưu URL hình ảnh
+        };
+        reader.readAsDataURL(file);
+      }
+    }
+    // Hàm cập nhật bảng để hiển thị ảnh
+    function updateHouseTable() {
+      const houseTable = document.getElementById("houseTable");
+      houseTable.innerHTML = ""; // Xóa nội dung cũ
+      sampleHouses.forEach((house) => {
+        const row = document.createElement("tr");
+        row.innerHTML = `
+            <td>${house.id}</td>
+            <td><img src="${house.image}" alt="Ảnh căn hộ" style="width: 50px; height: 50px; object-fit: cover;"></td>
+            <td>${house.name}</td>
+            <td>${house.description}</td>
+            <td>${house.size} m²</td>
+            <td>${house.price.toLocaleString()} VND</td>
+            <td>${house.rooms}</td>
+            <td>${house.bathrooms}</td>
+            <td>${house.toilets}</td>
+            <td>${house.floors}</td>
+            <td>${house.furniture}</td>
+            <td>${house.legal}</td>
+            <td>${house.address}</td>
+            <td>${house.type === "for_sale" ? "Bán" : "Cho thuê"}</td>
+            <td>${house.seller}</td>
+            <td>${house.date}</td>
+            <td>${house.status === "available" ? "Có sẵn" : house.status === "sold" ? "Đã bán" : "Đã đặt trước"}</td>
+            <td class="text-right">
+                <button class="btn btn-sm btn-primary" onclick="editHouse(${house.id})">Sửa</button>
+                <button class="btn btn-sm btn-danger" onclick="deleteHouse(${house.id})">Xóa</button>
+            </td>
+        `;
+        houseTable.appendChild(row);
+      });
+    }
+    // Hàm mở form thêm mới căn hộ
+    function openHouseForm() {
+      document.getElementById("houseFormData").reset(); // Reset form
+      const saveButton = document.querySelector("#houseForm .btn-primary");
+      saveButton.textContent = "Lưu căn hộ";
+      saveButton.onclick = null;
+      saveButton.onclick = addHouse; // Gắn sự kiện thêm mới
+      $("#houseForm").modal("show");
+    }
+    //  hàm thêm căn hộ
+    function addHouse(event) {
+      event.preventDefault(); // Ngăn chặn reload trang
+      const newHouse = {
+        id: sampleHouses.length + 1,
+        name: document.getElementById("houseName").value,
+        description: document.getElementById("houseDescription").value,
+        size: parseInt(document.getElementById("houseSize").value),
+        price: parseInt(document.getElementById("housePrice").value),
+        rooms: parseInt(document.getElementById("houseRooms").value),
+        bathrooms: parseInt(document.getElementById("houseBathrooms").value),
+        toilets: parseInt(document.getElementById("houseToilets").value),
+        floors: parseInt(document.getElementById("houseFloors").value),
+        furniture: document.getElementById("houseFurniture").value,
+        legal: document.getElementById("houseLegal").value,
+        address: document.getElementById("houseAddress").value,
+        type: document.getElementById("houseType").value,
+        status: document.getElementById("houseStatus").value,
+        seller: document.getElementById("houseSeller").value,
+        date: document.getElementById("houseDate").value,
+        image: uploadedImage || "placeholder.jpg", // Sử dụng ảnh tải lên hoặc ảnh mặc định
+      };
+      sampleHouses.push(newHouse); // Thêm vào danh sách
+      updateHouseTable(); // Cập nhật bảng
+      showNotification("Thêm căn hộ thành công!");
+      $("#houseForm").modal("hide");
+    }
+    // Hàm sửa thông tin căn hộ
+    function editHouse(houseId) {
+      const house = sampleHouses.find((h) => h.id === houseId);
+      if (house) {
+        document.getElementById("houseName").value = house.name;
+        document.getElementById("houseDescription").value = house.description;
+        document.getElementById("houseSize").value = house.size;
+        document.getElementById("housePrice").value = house.price;
+        document.getElementById("houseRooms").value = house.rooms;
+        document.getElementById("houseBathrooms").value = house.bathrooms;
+        document.getElementById("houseToilets").value = house.toilets;
+        document.getElementById("houseFloors").value = house.floors;
+        document.getElementById("houseFurniture").value = house.furniture;
+        document.getElementById("houseLegal").value = house.legal;
+        document.getElementById("houseAddress").value = house.address;
+        document.getElementById("houseType").value = house.type;
+        document.getElementById("houseStatus").value = house.status;
+        document.getElementById("houseSeller").value = house.seller;
+        document.getElementById("houseDate").value = house.date;
+        const saveButton = document.querySelector("#houseForm .btn-primary");
+        saveButton.textContent = "Cập nhật căn hộ";
+        saveButton.onclick = null;
+        saveButton.onclick = function (event) {
+          saveEditedHouse(houseId, event);
+        };
+        $("#houseForm").modal("show");
+      }
+    }
+    // Hàm lưu sửa đổi căn hộ
+    function saveEditedHouse(houseId, event) {
+      event.preventDefault(); // Ngăn chặn reload trang
+      const house = sampleHouses.find((h) => h.id === houseId);
+      if (house) {
+        house.name = document.getElementById("houseName").value;
+        house.description = document.getElementById("houseDescription").value;
+        house.size = parseInt(document.getElementById("houseSize").value);
+        house.price = parseInt(document.getElementById("housePrice").value);
+        house.rooms = parseInt(document.getElementById("houseRooms").value);
+        house.bathrooms = parseInt(document.getElementById("houseBathrooms").value);
+        house.toilets = parseInt(document.getElementById("houseToilets").value);
+        house.floors = parseInt(document.getElementById("houseFloors").value);
+        house.furniture = document.getElementById("houseFurniture").value;
+        house.legal = document.getElementById("houseLegal").value;
+        house.address = document.getElementById("houseAddress").value;
+        house.type = document.getElementById("houseType").value;
+        house.status = document.getElementById("houseStatus").value;
+        house.seller = document.getElementById("houseSeller").value;
+        house.date = document.getElementById("houseDate").value;
+        updateHouseTable();
+        showNotification("Cập nhật căn hộ thành công!");
+        $("#houseForm").modal("hide");
+      }
+    }
+    // Hàm xóa căn hộ
+    function deleteHouse(houseId) {
+      const isConfirmed = confirm("Bạn có chắc chắn muốn xóa căn hộ này?");
+      if (isConfirmed) {
+        sampleHouses = sampleHouses.filter((house) => house.id !== houseId);
+        updateHouseTable();
+        showNotification("Xóa căn hộ thành công!", "danger");
+      }
+    }
+    // Hàm hiển thị thông báo
+    function showNotification(message, type = "success") {
+      const notification = document.createElement("div");
+      notification.className = `alert alert-${type}`;
+      notification.textContent = message;
+      notification.style.position = "fixed";
+      notification.style.top = "10px";
+      notification.style.right = "10px";
+      notification.style.zIndex = "1000";
+      document.body.appendChild(notification);
+      setTimeout(() => {
+        notification.remove();
+      }, 3000);
+    }
+    // Khởi tạo bảng khi tải trang
+    updateHouseTable();
+  </script>
+  <script data-cfasync="false" src="../../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+  <script src="assets/js/jquery-3.5.1.min.js"></script>
+  <script src="assets/js/popper.min.js"></script>
+  <script src="assets/js/bootstrap.min.js"></script>
+  <script src="assets/plugins/datatables/jquery.dataTables.min.js"></script>
+  <script src="assets/plugins/datatables/datatables.min.js"></script>
+  <script src="assets/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+  <script src="assets/plugins/raphael/raphael.min.js"></script>
+  <script src="assets/js/script.js"></script>
+</body>
+</html>

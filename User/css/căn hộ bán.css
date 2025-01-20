@@ -1,0 +1,513 @@
+/*header*/
+/* Global Styles */
+body {
+    font-family: Tahoma, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Filter Section */
+.properties-filter {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    list-style: none;
+    padding: 0;
+}
+
+.properties-filter li {
+    margin: 0 10px;
+}
+
+.properties-filter a {
+    text-decoration: none;
+    color: #555;
+    padding: 10px 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+
+.properties-filter a:hover,
+.properties-filter a.is_active {
+    background-color: #007bff;
+    color: #fff;
+    border-color: #007bff;
+}
+
+/* Property Card Styles */
+.properties-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Căn đều khoảng cách giữa các khung */
+    gap: 20px; /* Khoảng cách giữa các khung */
+}
+/* Đảm bảo mỗi khung chiếm cùng một kích thước */
+.properties-items {
+    flex: 1 1 calc(33.333% - 20px); /* 3 khung mỗi hàng, trừ khoảng cách (20px) */
+    max-width: calc(33.333% - 20px); /* Đảm bảo không vượt quá 1/3 chiều rộng */
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: box-shadow 0.3s;
+}
+
+.properties-items:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.properties-items img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.properties-items .item {
+    padding: 20px;
+}
+
+.properties-items .category {
+    display: inline-block;
+    font-size: 14px;
+    color: #fff;
+    background-color: #007bff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.properties-items h6 {
+    font-size: 18px;
+    color: #007bff;
+    margin: 10px 0;
+}
+
+.properties-items h4 a {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s;
+}
+
+.properties-items h4 a:hover {
+    color: #007bff;
+}
+
+.properties-items ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+}
+
+.properties-items ul li {
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+.main-button a {
+
+    display: flex;
+    text-decoration: none;
+    color: #fff;
+    background-color: #007bff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+
+}
+
+.main-button a:hover {
+    background-color: #0056b3;
+}
+
+/* Pagination */
+.pagination {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.pagination li {
+    margin: 0 5px;
+}
+
+.pagination a {
+    text-decoration: none;
+    color: #007bff;
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+
+.pagination a:hover,
+.pagination a.is_active {
+    background-color: #007bff;
+    color: #fff;
+    border-color: #007bff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .properties-box {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .properties-items {
+        width: 90%;
+    }
+
+}
+@media (max-width: 1024px) {
+    .properties-items {
+        flex: 1 1 calc(50% - 20px); /* 2 khung mỗi hàng trên màn hình nhỏ hơn */
+        max-width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 768px) {
+    .properties-items {
+        flex: 1 1 100%; /* 1 khung mỗi hàng trên màn hình nhỏ */
+        max-width: 100%;
+    }
+}
+
+
+/*footer*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.footer {
+    background-color: #f5f5f5;
+    padding: 20px;
+    color: #333;
+    font-size: 14px;
+}
+
+.footer-section {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+    flex-wrap: wrap;
+}
+
+.footer-section.top {
+    align-items: flex-start;
+}
+
+.footer-brand, .footer-links, .footer-subscribe {
+    flex: 1;
+    margin-bottom: 20px;
+}
+
+.footer-logo {
+    max-width: 150px;
+    margin-bottom: 10px;
+}
+
+.company-name {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.download-links {
+    display: flex;
+    gap: 10px;
+}
+
+.app-icon {
+    width: 100px;
+}
+
+.footer-links ul {
+    list-style: none;
+    margin-right: 70px;
+}
+.footer-links{
+    display:flex;
+}
+.footer-links h4, .footer-subscribe h4 {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+}
+
+.footer-links ul li a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.footer-subscribe form {
+    display: flex;
+    margin-top: 10px;
+}
+
+.footer-subscribe input[type="email"] {
+    padding: 5px;
+    flex: 1;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px;
+}
+
+.footer-subscribe button {
+    padding: 5px;
+    background-color: #e53935;
+    color: white;
+    border: none;
+    border-radius: 0 5px 5px 0;
+}
+.language-select {
+    margin-top: 20px;
+}
+
+.language-select select {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #ccc;
+}
+
+.footer-section.branches {
+    flex-direction: column;
+    text-align: left;
+    gap: 20px;
+}
+
+.branch-info {
+    display: flex;
+    gap: 20px;
+    width:100%;
+}
+
+.footer-section.bottom {
+    align-items: center;
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.social-icon {
+    width: 24px;
+    height: 24px;
+}
+
+/* Responsive CSS */
+
+@media (max-width: 1024px) {
+    .footer-section {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-brand, .footer-links, .footer-subscribe {
+        margin-bottom: 20px;
+    }
+
+    .branch-info {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+.language-select {
+    margin-top: 20px;
+}
+
+.language-select select {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #ccc;
+}
+
+.footer-section.branches {
+    flex-direction: column;
+    text-align: left;
+    gap: 20px;
+}
+
+.branch-info {
+    display: flex;
+    gap: 20px;
+    width:100%;
+}
+
+.footer-section.bottom {
+    align-items: center;
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.social-icon {
+    width: 24px;
+    height: 24px;
+}
+
+/* Responsive CSS */
+
+@media (max-width: 1024px) {
+    .footer-section {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-brand, .footer-links, .footer-subscribe {
+        margin-bottom: 20px;
+    }
+
+    .branch-info {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-subscribe form {
+        flex-direction: column;
+    }
+
+    .footer-subscribe input[type="email"],
+    .footer-subscribe button {
+        width: 100%;
+        margin-bottom: 5px;
+        border-radius: 5px;
+    }
+
+    .footer-subscribe button {
+        border-radius: 5px;
+    }
+
+    .download-links {
+        flex-direction: column;
+    }
+
+    .app-icon {
+        width: 120px;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-logo {
+        max-width: 100px;
+    }
+
+    .footer-subscribe form {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-subscribe input[type="email"] {
+        margin-bottom: 10px;
+    }
+
+    .footer-links, .footer-brand, .footer-subscribe {
+        text-align: center;
+    }
+
+    .branch-info {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+}
+._hj-widget-container div[class*="__styles__buttonPositionTarget"] button {
+    width: 36px;
+    height: 38px;
+    background-color: rgba(0,0,0,0.6) !important;
+    color: #fff;
+    padding: 4px 4px;
+    border-radius: 4px;
+    z-index: 9;
+    border: none;
+    transform: translateX(0px) translateY(0px) !important;
+    display: block
+}
+.slider-container {
+    margin-top: -1080px;
+}
+
+.slider-container #productCarousel {
+    width: 100%;
+    max-width: 990px; /* Đảm bảo kích thước tối đa trên màn hình lớn */
+    height: auto; /* Chiều cao tự động để giữ tỷ lệ */
+    margin: 0 auto;
+    position: relative;
+}
+
+.slider-container .carousel-inner .carousel-item img {
+    width: 100%; /* Chiếm toàn bộ chiều ngang slider */
+    height: auto; /* Tự động điều chỉnh chiều cao */
+    object-fit: cover;
+}
+.carousel-inner{
+    width: 1200px;
+    margin-left: -100px;
+}
+/* Định dạng cho nội dung bên trong */
+.slider-container .carousel-caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    z-index: 2;
+
+}
+.main-button {
+    display: flex;
+    justify-content: space-between; /* Căn chỉnh hai bên trái - phải */
+    align-items: center; /* Căn giữa theo chiều dọc */
+}
+
+.my-eye{
+    margin-top: 12px;
+    margin-left: -150px;
+    margin-right: 50px;
+}
+
+
+
+
+

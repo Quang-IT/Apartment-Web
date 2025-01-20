@@ -1,0 +1,42 @@
+html, body{
+    font-family: Tahoma, sans-serif;
+}
+.container {
+    max-width: 100%;
+}
+.col-md-3{
+    width: 20%;
+    margin-top: 5px;
+}
+.col-md-2{
+    width: 194px;
+}
+.card {
+    border-radius: 10px;
+    border: none;
+}
+.input-group-text {
+    border-radius: 0;
+    border-right: none;
+}
+
+.input-group .form-control {
+    border-left: none;
+}
+
+select.form-select {
+    border-radius: 5px;
+}
+
+button.btn-primary {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.card select {
+    margin-top: 5px;
+}
+
+.card button {
+    margin-top: 5px;
+}

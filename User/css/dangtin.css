@@ -1,0 +1,100 @@
+body{
+    font-family: Tahoma, sans-serif;
+}
+/* Tùy chỉnh toàn bộ form */
+.form-container {
+    max-width: 700px; /* Giới hạn chiều rộng form */
+    margin: 0 auto; /* Canh giữa form */
+    padding: 20px 30px; /* Khoảng cách padding trong khung */
+    background-color: #f9f9f9; /* Màu nền nhạt */
+    border-radius: 10px; /* Bo viền mềm mại */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Hiệu ứng bóng nhẹ */
+    display: flex;
+    flex-direction: column; /* Đặt các thành phần thẳng hàng dọc */
+    align-items: center; /* Canh giữa các thành phần */
+}
+
+/* Tùy chỉnh label */
+.form-label {
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 5px;
+    display: block;
+    text-align: left; /* Canh trái chữ trong form */
+    width: 600px; /* Chiều rộng bằng toàn khung */
+}
+
+/* Tùy chỉnh input và textarea */
+input.form-control,
+textarea.form-control,
+select.form-select {
+    width: 100%; /* Ô nhập liệu chiếm toàn chiều rộng form */
+    border: 1px solid #ccc; /* Viền xám nhạt */
+    border-radius: 8px; /* Bo góc */
+    height: 50px; /* Chiều cao đồng nhất */
+    padding: 10px 15px; /* Văn bản cách đều viền */
+    font-size: 16px;
+    box-sizing: border-box; /* Đảm bảo padding không làm thay đổi kích thước */
+    transition: all 0.2s ease-in-out; /* Hiệu ứng hover và focus */
+}
+
+/* Tùy chỉnh riêng textarea */
+textarea.form-control {
+    height: 120px; /* Đặt chiều cao lớn hơn */
+    resize: vertical; /* Cho phép kéo thả theo chiều dọc */
+    overflow: auto;
+}
+
+/* Hiệu ứng khi hover vào input và textarea */
+input.form-control:focus,
+textarea.form-control:focus,
+select.form-select:focus {
+    border-color: #007bff; /* Viền xanh khi focus */
+    outline: none; /* Bỏ đường viền mặc định */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Hiệu ứng bóng xanh nhạt */
+}
+
+/* Khoảng cách giữa các trường form */
+.mb-3 {
+    margin-bottom: 20px; /* Tạo khoảng cách giữa các trường */
+    width: 100%; /* Đảm bảo các trường chiếm toàn chiều rộng khung */
+}
+/* Tùy chỉnh trường Ngày đăng */
+input[type="date"] {
+    width: 100%; /* Chiếm toàn chiều ngang */
+    border: 1px solid #ccc; /* Viền màu xám nhạt */
+    border-radius: 8px; /* Bo góc mềm mại */
+    height: 50px; /* Chiều cao đồng nhất */
+    padding: 10px 15px; /* Khoảng cách văn bản bên trong */
+    font-size: 16px; /* Kích thước chữ */
+    box-sizing: border-box; /* Đảm bảo padding không làm thay đổi kích thước */
+    transition: all 0.2s ease-in-out; /* Hiệu ứng khi hover và focus */
+}
+
+/* Hiệu ứng khi focus vào trường Ngày đăng */
+input[type="date"]:focus {
+    border-color: #007bff; /* Đổi viền sang xanh khi focus */
+    outline: none; /* Bỏ viền mặc định */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Hiệu ứng bóng xanh nhạt */
+}
+
+/* Tùy chỉnh nút "Đăng tin" */
+button.btn-primary {
+    background-color: red;
+    border: none;
+    color: #fff;
+    padding: 12px 20px;
+    font-size: 18px;
+    border-radius: 8px; /* Bo góc mềm mại */
+    transition: all 0.3s ease-in-out;
+    cursor: pointer; /* Con trỏ chuột dạng tay khi hover */
+    width: 100%; /* Nút chiếm toàn chiều rộng */
+    text-align: center; /* Canh giữa chữ trong nút */
+}
+
+/* Hiệu ứng khi hover nút "Đăng tin" */
+button.btn-primary:hover {
+    background-color: #e51111; /* Màu đỏ đậm hơn */
+    transform: translateY(-2px); /* Hiệu ứng nổi lên khi hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Thêm bóng */
+}

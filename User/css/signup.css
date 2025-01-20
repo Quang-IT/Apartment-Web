@@ -1,0 +1,148 @@
+/* Đặt lại margin, padding và kích thước hộp */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Định dạng cho body */
+body {
+    font-family: Tahoma, sans-serif;
+    background-color: #f7f7f7; /* Màu nền nhẹ */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Chiều cao khớp với màn hình */
+}
+
+/* Định dạng container chính */
+.container {
+    width: 100%;
+    max-width: 420px; /* Chiều rộng tối đa */
+    background-color: #fff; /* Nền trắng */
+    border-radius: 12px; /* Bo tròn góc */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Đổ bóng nhẹ */
+    overflow: hidden; /* Ẩn phần thừa */
+    padding: 20px; /* Padding xung quanh */
+}
+
+/* Phần nội dung */
+.containt {
+    display: flex;
+    flex-direction: column; /* Các phần tử xếp theo chiều dọc */
+    justify-content: center; /* Căn giữa nội dung */
+}
+
+/* Tiêu đề chính */
+h2 {
+    font-size: 26px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+/* Tiêu đề phụ */
+h3 {
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+/* Nhóm input */
+.input-group {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ddd; /* Viền mỏng */
+    border-radius: 6px; /* Bo tròn */
+    padding: 12px 10px;
+    margin-bottom: 15px;
+
+}
+
+.input-group i {
+    margin-right: 10px;
+}
+
+.input-group input {
+    border: none;
+    outline: none;
+    width: 100%; /* Chiếm toàn bộ chiều rộng */
+    font-size: 16px;
+    color: #333;
+    background-color: transparent; /* Nền trong suốt */
+}
+
+/* Nút chính */
+.btn {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    color: #fff;
+    background-color: red; /* Màu đỏ nhạt */
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-bottom: 15px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+    background-color: #e80c0c; /* Màu đậm hơn khi hover */
+    transform: scale(1.02); /* Hiệu ứng phóng to */
+}
+
+/* Nút mạng xã hội */
+.social-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 12px;
+    font-size: 15px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background-color: #fff;
+    color: #333;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.social-btn:hover {
+    background-color: #f1f1f1; /* Màu sáng hơn khi hover */
+}
+
+/* Biểu tượng trong nút mạng xã hội */
+.img-face,
+.img-gg {
+    height: 20px;
+    width: 20px;
+    margin-right: 10px;
+}
+
+/* Phần liên kết và điều khoản */
+.terms {
+    text-align: center;
+    font-size: 14px;
+    color: #555;
+    margin-top: 30px;
+}
+
+.terms a {
+    color: #007bff; /* Màu xanh liên kết */
+    text-decoration: none;
+}
+
+.terms a:hover {
+    text-decoration: underline; /* Gạch chân khi hover */
+}
+
+/* Dòng "Hoặc" */
+.or {
+    text-align: center;
+    font-size: 14px;
+    color: #888;
+    margin: 15px 0;
+}

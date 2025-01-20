@@ -1,0 +1,919 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bán Căn Hộ</title>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="shortcut icon" type="image/x-icon" href="/User/images/favicon.ico">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/căn hộ bán.css">
+    <link rel="stylesheet" href="../css/style.css">
+
+
+</head>
+<body>
+<header class="header-area header-sticky">
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <!--Logo -->
+            <a class="navbar-brand" href="home.html">
+                <img src="/User/images/LoGo.jpg" height="50" width="50">
+                <span class="ms-2 fw-bold">Mầm Xanh Group</span>
+            </a>
+            <!-- Toggle button for mobile -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- Navbar links -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <!-- Dropdown: Căn hộ bán -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="banDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Căn hộ bán
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="banDropdown">
+                            <li><a class="dropdown-item" href="../html/Căn%20hộ%20bán.html">Bán căn hộ chung cư</a></li>
+                            <li><a class="dropdown-item" href="#">Bán chung cư mini</a></li>
+                            <li><a class="dropdown-item" href="#">Bán nhà riêng</a></li>
+                            <li><a class="dropdown-item" href="#">Bán biệt thự, liền kề</a></li>
+                            <li><a class="dropdown-item" href="#">Bán nhà mặt phố</a></li>
+                            <li><a class="dropdown-item" href="#">Bán shophouse</a></li>
+                        </ul>
+                    </li>
+                    <!-- Dropdown: Căn hộ thuê -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="thueDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Căn hộ thuê
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="thueDropdown">
+                            <li><a class="dropdown-item" href="../html/CanHoThue.html">Thuê căn hộ chung cư</a></li>
+                            <li><a class="dropdown-item" href="#">Thuê chung cư mini</a></li>
+                            <li><a class="dropdown-item" href="#">Thuê nhà riêng</a></li>
+                            <li><a class="dropdown-item" href="#">Thuê biệt thự</a></li>
+                            <li><a class="dropdown-item" href="#">Thuê nhà mặt phố</a></li>
+                            <li><a class="dropdown-item" href="#">Thuê phòng trọ</a></li>
+                        </ul>
+                    </li>
+                    <!-- Tin tức -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="tin%20tức.html">Tin tức</a>
+                    </li>
+                    <!-- Mục yêu thích(mục tin đã lưu) -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fas fa-heart"></i> Tin đã lưu</a>
+
+                    </li>
+                    <!-- Đăng nhập & Đăng ký -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html">Đăng nhập</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="signup.html">Đăng ký</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+</header>
+<!--Slider-->
+<div class="slider-container" style = "margin-top: 2px;">
+    <div id="productCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="/User/images/img1.jpg" class="d-block w-100" alt="Căn hộ 1">
+                <div class="carousel-caption"></div>
+            </div>
+            <div class="carousel-item">
+                <img src="/User/images/img3.jpg" class="d-block w-100" alt="Căn hộ 2">
+                <div class="carousel-caption"></div>
+            </div>
+            <div class="carousel-item">
+                <img src="/User/images/img4.jpg" class="d-block w-100" alt="Căn hộ 3">
+                <div class="carousel-caption"></div>
+            </div>
+            <div class="carousel-item">
+                <img src="/User/images/img5.jpg" class="d-block w-100" alt="Căn hộ 4">
+                <div class="carousel-caption"></div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#productCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+
+    </div>
+</div>
+
+<!--Container Căn hộ bán-->
+<div class="section properties">
+    <div class="container">
+        <ul class="properties-filter">
+            <li>
+                <a class="is_active" href="#!" data-filter="*">Tất Cả</a>
+            </li>
+            <li>
+                <a href="#!" data-filter=".adv"> 1 phòng ngủ </a>
+            </li>
+            <li>
+                <a href="#!" data-filter=".str"> 2 phòng ngủ </a>
+            </li>
+            <li>
+                <a href="#!" data-filter=".rac"> 3 phòng ngủ </a>
+            </li>
+
+        </ul>
+        <div class="row properties-box">
+            <div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 adv">
+                <div class="item">
+                    <a href="product-details.html">
+                        <img src="/User/images/rainbow3.jpg" alt="">
+                    </a>
+                    <h6> 1tỷ350 full nội thất </h6>
+                    <h4><a href="product-details.html">Dự án Vinhomes Central Park, Phường 22, Quận Bình Thạnh, TP Hồ Chí Minh</a></h4>
+                    <ul>
+                        <li>Số phòng ngủ: <span> 1pn+ </span></li>
+                        <li>Nhà vệ sinh: <span> 1 </span></li>
+                        <li>Diện tích: <span> 54m2 </span></li>
+                        <li>Tiện ích: <span> Hồ bơi, sân bóng gỗ, sân bóng chuyền,sân tennis</span></li>
+                    </ul>
+                    <div class="main-button">
+                        <a href="product-details.html">Xem thêm</a>
+                        <i class="fas fa-heart text-muted heart-icon" onclick="toggleFavorite(this)"></i>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 str">
+                <div class="item">
+                    <a href="product-details.html"><img src="/User/images/rainbow.jpg" alt=""></a>
+                    <h6>2tỷ3 nội thất nhập khẩu</h6>
+                    <h4><a href="product-details.html">S103, Vinhome Ocen Park, Đại Dương, Đa Tốn, Gia Lâm, Hà Nội</a></h4>
+                    <ul>
+                        <li>Số phòng ngủ: <span> 2pn1Wc </span></li>
+                        <li>Nhà vệ sinh: <span> 1 </span></li>
+                        <li>Diện tích: <span> 59m2 </span></li>
+                        <li>Tiện ích: <span> Hồ bơi, sân bóng gỗ, sân bóng chuyền,sân tennis</span></li>
+                    </ul>
+                    <div class="main-button">
+                        <a href="product-details.html">Xem thêm</a>
+                        <i class="fas fa-heart text-muted heart-icon" onclick="toggleFavorite(this)"></i>
+
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 str">
+                <div class="item">
+                    <a href="product-details.html"><img src="/User/images/rainbow1.jpg" alt=""></a>
+                    <h6> 2tỷ6 full nội thất</h6>
+                    <h4><a href="product-details.html">S302, Vinhome Central Park, Phường 22, Bình Thạnh, TP.Hồ Chí Minh</a></h4>
+                    <ul>
+                        <li>Số phòng ngủ: <span> 2pn2Wc </span></li>
+                        <li>Nhà vệ sinh: <span> 2 </span></li>
+                        <li>Diện tích: <span> 68m2 </span></li>
+                        <li>Tiện ích: <span> Hồ bơi, sân bóng gỗ, sân bóng chuyền,sân tennis</span></li>
+                    </ul>
+                    <div class="main-button">
+                        <a href="product-details.html">Xem thêm</a>
+                        <i class="fas fa-heart text-muted heart-icon" onclick="toggleFavorite(this)"></i>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 str">
+                <div class="item">
+                    <a href="product-details.html"><img src="/User/images/Origami1.jpg" alt=""></a>
+                    <h6> 2tỷ9 full nội thất</h6>
+                    <h4><a href="product-details.html">S702, Nguyễn Xiển, Vinhome GrandPark Q9,P.Long Bình, TP. Hồ Chí Minh</a></h4>
+                    <ul>
+                        <li>Số phòng ngủ: <span> 2pn1Wc </span></li>
+                        <li>Nhà vệ sinh: <span> 1 </span></li>
+                        <li>Diện tích: <span> 59m2 </span></li>
+                        <li>Tiện ích: <span> Hồ bơi, sân bóng gỗ, sân bóng chuyền,sân tennis</span></li>
+                    </ul>
+                    <div class="main-button">
+                        <a href="product-details.html">Xem thêm</a>
+                        <i class="fas fa-heart text-muted heart-icon" onclick="toggleFavorite(this)"></i>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6  str">
+                <div class="item">
+                    <a href="product-details.html"><img src="/User/images/Origami2.jpg" alt=""></a>
+                    <h6> 3tỷ1 nội thất nhập khẩu </h6>
+                    <h4><a href="product-details.html">S803, Vinhome Ocen Park, Đại Dương, Đa Tốn, Gia Lâm, Hà Nội</a></h4>
+                    <ul>
+                        <li>Số phòng ngủ: <span> 2pn2Wc </span></li>
+                        <li>Nhà vệ sinh: <span> 2 </span></li>
+                        <li>Diện tích: <span> 69m2 </span></li>
+                        <li>Tiện ích: <span> Hồ bơi, sân bóng gỗ, sân bóng chuyền,sân tennis</span></li>
+                    </ul>
+                    <div class="main-button">
+                        <a href="product-details.html">Xem thêm</a>
+                        <i class="fas fa-heart text-muted heart-icon" onclick="toggleFavorite(this)"></i>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 adv">
+                <div class="item">
+                    <a href="product-details.html"><img src="/User/images/Origami3.jpg" alt=""></a>
+                    <h6>2tỷ3 nội thất cơ bản</h6>
+                    <h4><a href="product-details.html">S302, Vinhome Central Park, Phường 22, Bình Thạnh, Thành phố Hồ Chí Minh</a></h4>
+                    <ul>
+                        <li>Số phòng ngủ: <span> 1pn1Wc </span></li>
+                        <li>Nhà vệ sinh: <span> 1 </span></li>
+                        <li>Diện tích: <span> 59m2 </span></li>
+                        <li>Tiện ích: <span> Hồ bơi, sân bóng gỗ, sân bóng chuyền,sân tennis</span></li>
+                    </ul>
+                    <div class="main-button">
+                        <a href="product-details.html">Xem thêm</a>
+                        <i class="fas fa-heart text-muted heart-icon" onclick="toggleFavorite(this)"></i>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 adv">
+                <div class="item">
+                    <a href="product-details.html"><img src="/User/images/masteri3.jpg" alt=""></a>
+                    <h6>4tỷ9 nội thất cơ bản</h6>
+                    <h4><a href="product-details.html">A3,Vinhome GrandPark Q9, P.Long Bình, TP. Hồ Chí Minh</a></h4>
+                    <ul>
+                        <li>Số phòng ngủ: <span> 1pn1Wc </span></li>
+                        <li>Nhà vệ sinh: <span> 1 </span></li>
+                        <li>Diện tích: <span> 59m2 </span></li>
+                        <li>Tiện ích: <span> Hồ bơi, sân bóng gỗ, sân bóng chuyền,sân tennis,phòng gym</span></li>
+                    </ul>
+                    <div class="main-button">
+                        <a href="product-details.html">Xem thêm</a>
+                        <i class="fas fa-heart text-muted heart-icon" onclick="toggleFavorite(this)"></i>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 str">
+                <div class="item">
+                    <a href="product-details.html"><img src="/User/images/masteri2.jpg" alt=""></a>
+                    <h6>5tỷ3 Nội thất cơ bản</h6>
+                    <h4><a href="product-details.html">A2,Vinhome GrandPark Q9, P.Long Bình, TP. Hồ Chí Minh</a></h4>
+                    <ul>
+                        <li>Số phòng ngủ: <span> 2pn1Wc </span></li>
+                        <li>Nhà vệ sinh: <span> 1 </span></li>
+                        <li>Diện tích: <span> 67m2 </span></li>
+                        <li>Tiện ích: <span> Hồ bơi, sân bóng gỗ, sân bóng chuyền,sân tennis, phòng gym</span></li>
+                    </ul>
+                    <div class="main-button">
+                        <a href="product-details.html">Xem thêm</a>
+                        <i class="fas fa-heart text-muted heart-icon" onclick="toggleFavorite(this)"></i>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 str">
+                <div class="item">
+                    <a href="product-details.html"><img src="/User/images/masteri1.jpg" alt=""></a>
+                    <h6> 6tỷ2 Full nội thất </h6>
+                    <h4><a href="product-details.html">T1 Masteri, Đ159,Võ Nguyên Giáp, Thảo Điền, Q2, TP.Hồ Chí Minh </a></h4>
+                    <ul>
+                        <li>Số phòng ngủ: <span> 2pn2Wc </span></li>
+                        <li>Nhà vệ sinh: <span> 2 </span></li>
+                        <li>Diện tích: <span> 78m2 </span></li>
+                        <li>Tiện ích: <span> Hồ bơi, sân bóng gỗ, sân bóng chuyền,sân tennis, phòng gym </span></li>
+                    </ul>
+                    <div class="main-button">
+                        <a href="product-details.html">Xem thêm</a>
+                        <i class="fas fa-heart text-muted heart-icon" onclick="toggleFavorite(this)"></i>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 adv ">
+                <div class="item">
+                    <a href="product-details.html"><img src="/User/images/Beverly.jpg" alt=""></a>
+                    <h6> 6tỷ490 nhà trống, nội thất cơ bản </h6>
+                    <h4><a href="product-details.html">B3, Vinhome GrandPark, Q9 ,P.Long Bình, TP.Hồ Chí Minh</a></h4>
+                    <ul>
+                        <li>Số phòng ngủ: <span> 1pn1WC </span></li>
+                        <li>Nhà vệ sinh: <span> 1 </span></li>
+                        <li>Diện tích: <span> 68m2 </span></li>
+                        <li>Tiện ích: <span> Hồ bơi, sân bóng gỗ, sân bóng chuyền,sân tennis, phòng gym, phòng xông hơi</span></li>
+                    </ul>
+                    <div class="main-button">
+                        <a href="product-details.html">Xem thêm</a>
+                        <i class="fas fa-heart text-muted heart-icon" onclick="toggleFavorite(this)"></i>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 str">
+                <div class="item">
+                    <a href="product-details.html"><img src="/User/images/Bervely4.jpg" alt=""></a>
+                    <h6> 7tỷ8 nội thất cơ bản </h6>
+                    <h4><a href="product-details.html">B3, Vinhome GrandPark, Q9 ,P.Long Bình, TP.Hồ Chí Minh</a></h4>
+                    <ul>
+                        <li>Số phòng ngủ: <span> 2pn2Wc </span></li>
+                        <li>Nhà vệ sinh: <span> 2 </span></li>
+                        <li>Diện tích: <span> 79m2 </span></li>
+                        <li>Tiện ích: <span> Hồ bơi, sân bóng gỗ, sân bóng chuyền,sân tennis, phòng gym, phòng xông hơi </span></li>
+                    </ul>
+                    <div class="main-button">
+                        <a href="product-details.html">Xem thêm</a>
+                        <i class="fas fa-heart text-muted heart-icon" onclick="toggleFavorite(this)"></i>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 adv rac">
+                <div class="item">
+                    <a href="product-details.html"><img src="/User/images/Beverly3.jpg" alt=""></a>
+                    <h6> 8tỷ4 nội thất cơ bản</h6>
+                    <h4><a href="product-details.html">B3, Vinhome GrandPark, Q9 ,P.Long Bình, TP.Hồ Chí Minh</a></h4>
+                    <ul>
+                        <li>Số phòng ngủ: <span> 3pn2Wc </span></li>
+                        <li>Nhà vệ sinh: <span> 2 </span></li>
+                        <li>Diện tích: <span> 87m2 </span></li>
+                        <li>Tiện ích: <span> Hồ bơi, sân bóng gỗ, sân bóng chuyền,sân tennis, phòng gym, phòng xông hơi </span></li>
+                    </ul>
+                    <div class="main-button">
+                        <a href="product-details.html">Xem thêm</a>
+                        <i class="fas fa-heart text-muted heart-icon" onclick="toggleFavorite(this)"></i>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 str">
+                <div class="item">
+                    <a href="product-details.html"><img src="/User/images/1.jpg" alt=""></a>
+                    <h6> 13tỷ </h6>
+                    <h4><a href="product-details.html"> 112, Phường 11, Quận 5, TP.Hồ Chí Minh </a></h4>
+                    <ul>
+                        <li>Số tầng: <span> 2 tầng </span></li>
+                        <li>Nhà vệ sinh: <span> 3 </span></li>
+                        <li>Diện tích: <span> 78m2 </span></li>
+                        <li>Tiện ích: <span> view thoáng mát, gần các chợ  </span></li>
+                    </ul>
+                    <div class="main-button">
+                        <a href="product-details.html">Xem thêm</a>
+                        <i class="fas fa-heart text-muted heart-icon" onclick="toggleFavorite(this)"></i>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 str">
+                <div class="item">
+                    <a href="product-details.html"><img src="/User/images/2.jpg" alt=""></a>
+                    <h6> 10 tỷ </h6>
+                    <h4><a href="product-details.html"> Đường Nguyễn Văn Linh, Hải Châu, Đà Nẵng</a></h4>
+                    <ul>
+                        <li>Số tầng: <span> 2 tầng </span></li>
+                        <li>Nhà vệ sinh: <span> 2 </span></li>
+                        <li>Diện tích: <span> 59m2 </span></li>
+                        <li>Tiện ích: <span> view thoáng mát, có sân, gần siêu thị, chợ</span></li>
+                    </ul>
+                    <div class="main-button">
+                        <a href="product-details.html">Xem thêm</a>
+                        <i class="fas fa-heart text-muted heart-icon" onclick="toggleFavorite(this)"></i>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 rac">
+                <div class="item">
+                    <a href="product-details.html"><img src="/User/images/3.jpg" alt=""></a>
+                    <h6>15tỷ350 có nội thất </h6>
+                    <h4><a href="product-details.html">Phạm Văn Chiêu, Phường 9, Gò Vấp, TP. Hồ Chí Minh </a></h4>
+                    <ul>
+                        <li>Số tầng: <span> 3 tầng </span></li>
+                        <li>Nhà vệ sinh: <span> 4 </span></li>
+                        <li>Diện tích: <span> 90m2 </span></li>
+                        <li>Tiện ích: <span> view thoáng mát, có sân, gần siêu thị, chợ</span></li>
+                    </ul>
+                    <div class="main-button">
+                        <a href="product-details.html">Xem thêm</a>
+                        <i class="fas fa-heart text-muted heart-icon" onclick="toggleFavorite(this)"></i>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 str">
+                <div class="item">
+                    <a href="product-details.html"><img src="/User/images/4.jpg" alt=""></a>
+                    <h6> 8tỷ850 </h6>
+                    <h4><a href="product-details.html">Đường số 10, An Bình, Dĩ An,Bình Dương</a></h4>
+                    <ul>
+                        <li>Số tầng: <span> 2 lầu </span></li>
+                        <li>Nhà vệ sinh: <span> 2 </span></li>
+                        <li>Diện tích: <span> 70m2 </span></li>
+                        <li>Tiện ích: <span> view thoáng mát, gần siêu thị, chợ, trường học </span></li>
+                    </ul>
+                    <div class="main-button">
+                        <a href="product-details.html">Xem thêm</a>
+                        <i class="fas fa-heart text-muted heart-icon" onclick="toggleFavorite(this)"></i>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 adv">
+                <div class="item">
+                    <a href="product-details.html"><img src="/User/images/5.jpg" alt=""></a>
+                    <h6>6 tỷ</h6>
+                    <h4><a href="product-details.html">28 Đường Thi Sách,Phường 8, Vũng Tàu</a></h4>
+                    <ul>
+                        <li>Số tầng: <span> 1 trệt </span></li>
+                        <li>Nhà vệ sinh: <span> 1 </span></li>
+                        <li>Diện tích: <span> 59m2 </span></li>
+                        <li>Tiện ích: <span> view thoáng mát, gần siêu thị, cách bãi sau 5 phút </span></li>
+                    </ul>
+                    <div class="main-button">
+                        <a href="product-details.html">Xem thêm</a>
+                        <i class="fas fa-heart text-muted heart-icon" onclick="toggleFavorite(this)"></i>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 str">
+                <div class="item">
+                    <a href="product-details.html"><img src="/User/images/6.jpg" alt=""></a>
+                    <h6> 9tỷ </h6>
+                    <h4><a href="product-details.html"></a> Đường Phạm Thế Hiển, Phường 6, Quận 8</h4>
+                    <ul>
+                        <li>Số tầng: <span> 2 tầng </span></li>
+                        <li>Nhà vệ sinh: <span> 2 </span></li>
+                        <li>Diện tích: <span> 59m2 </span></li>
+                        <li>Tiện ích: <span> view thoáng mát, gần Chợ, Gần bệnh viện, trường học  </span></li>
+                    </ul>
+                    <div class="main-button">
+                        <a href="product-details.html">Xem thêm</a>
+                        <i class="fas fa-heart text-muted heart-icon" onclick="toggleFavorite(this)"></i>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 rac ">
+                <div class="item">
+                    <a href="product-details.html"><img src="/User/images/7.jpg" alt=""></a>
+                    <h6> 8tỷ990 </h6>
+                    <h4><a href="product-details.html"> Đại Dương, Đa Tốn, Gia Lâm, Hà Nội</a></h4>
+                    <ul>
+                        <li>Số tầng: <span> 3 tầng </span></li>
+                        <li>Nhà vệ sinh: <span> 3 </span></li>
+                        <li>Diện tích: <span> 100m2 </span></li>
+                        <li>Tiện ích: <span> view thoáng mát, gần Chợ, Gần bệnh viện, trường học</span></li>
+                    </ul>
+                    <div class="main-button">
+                        <a href="product-details.html">Xem thêm</a>
+                        <i class="fas fa-heart text-muted heart-icon" onclick="toggleFavorite(this)"></i>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 str">
+                <div class="item">
+                    <a href="product-details.html"><img src="/User/images/8.jpg" alt=""></a>
+                    <h6> 6tỷ950 có nôi thất </h6>
+                    <h4><a href="product-details.html">3 Đ.Nguyễn Du, Bình Hòa, Thuận An, Bình Dương</a></h4>
+                    <ul>
+                        <li>Số tầng: <span> 2 tầng </span></li>
+                        <li>Nhà vệ sinh: <span> 2</span></li>
+                        <li>Diện tích: <span> 92m2 </span></li>
+                        <li>Tiện ích: <span> view thoáng mát, gần Chợ, Gần bệnh viện, trường học</span></li>
+                    </ul>
+                    <div class="main-button">
+                        <a href="product-details.html">Xem thêm</a>
+                        <i class="fas fa-heart text-muted heart-icon" onclick="toggleFavorite(this)"></i>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 str">
+                <div class="item">
+                    <a href="product-details.html"><img src="/User/images/10.jpg" alt=""></a>
+                    <h6> 5tỷ3 nội thất nhập khẩu</h6>
+                    <h4><a href="product-details.html">S103, Vinhome Central Park, Bình Thạnh, TP.Hồ Chí Minh </a></h4>
+                    <ul>
+                        <li>Số phòng ngủ: <span> 2pn1Wc </span></li>
+                        <li>Nhà vệ sinh: <span> 1 </span></li>
+                        <li>Diện tích: <span> 59m2 </span></li>
+                        <li>Tiện ích: <span> Hồ bơi, sân bóng gỗ, sân bóng chuyền,sân tennis</span></li>
+                    </ul>
+                    <div class="main-button">
+                        <a href="product-details.html">Xem thêm</a>
+                        <i class="fas fa-heart text-muted heart-icon" onclick="toggleFavorite(this)"></i>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 rac">
+                <div class="item">
+                    <a href="product-details.html"><img src="/User/images/11.jpg" alt=""></a>
+                    <h6> 11tỷ3 nội thất nhập khẩu</h6>
+                    <h4><a href="product-details.html"> Đường Lê Văn Thọ, Phường 11, Gò Vấp, TP.Hồ Chí Minh</a></h4>
+                    <ul>
+                        <li>Số tầng: <span> 3 tầng </span></li>
+                        <li>Nhà vệ sinh: <span> 2 </span></li>
+                        <li>Diện tích: <span> 112m2 </span></li>
+                        <li>Tiện ích: <span> </span></li>
+                    </ul>
+                    <div class="main-button">
+                        <a href="product-details.html">Xem thêm</a>
+                        <i class="fas fa-heart text-muted heart-icon" onclick="toggleFavorite(this)"></i>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 str">
+                <div class="item">
+                    <a href="product-details.html"><img src="/User/images/13.jpg" alt=""></a>
+                    <h6> 12tỷ có nội thất</h6>
+                    <h4><a href="product-details.html">Đường Nguyễn Thái Sơn, Phường 3, Gò Vấp, TP.Hồ Chí Minh </a></h4>
+                    <ul>
+                        <li>Số tầng: <span> 2 tầng </span></li>
+                        <li>Nhà vệ sinh: <span> 2 </span></li>
+                        <li>Diện tích: <span> 98m2 </span></li>
+                        <li>Tiện ích: <span> view thoáng mát, gần Chợ, Gần bệnh viện, trường học</span></li>
+                    </ul>
+                    <div class="main-button">
+                        <a href="product-details.html">Xem thêm</a>
+                        <i class="fas fa-heart text-muted heart-icon" onclick="toggleFavorite(this)"></i>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 adv">
+                <div class="item">
+                    <a href="product-details.html"><img src="/User/images/14.jpg" alt=""></a>
+                    <h6> 7tỷ</h6>
+                    <h4><a href="product-details.html"> 1/32, Đường Thuận Giao 21, Thuận Giao, Thuận An,Bình Dương</a></h4>
+                    <ul>
+                        <li>Số Tầng: <span> 1 Trệt </span></li>
+                        <li>Nhà vệ sinh: <span> 1 </span></li>
+                        <li>Diện tích: <span> 75m2 </span></li>
+                        <li>Tiện ích: <span>view thoáng mát, gần Chợ, Gần bệnh viện, trường học</span></li>
+                    </ul>
+                    <div class="main-button">
+                        <a href="product-details.html">Xem thêm</a>
+                        <i class="fas fa-heart text-muted heart-icon" onclick="toggleFavorite(this)"></i>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 rac">
+                <div class="item">
+                    <a href="product-details.html"><img src="/User/images/15.jpg" alt=""></a>
+                    <h6> 6tỷ3 nội thất nhập khẩu</h6>
+                    <h4><a href="product-details.html"> T2, Masteri Thảo Điền, Quận 2, TP. Hồ Chí Minh </a></h4>
+                    <ul>
+                        <li>Số phòng ngủ: <span> 3pn2wc </span></li>
+                        <li>Nhà vệ sinh: <span> 2 </span></li>
+                        <li>Diện tích: <span> 80m2 </span></li>
+                        <li>Tiện ích: <span> Hồ bơi, sân bóng gỗ, sân bóng chuyền,sân tennis, phòng xông hơi</span></li>
+                    </ul>
+                    <div class="main-button">
+                        <a href="product-details.html">Xem thêm</a>
+                        <i class="fas fa-heart text-muted heart-icon" onclick="toggleFavorite(this)"></i>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 str">
+                <div class="item">
+                    <a href="product-details.html"><img src="/User/images/17.jpg" alt=""></a>
+                    <h6> 4tỷ3 có nội thất </h6>
+                    <h4><a href="property-details.html">S103, Vinhome Ocen Park, Đại Dương, Đa Tốn, Gia Lâm, Hà Nội</a></h4>
+                    <ul>
+                        <li>Số phòng ngủ: <span> 2pn1Wc </span></li>
+                        <li>Nhà vệ sinh: <span> 1 </span></li>
+                        <li>Diện tích: <span> 69m2 </span></li>
+                        <li>Tiện ích: <span> Hồ bơi, sân bóng gỗ, sân bóng chuyền,sân tennis</span></li>
+                    </ul>
+                    <div class="main-button">
+                        <a href="product-details.html">Xem thêm</a>
+                        <i class="fas fa-heart text-muted heart-icon" onclick="toggleFavorite(this)"></i>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 str">
+                <div class="item">
+                    <a href="product-details.html"><img src="/User/images/18.jpg" alt=""></a>
+                    <h6>2tỷ3 nội thất nhập khẩu</h6>
+                    <h4><a href="product-details.html"> B2,Vinhome GranPark Q9, Long Bình, TP.Hồ Chí Minh</a></h4>
+                    <ul>
+                        <li>Số phòng ngủ: <span> 2pn1Wc </span></li>
+                        <li>Nhà vệ sinh: <span> 1 </span></li>
+                        <li>Diện tích: <span> 59m2 </span></li>
+                        <li>Tiện ích: <span> Hồ bơi, sân bóng gỗ, sân bóng chuyền,sân tennis</span></li>
+                    </ul>
+                    <div class="main-button">
+                        <a href="product-details.html">Xem thêm</a>
+                        <i class="fas fa-heart text-muted heart-icon" onclick="toggleFavorite(this)"></i>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 str">
+                <div class="item">
+                    <a href="product-details.html"><img src="/User/images/19.jpg" alt=""></a>
+                    <h6>2tỷ3 nội thất nhập khẩu</h6>
+                    <h4><a href="product-details.html">S103, Vinhome Ocen Park, Đại Dương, Đa Tốn, Gia Lâm, Hà Nội</a></h4>
+                    <ul>
+                        <li>Số phòng ngủ: <span> 2pn1Wc </span></li>
+                        <li>Nhà vệ sinh: <span> 1 </span></li>
+                        <li>Diện tích: <span> 59m2 </span></li>
+                        <li>Tiện ích: <span> Hồ bơi, sân bóng gỗ, sân bóng chuyền,sân tennis</span></li>
+                    </ul>
+                    <div class="main-button">
+                        <a href="product-details.html">Xem thêm</a>
+                        <i class="fas fa-heart text-muted heart-icon" onclick="toggleFavorite(this)"></i>
+
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 str">
+                <div class="item">
+                    <a href="product-details.html"><img src="/User/images/20.jpg" alt=""></a>
+                    <h6>2tỷ3 nội thất nhập khẩu</h6>
+                    <h4><a href="product-details.html">S103, Vinhome Ocen Park, Đại Dương, Đa Tốn, Gia Lâm, Hà Nội</a></h4>
+                    <ul>
+                        <li>Số phòng ngủ: <span> 2pn1Wc </span></li>
+                        <li>Nhà vệ sinh: <span> 1 </span></li>
+                        <li>Diện tích: <span> 59m2 </span></li>
+                        <li>Tiện ích: <span> Hồ bơi, sân bóng gỗ, sân bóng chuyền,sân tennis</span></li>
+                    </ul>
+                    <div class="main-button">
+                        <a href="product-details.html">Xem thêm</a>
+                        <i class="fas fa-heart text-muted heart-icon" onclick="toggleFavorite(this)"></i>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 str">
+                <div class="item">
+                    <a href="product-details.html"><img src="/User/images/21.jpg" alt=""></a>
+                    <h6>2tỷ3 nội thất nhập khẩu</h6>
+                    <h4><a href="product-details.html">S103, Vinhome Ocen Park, Đại Dương, Đa Tốn, Gia Lâm, Hà Nội</a></h4>
+                    <ul>
+                        <li>Số phòng ngủ: <span> 2pn1Wc </span></li>
+                        <li>Nhà vệ sinh: <span> 1 </span></li>
+                        <li>Diện tích: <span> 59m2 </span></li>
+                        <li>Tiện ích: <span> Hồ bơi, sân bóng gỗ, sân bóng chuyền,sân tennis</span></li>
+                    </ul>
+                    <div class="main-button">
+                        <a href="product-details.html">Xem thêm</a>
+                        <i class="fas fa-heart text-muted heart-icon" onclick="toggleFavorite(this)"></i>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 str">
+                <div class="item">
+                    <a href="product-details.html"><img src="/User/images/22.jpg" alt=""></a>
+                    <h6>2tỷ3 nội thất nhập khẩu</h6>
+                    <h4><a href="product-details.html">S103, Vinhome Ocen Park, Đại Dương, Đa Tốn, Gia Lâm, Hà Nội</a></h4>
+                    <ul>
+                        <li>Số phòng ngủ: <span> 2pn1Wc </span></li>
+                        <li>Nhà vệ sinh: <span> 1 </span></li>
+                        <li>Diện tích: <span> 59m2 </span></li>
+                        <li>Tiện ích: <span> Hồ bơi, sân bóng gỗ, sân bóng chuyền,sân tennis</span></li>
+                    </ul>
+                    <div class="main-button">
+                        <a href="product-details.html">Xem thêm</a>
+                        <i class="fas fa-heart text-muted heart-icon" onclick="toggleFavorite(this)"></i>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 str">
+                <div class="item">
+                    <a href="product-details.html"><img src="/User/images/23.jpg" alt=""></a>
+                    <h6>2tỷ3 nội thất nhập khẩu</h6>
+                    <h4><a href="product-details.html">S103, Vinhome Ocen Park, Đại Dương, Đa Tốn, Gia Lâm, Hà Nội</a></h4>
+                    <ul>
+                        <li>Số phòng ngủ: <span> 2pn1Wc </span></li>
+                        <li>Nhà vệ sinh: <span> 1 </span></li>
+                        <li>Diện tích: <span> 59m2 </span></li>
+                        <li>Tiện ích: <span> Hồ bơi, sân bóng gỗ, sân bóng chuyền,sân tennis</span></li>
+                    </ul>
+                    <div class="main-button">
+                        <a href="product-details.html">Xem thêm</a>
+                        <i class="fas fa-heart text-muted heart-icon" onclick="toggleFavorite(this)"></i>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 str">
+                <div class="item">
+                    <a href="product-details.html"><img src="/User/images/24.jpg" alt=""></a>
+                    <h6>2tỷ3 nội thất nhập khẩu</h6>
+                    <h4><a href="product-details.html">S103, Vinhome Ocen Park, Đại Dương, Đa Tốn, Gia Lâm, Hà Nội</a></h4>
+                    <ul>
+                        <li>Số phòng ngủ: <span> 2pn1Wc </span></li>
+                        <li>Nhà vệ sinh: <span> 1 </span></li>
+                        <li>Diện tích: <span> 59m2 </span></li>
+                        <li>Tiện ích: <span> Hồ bơi, sân bóng gỗ, sân bóng chuyền,sân tennis</span></li>
+                    </ul>
+                    <div class="main-button">
+                        <a href="product-details.html">Xem thêm</a>
+                        <i class="fas fa-heart text-muted heart-icon" onclick="toggleFavorite(this)"></i>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 str">
+                <div class="item">
+                    <a href="product-details.html"><img src="/User/images/25.jpg" alt=""></a>
+                    <h6> 23tỷ</h6>
+                    <h4><a href="product-details.html"> Trần Phú, Lộc Thọ, Nha Trang,Khánh Hòa</a></h4>
+                    <ul>
+                        <li>Số tầng: <span> 3 tầng </span></li>
+                        <li>Nhà vệ sinh: <span> 1 </span></li>
+                        <li>Diện tích: <span> 59m2 </span></li>
+                        <li>Tiện ích: <span> view thoáng mát, gần trường học, gần biển</span></li>
+                    </ul>
+                    <div class="main-button">
+                        <a href="product-details.html">Xem thêm</a>
+                        <i class="fas fa-heart text-muted heart-icon" onclick="toggleFavorite(this)"></i>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 rac">
+                <div class="item">
+                    <a href="product-details.html"><img src="/User/images/27.jpg" alt=""></a>
+                    <h6> 9tỷ</h6>
+                    <h4><a href="product-details.html">Thùy Vân, Phường 2, Vũng Tàu</a></h4>
+                    <ul>
+                        <li>Số tầng: <span> 3 tầng </span></li>
+                        <li>Nhà vệ sinh: <span> 2 </span></li>
+                        <li>Diện tích: <span> 89m2 </span></li>
+                        <li>Tiện ích: <span> View biển, gần bãi trước và bãi sau</span></li>
+                    </ul>
+                    <div class="main-button">
+                        <a href="product-details.html">Xem thêm</a>
+                        <i class="fas fa-heart text-muted heart-icon" onclick="toggleFavorite(this)"></i>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 str">
+                <div class="item">
+                    <a href="product-details.html"><img src="/User/images/29.jpg" alt=""></a>
+                    <h6> 3tỷ3 nội thất nhập khẩu</h6>
+                    <h4><a href="product-details.html">S803, Vinhome Ocen Park, Đại Dương, Đa Tốn, Gia Lâm, Hà Nội</a></h4>
+                    <ul>
+                        <li>Số phòng ngủ: <span> 2pn1Wc </span></li>
+                        <li>Nhà vệ sinh: <span> 1 </span></li>
+                        <li>Diện tích: <span> 59m2 </span></li>
+                        <li>Tiện ích: <span> Hồ bơi, sân bóng gỗ, sân bóng chuyền,sân tennis</span></li>
+                    </ul>
+                    <div class="main-button">
+                        <a href="product-details.html">Xem thêm</a>
+                        <i class="fas fa-heart text-muted heart-icon" onclick="toggleFavorite(this)"></i>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <ul class="pagination">
+                    <li><a href="#">1</a></li>
+                    <li><a class="is_active" href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">>></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- footer-->
+<footer class="footer">
+    <div class="footer-section top">
+        <div class="footer-brand">
+            <img src="../images/LoGo.jpg" alt="Logo" class="footer-logo">
+            <div>
+                <p class="company-name">CÔNG TY CỔ PHẦN PROPERTYGURU VIỆT NAM</p>
+                <address>
+                    S1803, Vinhome grandpark Quận 9, Thủ Đức<br>
+                    (84) 3562 5939 - (84) 3562 5940
+                </address>
+            </div>
+            <div class="download-links">
+                <img src="../images/google.pnj.png" alt="Google Play" class="app-icon">
+                <img src="../images/app-store.jpg" alt="App Store" class="app-icon">
+            </div>
+        </div>
+        <div class="footer-links">
+            <div>
+                <div>
+                    Hotline<br>
+                    <b>1900 1881 <br><br></b>
+                </div>
+                <h4>HƯỚNG DẪN</h4>
+                <ul>
+                    <li><a href="#">Về chúng tôi</a></li>
+                    <li><a href="#">Báo giá và hỗ trợ</a></li>
+                    <li><a href="#">Câu hỏi thường gặp</a></li>
+                    <li><a href="#">Góp ý báo lỗi</a></li>
+                    <li><a href="#">Sitemap</a></li>
+                </ul>
+            </div>
+            <div>
+                <div>
+                    Hỗ trợ khách hàng<br>
+                    <b>trogiup.mamxanhgroup.com.vn<br><br></b>
+                </div>
+                <h4>QUY ĐỊNH</h4>
+                <ul>
+                    <li><a href="#">Quy định đăng tin</a></li>
+                    <li><a href="#">Quy chế hoạt động</a></li>
+                    <li><a href="#">Điều khoản thỏa thuận</a></li>
+                    <li><a href="#">Chính sách bảo mật</a></li>
+                    <li><a href="#">Giải quyết khiếu nại</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-subscribe">
+            <div>
+                Chăm sóc khách hàng<br>
+                <b>hotro@mamxanhgroup.com.vn<br><br></b>
+            </div>
+            <h4>ĐĂNG KÝ NHẬN TIN</h4>
+            <form>
+                <input type="email" placeholder="Nhập email của bạn">
+                <button type="submit">&#9654;</button>
+            </form>
+            <div class="language-select">
+                <span>QUỐC GIA & NGÔN NGỮ</span>
+                <select>
+                    <option>Việt Nam</option>
+                    <option>Singapo</option>
+                    <option>Malaysia</option>
+                    <option>Thailand</option>
+                    <option>Indonesia</option>
+                    <option>Australia</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="footer-section branches">
+        <p><strong>Chi nhánh của Mamxanhgroup.com.vn</strong></p>
+        <div class="branch-info">
+            <div>
+                <p><strong>Chi nhánh TP. Hồ Chí Minh</strong><br>S1803, Vinhome grandpark , Q.9, TP. Thủ Đức<br>Hotline: 1900 1881 - Mobile: 0904 893 279</p>
+                <p><strong>Chi nhánh Đà Nẵng</strong><br>Tầng 9, Tòa nhà Vĩnh Trung Plaza, 255 - 257 Hùng Vương, Q.Thanh Khê, TP. Đà Nẵng<br>Hotline: 1900 1881 - Mobile: 0904 907 279</p>
+            </div>
+            <div>
+                <p><strong>Chi nhánh Hà Nội</strong><br>Đường Chu Huy Mân, Phường Phúc Lợi, Quận Long Biên, Hà Nội<br>Hotline: 1900 1881 - Mobile: 0903 456 322</p>
+                <p><strong>Chi nhánh Vũng Tàu</strong><br>Tầng 4, Tòa nhà ACB, Hoàng Hoa Thám, P.2, TP. Vũng Tàu<br>Hotline: 1900 1881 - Mobile: 0904 509 293</p>
+            </div>
+            <div>
+                <p><strong>Chi nhánh Bình Dương</strong><br>Phòng 10, tầng 16, Becamex Tower, ĐL Bình Dương, TP. Thủ Dầu Một<br>Hotline: 1900 1881 - Mobile: 0919 255 580</p>
+                <p><strong>Chi nhánh Nha Trang</strong><br>Tầng 6, Tòa nhà Điện Lực Khánh Hòa, Lý Thánh Tôn, TP. Nha Trang<br>Hotline: 1900 1881 - Mobile: 0902 169 295</p>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="footer-section bottom">
+        <p>Copyright © 2007 - 2024 mamxanhgroup.com.vn <br>
+
+            Giấy ĐKKD số 0104630479 do Sở KHĐT TP Hà Nội cấp lần đầu ngày 02/06/2010 <br>
+            Giấy phép thiết lập trang thông tin điện tử tổng hợp trên mạng số 191/GP-TTĐT do<br>
+            Sở TTTT Thành phố Hồ Chí Minh cấp ngày 31/08/2020</p>
+        <p>Chịu trách nhiệm nội dung GP ICP: Bà Cao Bich Thùy<br>
+            Chịu trách nhiệm sàn GDTMĐT: Ông Đặng Thành <br>
+            Quy chế, quy định giao dịch có hiệu lực từ 08/08/2020<br>
+            Ghi rõ nguồn "manxanhgroup.com.vn" khi phát hành lại thông tin từ website này.
+        </p>
+        <img src="../images/registered-icon.jpg" alt="Registered" class="social-icon" style="width: 100px; height: 40px;">
+        <div class="social-icons">
+            <img src="../images/face.pnj.jpg" alt="Facebook" class="social-icon">
+            <img src="../images/youtube-icon.jpg" alt="YouTube" class="social-icon">
+            <img src="../images/zalo-icon.jpg" alt="Facebook" class="social-icon">
+        </div>
+    </div>
+</footer>
+<script src="../js/căn hộ bán.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
