@@ -119,7 +119,7 @@
             <img src="<%= request.getContextPath() %>/User/images/zalo-icon.jpg" alt="Facebook" class="social-icon">
         </div>
     </div>
-</footer>
+</footer>24204
 
 </body>
 </html>
