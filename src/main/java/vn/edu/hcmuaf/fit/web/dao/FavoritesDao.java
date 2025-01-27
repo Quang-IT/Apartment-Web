@@ -2,6 +2,8 @@ package vn.edu.hcmuaf.fit.web.dao;
 
 import vn.edu.hcmuaf.fit.web.dao.db.JDBIConnect;
 
+import java.util.List;
+
 public class FavoritesDao {
     public void addToFavorite(int userID, String apartmentID) {
         String sql = "INSERT INTO favorite (userID, apartmentID) VALUES (:userID, :apartmentID)";
@@ -20,6 +22,15 @@ public class FavoritesDao {
                         .bind("userID", userID)
                         .bind("apartmentID", apartmentID)
                         .execute()
+        );
+    }
+
+    public List<String> getFavoritesByUserId(int userId) {
+        return JDBIConnect.get().withHandle(handle ->
+                handle.createQuery("SELECT apartment_id FROM favorites WHERE user_id = :userId")
+                        .bind("userId", userId)
+                        .mapTo(String.class)
+                        .list()
         );
     }
 }

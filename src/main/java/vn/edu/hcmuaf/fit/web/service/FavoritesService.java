@@ -5,12 +5,21 @@ import vn.edu.hcmuaf.fit.web.model.Apartment;
 import vn.edu.hcmuaf.fit.web.model.Favorites;
 import vn.edu.hcmuaf.fit.web.model.User;
 
+import java.util.List;
+
 public class FavoritesService {
     private FavoritesDao favoritesDao;
     private User user;
 
-    public Favorites addFavorites(Favorites favorites) {
-        favoritesDao.addToFavorite(user.getId(), "Nam");
-        return favorites;
+    public void addToFavorite(int userId, String apartmentId) {
+        favoritesDao.addToFavorite(userId, apartmentId);
+    }
+
+    public void removeFromFavorite(int userId, String apartmentId) {
+        favoritesDao.removeFromFavorite(userId, apartmentId);
+    }
+
+    public List<String> getUserFavorites(int userId) {
+        return favoritesDao.getFavoritesByUserId(userId);
     }
 }
